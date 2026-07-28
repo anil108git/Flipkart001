@@ -244,22 +244,13 @@
 
 ## Component Matrix
 
-| Component           | File                                              | Purpose                  | Triggers On      |
-|---------------------|---------------------------------------------------|--------------------------|------------------|
-| bugasura-to-test-plan | `.claude/skills/bugasura-to-test-plan/SKILL.md` | Ticket -> test plan      | New ticket       |
-| coding-standards      | `.claude/skills/coding-standards/SKILL.md`      | Enforce patterns         | Code generation  |
-| test-data-setup       | `.claude/skills/test-data-setup/SKILL.md`       | Auth & data config       | Test setup       |
-| ci-reporting          | `.claude/skills/ci-reporting/SKILL.md`          | CI pipeline config       | CI run           |
-| healing-policy        | `.claude/skills/healing-policy/SKILL.md`        | Auto-fix rules           | Test failure     |
-| bugasura-write-back   | `.claude/skills/bugasura-write-back/SKILL.md`   | Results -> Bugasura      | Test complete    |
-| requirements-only-planning | `.claude/skills/requirements-only-planning/SKILL.md` | Shift-left plans | No live app yet  |
-| Planner Agent       | `.github/agents/playwright-test-planner.agent.md` | Plan structure           | New requirement  |
-| Generator Agent     | `.github/agents/playwright-test-generator.agent.md`| Write code             | Plan approved    |
-| Healer Agent        | `.github/agents/playwright-test-healer.agent.md`  | Fix failures             | Test fails       |
-| Create Test Plan    | `.github/prompts/create-testplan.prompt.md` | Create plan from any source | /create-testplan |
-| Generate Specs      | `.github/prompts/generate-specs-from-plan.prompt.md` | Plan -> spec files | /generate-specs-from-plan |
-| Update Requirement  | `.github/prompts/update-requirement.prompt.md` | Diff detect + plan update | /update-requirement |
-| Heal Tests          | `.github/prompts/heal-failed-run.prompt.md` | Fix failing tests       | /heal-failed-run |
+See [responsibility-map](responsibility-map.md) for the full component-to-purpose mapping. Key files are:
+
+| Category | Location |
+|----------|----------|
+| Skills (7) | `.claude/skills/*/SKILL.md` |
+| Agents (3) | `.github/agents/*.agent.md` |
+| Prompts (4) | `.github/prompts/*.prompt.md` |
 
 ## Data Flow
 

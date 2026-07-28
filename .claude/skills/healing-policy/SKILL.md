@@ -118,21 +118,9 @@ The Healer must stop and raise a Bugasura bug for any of the following:
 When escalation is required, the Healer uses the Bugasura MCP to create
 a bug ticket. It must never skip this step or leave the failure undocumented.
 
-### Bugasura MCP config (in `mcp.config.json`)
-```json
-{
-  "mcpServers": {
-    "bugasura": {
-      "url": "https://mcp.bugasura.io/mcp",
-      "headers": {
-        "Authorization": "Bearer ${BUGASURA_API_KEY}"
-      }
-    }
-  }
-}
-```
-`BUGASURA_API_KEY` must be set in `.env.dev` / `.env.staging` and CI secrets.
-Never hardcode it.
+### Bugasura MCP config
+
+Configured in `mcp.config.json` — see [MCP config](../../../mcp.config.json). `BUGASURA_API_KEY` must be set in `.env.dev`, `.env.staging`, and CI secrets. Never hardcode it.
 
 ### Bug ticket fields — required for every escalation
 

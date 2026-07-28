@@ -91,19 +91,11 @@ For each missing page object, create the file following the `coding-standards` s
 ### File location
 `pages/[feature-name].page.ts`
 
-### Class structure rules (from coding-standards skill)
-- Import `Page` and `Locator` from `@playwright/test`
-- Class name: `PascalCase + Page` (e.g. `FlipkartPage`)
-- Locators defined in constructor using role-first strategy:
-  1. `getByRole()` — always first
-  2. `getByLabel()` — for form inputs
-  3. `getByTestId()` — fallback only
-  4. CSS/XPath — prohibited
-- One locator property per element, named as descriptive noun:
-  - `searchInput`, `loginButton`, `cartIcon`, `forYouTab`
-- Methods: one action per method, no assertions, no test data
-- Navigation method: `async goto()`
-- No `page.waitForTimeout()` anywhere
+Follow the [coding-standards skill](../.claude/skills/coding-standards/SKILL.md#page-object-model-structure) for:
+- Class structure (role-first locators, constructor pattern)
+- Method conventions (one action, no assertions, no test data)
+- Navigation method `async goto()`
+- **No `page.waitForTimeout()`** anywhere
 
 ### Use live app selectors
 If the requirement file has an Appendix with real selectors (like
@@ -113,32 +105,6 @@ locators in the page object. For example:
 Search Input: textbox "Search for Products, Brands and More"
 Login Button: link "Login"
 For You Tab:  link "For You"
-```
-
-### Template
-
-```typescript
-import { Page, Locator } from '@playwright/test';
-
-export class [Feature]Page {
-  readonly page: Page;
-
-  // Locators — role-first, one per element
-  readonly [elementName]: Locator;
-
-  constructor(page: Page) {
-    this.page = page;
-    this.[elementName] = page.getByRole('[role]', { name: '[name]' });
-  }
-
-  async goto() {
-    await this.page.goto(process.env.BASE_URL!);
-  }
-
-  async [actionMethod]([params]) {
-    // one action per method
-  }
-}
 ```
 
 ---
@@ -206,76 +172,7 @@ tests/
 ### Test Tags (Mandatory)
 
 Every test MUST have at least one tag. Tags are assigned based on the scenario's Type and Complexity from the plan.
-
-#### Tag Definitions
-
-| Tag | Description | When to Apply |
-|-----|-------------|---------------|
-| `@smoke` | Critical path — must pass before any release | Positive scenarios with Simple/Medium complexity |
-| `@regression` | Full test suite — run before major releases | All scenarios |
-| `@e2e` | End-to-end flow across multiple pages | Complex scenarios, multi-page flows |
-| `@ui` | UI element verification | Element visibility, layout, styling checks |
-| `@negative` | Error handling and validation | All Negative type scenarios |
-| `@edge-case` | Boundary and unusual inputs | All Edge Case type scenarios |
-| `@accessibility` | A11y compliance | Keyboard navigation, screen reader, ARIA |
-| `@performance` | Load time, rendering | Performance-related scenarios |
-| `@security` | Security validation | XSS, injection, auth bypass |
-
-#### Tag Assignment Rules
-
-| Scenario Type | Required Tags | Optional Tags |
-|---------------|---------------|---------------|
-| Positive + Simple | `@smoke` `@ui` | `@regression` |
-| Positive + Medium | `@smoke` `@regression` | `@e2e` |
-| Positive + Complex | `@e2e` `@regression` | `@smoke` |
-| Negative | `@negative` `@regression` | `@ui` |
-| Edge Case | `@edge-case` `@regression` | `@ui` |
-| Accessibility | `@accessibility` `@regression` | `@ui` |
-| Performance | `@performance` `@regression` | |
-
-#### Tag Usage in Spec Files
-
-Tags are added as comments above the test function:
-
-```typescript
-test.describe('[Feature Name] — [REQ-ID]', () => {
-
-  // @smoke @ui
-  test('should display search input field', async ({ page }) => {
-    // ...
-  });
-
-  // @negative @regression
-  test('should show error for empty search', async ({ page }) => {
-    // ...
-  });
-
-  // @e2e @regression
-  test('should complete full checkout flow', async ({ page }) => {
-    // ...
-  });
-
-});
-```
-
-#### Running Tests by Tag
-
-```bash
-# Run only smoke tests
-npx playwright test --grep @smoke
-
-# Run only regression tests
-npx playwright test --grep @regression
-
-# Run only e2e tests
-npx playwright test --grep @e2e
-
-# Run only negative tests
-npx playwright test --grep @negative
-
-# Run smoke + regression
-npx playwright test --grep "@smoke|@regression"
-```
+Apply tags per the [coding-standards skill](../.claude/skills/coding-standards/SKILL.md#test-tags).
 
 ### Spec template
 
@@ -383,18 +280,8 @@ Next steps:
 
 ---
 
-## Hard Rules (from coding-standards skill)
+Follow the [What the Generator Must Never Do](../.claude/skills/coding-standards/SKILL.md#what-the-generator-must-never-do) rules from `coding-standards` skill.
 
-- Never write raw `page.locator()`, `page.click()`, or `page.fill()` in spec files.
-- Never use CSS selectors, XPath, or positional locators (`.nth()`, `.first()`).
-- Never add assertions inside page object methods.
-- Never hardcode test data strings inside spec or page object files.
-- Never use `page.waitForTimeout()` anywhere.
-- Never create a page object without the constructor locator pattern.
-- Never combine two unrelated features into one spec file.
-- **Never create a test without at least one tag** — every test must be tagged.
-- Never commit `test.only` or `test.skip` without a comment explaining why.
-- Never invent a locator for an element not confirmed to exist — tag as TBD.
-- Always use `test.describe('Feature — REQ-ID')` format when REQ-ID exists.
+Additional rules:
 - Always run `npx tsc --noEmit` before reporting success.
-- Always use role-first locator strategy: getByRole > getByLabel > getByTestId.
+- Never create a test without at least one tag — every test must be tagged.

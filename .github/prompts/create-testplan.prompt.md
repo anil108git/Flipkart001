@@ -184,79 +184,15 @@ Ask the user:
 
 ## Phase 5 — Write Test Plan Scenarios
 
-Using `requirements-only-planning` and (if Bugasura source) `bugasura-to-test-plan` skills:
+Using the [requirements-only-planning](../.claude/skills/requirements-only-planning/SKILL.md) skill and (if Bugasura source) [bugasura-to-test-plan](../.claude/skills/bugasura-to-test-plan/SKILL.md) skill:
 
-### Rules
-- One or more scenarios per AC line — never combine unrelated AC lines.
-- Use Given/When/Then format — behavior terms only, no selectors or UI detail.
-- Tag every gap using the standard tags below — never guess missing detail.
-- Every scenario must cite its AC source line.
-- Out-of-scope items → add a clearly labelled `## Out of Scope` section.
-- For every happy-path scenario, check for a corresponding negative/error path.
-  If implied but not stated, write as `SUGGESTED`.
-- **Mandatory coverage**: Every feature MUST have positive, negative, and edge case scenarios.
-
-### Test Case Types (Mandatory Coverage)
-
-Every test plan MUST include all three types:
-
-| Type | Description | Example |
-|------|-------------|---------|
-| **Positive** | Happy path — valid input, expected behavior | User logs in with correct credentials |
-| **Negative** | Error paths — invalid input, error handling | User logs in with wrong password |
-| **Edge Cases** | Boundary conditions, unusual inputs | Empty fields, max length, special characters |
-
-**Coverage rules:**
-- For every positive scenario, ask: "What happens if this fails?"
-- For every input field, include: valid, invalid, empty, boundary cases
-- For every action, include: success, failure, and timeout scenarios
-- If a negative/edge case is not in the AC, mark as `SUGGESTED`
-
-### Complexity Levels
-
-Each scenario should be classified by complexity:
-
-| Complexity | Description | Examples |
-|------------|-------------|----------|
-| **Simple** | Single action, single assertion | Click button, verify element visible |
-| **Medium** | Multi-step flow, multiple assertions | Fill form, submit, verify result |
-| **Complex** | Multi-page flow, conditional logic, API + UI | Login → add to cart → checkout → verify order |
-
-### Scenario template
-```
-## Scenario [N]: [Short descriptive name]
-Source: [AC-ID] from [source reference]
-Priority: High | Medium | Low
-Type: Positive | Negative | Edge Case
-Complexity: Simple | Medium | Complex
-
-Given: [Precondition]
-When:  [User action — no selectors]
-Then:  [Expected observable outcome]
-TBD:   [Missing implementation detail — if any]
-ASSUMPTION: [What was inferred — if any]
-```
-
-### Gap tags
-| Tag | When to use |
-|-----|-------------|
-| `TBD` | Implementation detail unknown — resolve during live verification |
-| `ASSUMPTION` | Inferred from context — must be confirmed |
-| `SUGGESTED` | Extra coverage beyond AC — needs team approval |
-| `OPEN QUESTION` | Ambiguity in the AC itself — needs clarification |
-
-### For Bugasura sources with OPEN QUESTION items
-Post a clarification comment on **{{SOURCE}}** in Bugasura via MCP:
-```
-"Add comment to Bugasura requirement {{SOURCE}}:
-OPEN QUESTION from QA: [your question here]"
-```
-
-### For local file/URL sources with OPEN QUESTION items
-Add a `## Notes` section at the end of the plan summarising:
-- All ASSUMPTION items (for BA/Dev review)
-- All OPEN QUESTION items (for requirement author to answer)
-- All SUGGESTED items (for QA lead to approve or reject)
+### Rules (from skills)
+- One or more scenarios per AC line, Given/When/Then format, no selectors
+- Mandatory coverage: Positive, Negative, and Edge Case for every feature
+- Classify by Type and Complexity per [coding-standards](../.claude/skills/coding-standards/SKILL.md#test-categorization)
+- Tag gaps as TBD, ASSUMPTION, SUGGESTED, or OPEN QUESTION
+- For Bugasura sources, post OPEN QUESTION comments via Bugasura MCP
+- For local files/URLs, add a `## Notes` section summarising gaps
 
 ---
 
@@ -364,12 +300,8 @@ create a linked test case in Bugasura under **{{SOURCE}}**:
 
 - Never produce a spec file (`.spec.ts`) — this prompt generates plans only.
 - Never mark Status as READY — only a live Planner pass can do that.
-- Never invent scenarios not traceable to an AC line.
-- Never silently skip an AC line — every line produces at least one scenario or an explicit note.
-- Never guess missing detail — always tag as TBD, ASSUMPTION, or OPEN QUESTION.
-- Always save to `specs/` — never to the same folder as the requirement file.
-- Always include the `Next step` line in the plan header.
-- Always detect source type before processing — never assume.
-- **Always include positive, negative, and edge case scenarios** — no exceptions.
-- **Always classify each scenario by Type and Complexity** — never leave blank.
-- **Always display coverage summary** before saving the plan.
+- Never invent or skip scenarios — every AC line must be addressed.
+- Never guess missing detail — tag as TBD, ASSUMPTION, or OPEN QUESTION.
+- Always include positive, negative, and edge case scenarios — no exceptions.
+- Always classify each scenario by Type and Complexity.
+- Always display coverage summary before saving.

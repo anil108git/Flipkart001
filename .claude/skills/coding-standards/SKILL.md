@@ -282,62 +282,7 @@ test.describe('[Feature Name] — [REQ-ID]', () => {
 
 ### Running Tests by Tag
 
-```bash
-npx playwright test --grep @smoke        # Smoke tests only
-npx playwright test --grep @regression   # Regression tests only
-npx playwright test --grep @e2e          # E2E tests only
-npx playwright test --grep @negative     # Negative tests only
-npx playwright test --grep "@smoke|@regression"  # Multiple tags
-```
-
----
-
-## Test Data Strategy
-
-### Static data — happy path
-Location: `fixtures/data/*.json`
-
-```json
-// fixtures/data/users.json
-{
-  "valid": {
-    "email": "testuser@example.com",
-    "password": "Test@1234"
-  },
-  "locked": {
-    "email": "locked@example.com",
-    "password": "Test@1234"
-  }
-}
-```
-- Used for standard positive and known-negative scenarios.
-- Committed to repo, reviewed alongside code.
-- Never use production credentials or PII.
-
-### Dynamic data — edge cases
-Location: `fixtures/data/generators.ts`
-
-```typescript
-import { faker } from '@faker-js/faker';
-
-export function generateUser(overrides?: Partial<{ emailPrefix: string }>) {
-  return {
-    email: `${overrides?.emailPrefix ?? faker.internet.userName()}@example.com`,
-    password: faker.internet.password({ length: 12, memorable: false }),
-  };
-}
-```
-- Used for boundary values, injection strings, random formats, stress inputs.
-- Never used for happy path — static data is preferred for repeatability.
-- Seed Faker with a fixed value in CI for reproducibility:
-  ```typescript
-  faker.seed(12345); // in global setup
-  ```
-
-### Data rules
-- **No hardcoded strings in spec files** — always import from `fixtures/data/`.
-- **No real user data** — use synthetic data only.
-- **No shared mutable state between tests** — each test sets up its own data.
+See [test-data-setup skill](../test-data-setup/SKILL.md) for data strategy and [list-of-commands.md](../../docs/list-of-commands.md) for grep commands.
 
 ---
 

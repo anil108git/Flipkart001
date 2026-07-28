@@ -175,23 +175,9 @@ Each requirement only receives results for its own spec file(s).
 
 ---
 
-## Bugasura MCP Config (`mcp.config.json`)
+## Bugasura MCP Config
 
-```json
-{
-  "mcpServers": {
-    "bugasura": {
-      "url": "https://mcp.bugasura.io/mcp",
-      "headers": {
-        "Authorization": "Bearer ${BUGASURA_API_KEY}"
-      }
-    }
-  }
-}
-```
-
-`BUGASURA_API_KEY` must be in `.env.dev`, `.env.staging`, and CI secrets.
-Never hardcode it.
+Configured in `mcp.config.json` at project root. `BUGASURA_API_KEY` must be in `.env.dev`, `.env.staging`, and CI secrets. Never hardcode it.
 
 ---
 

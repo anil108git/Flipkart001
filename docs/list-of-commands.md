@@ -133,43 +133,9 @@ LLM_PROVIDER=gemini GEMINI_API_KEY=xxx npx playwright test
 |---------|-------------|
 | `npx ts-node orchestrator/orchestrator.ts` | Run full orchestration (classify + heal + write-back) |
 
----
 
-## Test Tags Reference
 
-### Available Tags
-
-| Tag | Description | When to Use |
-|-----|-------------|-------------|
-| `@smoke` | Critical path | Positive + Simple/Medium complexity |
-| `@regression` | Full suite | All scenarios |
-| `@e2e` | End-to-end flow | Complex multi-page scenarios |
-| `@ui` | UI element verification | Element visibility, layout |
-| `@negative` | Error handling | All negative scenarios |
-| `@edge-case` | Boundary inputs | All edge case scenarios |
-| `@accessibility` | A11y compliance | Keyboard, screen reader |
-| `@performance` | Load time, rendering | Performance scenarios |
-| `@security` | Security validation | XSS, injection |
-
-### Running Tests by Tag
-
-```bash
-npx playwright test --grep @smoke        # Smoke tests only
-npx playwright test --grep @regression   # Regression tests only
-npx playwright test --grep @e2e          # E2E tests only
-npx playwright test --grep @negative     # Negative tests only
-npx playwright test --grep @edge-case    # Edge case tests only
-npx playwright test --grep @ui           # UI tests only
-npx playwright test --grep @accessibility # Accessibility tests only
-npx playwright test --grep @performance  # Performance tests only
-npx playwright test --grep @security     # Security tests only
-npx playwright test --grep "@smoke|@regression"  # Multiple tags
-npx playwright test --grep "@smoke|@e2e"  # Multiple tags
-```
-
----
-
-## Quick Reference
+---## Quick Reference
 
 ### First Time Setup
 ```bash
