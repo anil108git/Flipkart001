@@ -40,6 +40,22 @@ AI-driven Playwright E2E automation framework. Uses dedicated opencode free mode
 - Tests in `tests/`, page objects in `pages/`, plans in `specs/`, requirements in `requirements/`
 - Env config via `.env.<env>` using `TEST_ENV`
 
+## Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| `BASE_URL` | Application base URL |
+| `API_URL` | API endpoint URL |
+| `TEST_USER_EMAIL` | Test user email |
+| `TEST_USER_PASSWORD` | Test user password |
+| `BUGASURA_API_KEY` | Bugasura API key |
+
+## TypeScript
+
+- Strict mode, Node16 module resolution
+- Includes: `tests/**/*.ts`, `pages/**/*.ts`, `fixtures/**/*.ts`, `playwright.config.ts`
+- Run `npx tsc --noEmit` to verify
+
 ## References
 
-- [Architecture](docs/architecture.md) | [Commands](docs/list-of-commands.md) | [Copilot](.github/copilot-instructions.md) | [11AGENTS.md](11AGENTS.md)
+- [Architecture](docs/architecture.md) | [Commands](docs/list-of-commands.md) | [Copilot](.github/copilot-instructions.md)

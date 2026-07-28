@@ -375,11 +375,6 @@ project-root/
 +-- pages/
 |   +-- login.page.ts              # Page objects
 |
-+-- orchestrator/
-|   +-- bugasura-client.ts         # Bugasura MCP client
-|   +-- orchestrator.ts            # Run orchestration logic
-|   +-- skill-loader.ts            # Skill file loader
-|
 +-- requirements/
 |   +-- flipkart-foryou-tab.md     # Requirements document
 |

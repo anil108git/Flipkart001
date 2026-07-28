@@ -96,22 +96,13 @@ These commands are used in VS Code with GitHub Copilot or Claude Code.
 | `API_URL` | URL | API endpoint URL |
 | `TEST_USER_EMAIL` | Email | Test user email |
 | `TEST_USER_PASSWORD` | Password | Test user password |
-| `LLM_PROVIDER` | `gemini`, `local` | LLM provider (CI: gemini, dev: local) |
-| `GEMINI_API_KEY` | Key | Gemini API key (required for CI) |
-| `LOCAL_LLM_URL` | URL | Local LLM endpoint (default: `http://localhost:11434`) |
-| `LOCAL_LLM_MODEL` | Model name | Local model (default: `llama3`) |
+
 
 ### Usage Examples
 
 ```bash
 # Run against staging
 TEST_ENV=staging npx playwright test
-
-# Run with local LLM
-LLM_PROVIDER=local npx playwright test
-
-# Run with Gemini (CI default)
-LLM_PROVIDER=gemini GEMINI_API_KEY=xxx npx playwright test
 ```
 
 ---
@@ -123,15 +114,9 @@ LLM_PROVIDER=gemini GEMINI_API_KEY=xxx npx playwright test
 | `npm ci` | Install dependencies (clean install) |
 | `npx playwright install --with-deps` | Install Playwright browsers + OS deps |
 | `npx playwright test` | Run all tests in CI |
-| `npx ts-node orchestrator/orchestrator.ts` | Run healing orchestrator |
+
 
 ---
-
-## Orchestrator Commands
-
-| Command | Description |
-|---------|-------------|
-| `npx ts-node orchestrator/orchestrator.ts` | Run full orchestration (classify + heal + write-back) |
 
 
 
