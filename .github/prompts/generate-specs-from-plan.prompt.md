@@ -1,0 +1,400 @@
+---
+name: generate-specs-from-plan
+description: >
+  Generates Playwright spec files and page objects from an approved test
+  plan in specs/. Reads the plan, creates missing page objects in pages/,
+  and produces .spec.ts files following the coding-standards skill. Invoke
+  with /generate-specs-from-plan and provide the plan file path when prompted.
+mode: agent
+tools:
+  - filesystem
+  - playwright-mcp
+---
+
+# Generate Specs from Approved Test Plan
+
+You are acting as the **Generator agent**. Your job is to read an approved
+test plan from `specs/` and produce runnable Playwright spec files and
+page objects. You must follow the `coding-standards` skill for every line
+of code you write.
+
+Follow every phase in order. Do not skip phases. Do not proceed to the next
+phase without completing the current one.
+
+---
+
+## Input
+
+**Plan file path:** {{PLAN_FILE}}
+
+If PLAN_FILE was not provided, ask:
+> "Please provide the path to your approved test plan in specs/
+> (e.g. specs/flipkart-foryou-tab.md) to continue."
+
+---
+
+## Phase 1 — Read and Validate the Plan
+
+1. Read the file at **{{PLAN_FILE}}** from the filesystem.
+2. If the file does not exist, stop and tell the user:
+   > "File not found at `{{PLAN_FILE}}`. Please check the path and try again."
+3. Parse the plan header and extract:
+   - Feature name (from the H1 heading)
+   - Bugasura Requirement ID (e.g. `REQ-42`) if present
+   - Status — must be `READY` or approved by the user
+   - Spec file target (from the header)
+4. Parse all scenarios from the plan body:
+   - Extract scenario name, Given/When/Then steps, Source AC reference
+   - Count total scenarios
+5. Display what was parsed:
+   ```
+   Parsed: [Feature name]
+   REQ-ID: [REQ-ID or N/A]
+   Status: [DRAFT | READY | Approved]
+   Scenarios found: [N]
+   Spec target: tests/[feature-name].spec.ts
+   ```
+6. If Status is `DRAFT`, warn the user:
+   > "The plan status is DRAFT — it has not been verified against the live
+   > app. Proceeding anyway, but selectors may need adjustment after the
+   > first test run. Reply 'yes' to continue or 'no' to cancel."
+7. Ask the user to confirm:
+   > "Ready to generate specs from this plan. Reply 'yes' to proceed."
+
+**Do not proceed to Phase 2 without confirmation.**
+
+---
+
+## Phase 2 — Determine Page Objects Needed
+
+1. Scan the plan for all distinct page sections or UI areas referenced:
+   - Header, navigation, hero banner, footer, etc.
+   - Each distinct section = one page object class
+2. Check which page objects already exist in `pages/`:
+   ```
+   ls pages/
+   ```
+3. List what exists and what needs to be created:
+   ```
+   Existing:  login.page.ts (LoginPage)
+   To create: flipkart.page.ts (FlipkartPage — header, tabs, banner, sections, footer)
+   ```
+4. Confirm with the user:
+   > "I need to create [N] page object(s). Proceed?"
+
+---
+
+## Phase 3 — Create Page Objects
+
+For each missing page object, create the file following the `coding-standards` skill:
+
+### File location
+`pages/[feature-name].page.ts`
+
+### Class structure rules (from coding-standards skill)
+- Import `Page` and `Locator` from `@playwright/test`
+- Class name: `PascalCase + Page` (e.g. `FlipkartPage`)
+- Locators defined in constructor using role-first strategy:
+  1. `getByRole()` — always first
+  2. `getByLabel()` — for form inputs
+  3. `getByTestId()` — fallback only
+  4. CSS/XPath — prohibited
+- One locator property per element, named as descriptive noun:
+  - `searchInput`, `loginButton`, `cartIcon`, `forYouTab`
+- Methods: one action per method, no assertions, no test data
+- Navigation method: `async goto()`
+- No `page.waitForTimeout()` anywhere
+
+### Use live app selectors
+If the requirement file has an Appendix with real selectors (like
+`requirements/flipkart-foryou-tab.md` Appendix A), use those exact
+locators in the page object. For example:
+```
+Search Input: textbox "Search for Products, Brands and More"
+Login Button: link "Login"
+For You Tab:  link "For You"
+```
+
+### Template
+
+```typescript
+import { Page, Locator } from '@playwright/test';
+
+export class [Feature]Page {
+  readonly page: Page;
+
+  // Locators — role-first, one per element
+  readonly [elementName]: Locator;
+
+  constructor(page: Page) {
+    this.page = page;
+    this.[elementName] = page.getByRole('[role]', { name: '[name]' });
+  }
+
+  async goto() {
+    await this.page.goto(process.env.BASE_URL!);
+  }
+
+  async [actionMethod]([params]) {
+    // one action per method
+  }
+}
+```
+
+---
+
+## Phase 4 — Generate Spec Files
+
+For each scenario group in the plan (grouped by section/topic), generate
+a spec file following the `coding-standards` skill.
+
+### File location
+`tests/[feature-name].spec.ts`
+
+One spec file per feature. If the plan is very large (50+ scenarios),
+split into multiple files by section:
+```
+tests/
+├── flipkart-header.spec.ts
+├── flipkart-tabs.spec.ts
+├── flipkart-banner.spec.ts
+└── flipkart-sections.spec.ts
+```
+
+### Spec file rules (from coding-standards skill)
+
+1. **`test.describe` block references the REQ-ID:**
+   ```typescript
+   test.describe('Feature Name — REQ-42', () => { ... });
+   ```
+   If no REQ-ID, use the feature name only:
+   ```typescript
+   test.describe('Flipkart For You Tab', () => { ... });
+   ```
+
+2. **Test name = scenario name in `should` format:**
+   ```
+   Plan: "Verify search input field is displayed"
+   Test: test('should display search input field', async () => { ... })
+   ```
+
+3. **All interactions via page object** — no raw `page.click()` in specs.
+
+4. **All assertions in spec files** — no assertions in page objects.
+
+5. **`beforeEach` initializes page object and navigates:**
+   ```typescript
+   let flipkartPage: FlipkartPage;
+
+   test.beforeEach(async ({ page }) => {
+     flipkartPage = new FlipkartPage(page);
+     await flipkartPage.goto();
+   });
+   ```
+
+6. **Import test data from fixtures:**
+   ```typescript
+   import { searchTerms } from '../fixtures/data/search-terms.json';
+   ```
+
+7. **No hardcoded strings** — use imported data or parameters.
+
+8. **No `page.waitForTimeout()`** anywhere.
+
+9. **No `test.only`** committed.
+
+### Test Tags (Mandatory)
+
+Every test MUST have at least one tag. Tags are assigned based on the scenario's Type and Complexity from the plan.
+
+#### Tag Definitions
+
+| Tag | Description | When to Apply |
+|-----|-------------|---------------|
+| `@smoke` | Critical path — must pass before any release | Positive scenarios with Simple/Medium complexity |
+| `@regression` | Full test suite — run before major releases | All scenarios |
+| `@e2e` | End-to-end flow across multiple pages | Complex scenarios, multi-page flows |
+| `@ui` | UI element verification | Element visibility, layout, styling checks |
+| `@negative` | Error handling and validation | All Negative type scenarios |
+| `@edge-case` | Boundary and unusual inputs | All Edge Case type scenarios |
+| `@accessibility` | A11y compliance | Keyboard navigation, screen reader, ARIA |
+| `@performance` | Load time, rendering | Performance-related scenarios |
+| `@security` | Security validation | XSS, injection, auth bypass |
+
+#### Tag Assignment Rules
+
+| Scenario Type | Required Tags | Optional Tags |
+|---------------|---------------|---------------|
+| Positive + Simple | `@smoke` `@ui` | `@regression` |
+| Positive + Medium | `@smoke` `@regression` | `@e2e` |
+| Positive + Complex | `@e2e` `@regression` | `@smoke` |
+| Negative | `@negative` `@regression` | `@ui` |
+| Edge Case | `@edge-case` `@regression` | `@ui` |
+| Accessibility | `@accessibility` `@regression` | `@ui` |
+| Performance | `@performance` `@regression` | |
+
+#### Tag Usage in Spec Files
+
+Tags are added as comments above the test function:
+
+```typescript
+test.describe('[Feature Name] — [REQ-ID]', () => {
+
+  // @smoke @ui
+  test('should display search input field', async ({ page }) => {
+    // ...
+  });
+
+  // @negative @regression
+  test('should show error for empty search', async ({ page }) => {
+    // ...
+  });
+
+  // @e2e @regression
+  test('should complete full checkout flow', async ({ page }) => {
+    // ...
+  });
+
+});
+```
+
+#### Running Tests by Tag
+
+```bash
+# Run only smoke tests
+npx playwright test --grep @smoke
+
+# Run only regression tests
+npx playwright test --grep @regression
+
+# Run only e2e tests
+npx playwright test --grep @e2e
+
+# Run only negative tests
+npx playwright test --grep @negative
+
+# Run smoke + regression
+npx playwright test --grep "@smoke|@regression"
+```
+
+### Spec template
+
+```typescript
+// spec: specs/[plan-file].md
+// seed: tests/seed.spec.ts
+
+import { test, expect } from '@playwright/test';
+import { [Feature]Page } from '../pages/[feature].page';
+
+test.describe('[Feature Name] — [REQ-ID]', () => {
+
+  let [feature]Page: [Feature]Page;
+
+  test.beforeEach(async ({ page }) => {
+    [feature]Page = new [Feature]Page(page);
+    await [feature]Page.goto();
+  });
+
+  // @smoke @ui
+  test('should [expected behavior from scenario]', async ({ page }) => {
+    // Given — setup state via page object methods
+    // When — perform action via page object method
+    // Then — assert using Playwright matchers
+  });
+
+});
+```
+
+### For each scenario in the plan:
+1. Map Given → page object state setup or precondition
+2. Map When → page object action method call
+3. Map Then → `expect()` assertion in the spec
+4. If a scenario has TBD/ASSUMPTION tags, add a comment:
+   ```typescript
+   // TODO: [TBD description] — needs resolution before CI
+   test.skip('should [scenario name]', async () => {
+   ```
+   Use `test.skip` with a comment explaining why — never leave it
+   without explanation.
+
+---
+
+## Phase 5 — Write Files to Disk
+
+1. Write all page object files to `pages/`.
+2. Write all spec files to `tests/`.
+3. Display a summary:
+   ```
+   Generated files:
+   ✅ pages/flipkart.page.ts     — FlipkartPage (12 locators, 8 methods)
+   ✅ tests/flipkart-header.spec.ts  — 27 tests (23 positive, 4 negative)
+   ✅ tests/flipkart-tabs.spec.ts    — 24 tests
+   ✅ tests/flipkart-banner.spec.ts  — 13 tests
+   ✅ tests/flipkart-sections.spec.ts — 122 tests
+
+   Total: [N] tests across [N] spec files
+
+   Tags applied:
+   @smoke: [N] | @regression: [N] | @e2e: [N]
+   @ui: [N] | @negative: [N] | @edge-case: [N]
+   ```
+
+---
+
+## Phase 6 — Validate with TypeScript
+
+Run type-checking to catch errors before the user runs tests:
+```bash
+npx tsc --noEmit
+```
+
+If there are type errors:
+1. Display the errors
+2. Fix them automatically
+3. Re-run type-check until clean
+4. Report: "TypeScript check passed ✅"
+
+---
+
+## Phase 7 — Final Summary
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Spec generation complete — [feature name]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Plan:     [PLAN_FILE]
+REQ-ID:   [REQ-ID or N/A]
+Status:   [plan status]
+
+Page objects created:
+  ✅ pages/[file].page.ts — [ClassName]
+
+Spec files created:
+  ✅ tests/[file].spec.ts — [N] tests
+
+TypeScript check: ✅ passed
+
+Next steps:
+1. Run tests:  npx playwright test tests/[feature].spec.ts
+2. Fix issues: /heal-failed-run tests/[feature].spec.ts
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+---
+
+## Hard Rules (from coding-standards skill)
+
+- Never write raw `page.locator()`, `page.click()`, or `page.fill()` in spec files.
+- Never use CSS selectors, XPath, or positional locators (`.nth()`, `.first()`).
+- Never add assertions inside page object methods.
+- Never hardcode test data strings inside spec or page object files.
+- Never use `page.waitForTimeout()` anywhere.
+- Never create a page object without the constructor locator pattern.
+- Never combine two unrelated features into one spec file.
+- **Never create a test without at least one tag** — every test must be tagged.
+- Never commit `test.only` or `test.skip` without a comment explaining why.
+- Never invent a locator for an element not confirmed to exist — tag as TBD.
+- Always use `test.describe('Feature — REQ-ID')` format when REQ-ID exists.
+- Always run `npx tsc --noEmit` before reporting success.
+- Always use role-first locator strategy: getByRole > getByLabel > getByTestId.

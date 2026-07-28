@@ -1,0 +1,14 @@
+{
+  "valid": {
+    "email": "testuser@example.com",
+    "password": "Test@1234"
+  },
+  "locked": {
+    "email": "locked@example.com",
+    "password": "Test@1234"
+  },
+  "invalid": {
+    "email": "nonexistent@example.com",
+    "password": "WrongPass999"
+  }
+}

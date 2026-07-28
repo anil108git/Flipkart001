@@ -1,0 +1,19 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+fixtures/auth/.auth/
+
+# Environment files
+.env*
+!.env.example
+
+# MCP config (may contain API keys)
+mcp.config.json
+
+# Playwright CLI session files
+.playwright-cli/

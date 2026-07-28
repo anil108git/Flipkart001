@@ -1,0 +1,30 @@
+{
+  "name": "e2e-automation",
+  "version": "1.0.0",
+  "description": "AI-powered Playwright E2E automation framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:staging": "TEST_ENV=staging npx playwright test",
+    "test:report": "npx playwright show-report",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.0",
+    "@playwright/test": "^1.62.0",
+    "@types/node": "^26.1.1",
+    "dotenv": "^16.4.5",
+    "eslint": "^9.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^7.0.2"
+  }
+}
