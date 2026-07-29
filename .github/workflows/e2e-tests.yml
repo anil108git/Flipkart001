@@ -6,12 +6,19 @@ on:
   pull_request:
     branches: [main, master]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  test:
-    timeout-minutes: 60
+  # ─── DEV — runs on PR, merge-blocking ───────────────────────────────
+  test-dev:
+    name: E2E Tests (dev)
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
-    env:
-      TEST_ENV: dev
+    timeout-minutes: 60
+
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -20,41 +27,92 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
-      - name: Run Playwright tests
+        run: npx playwright install --with-deps chromium
+      - name: Run E2E tests (dev)
         run: npx playwright test
         env:
+          TEST_ENV: dev
           BUGASURA_API_KEY: ${{ secrets.BUGASURA_API_KEY }}
       - name: Upload HTML Report
         uses: actions/upload-artifact@v4
-        if: ${{ !cancelled() }}
+        if: always()
         with:
-          name: playwright-report
+          name: playwright-report-dev-${{ github.run_id }}
           path: playwright-report/
           retention-days: 14
       - name: Upload Traces on Failure
         uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: trace-files
+          name: trace-files-dev-${{ github.run_id }}
           path: test-results/
           retention-days: 14
 
-  deploy-report:
-    needs: test
-    if: ${{ !cancelled() && github.ref == 'refs/heads/main' }}
+  # ─── STAGING — runs post-merge, NOT merge-blocking, Healer on failure ─
+  test-staging:
+    name: E2E Tests (staging)
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     permissions:
+      contents: write
+      pull-requests: write
       pages: write
       id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+      - name: Run E2E tests (staging)
+        run: npx playwright test
+        env:
+          TEST_ENV: staging
+          BUGASURA_API_KEY: ${{ secrets.BUGASURA_API_KEY }}
+      - name: Upload HTML Report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report-staging-${{ github.run_id }}
+          path: playwright-report/
+          retention-days: 14
+      - name: Upload Traces on Failure
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: trace-files-staging-${{ github.run_id }}
+          path: test-results/
+          retention-days: 14
+
+      # ─── Healer Agent ────────────────────────────────────────────
+      - name: Install opencode
+        if: failure()
+        run: curl -fsSL https://opencode.ai/install | bash
+      - name: Run Healer on failures
+        if: failure()
+        run: node scripts/ci-heal.mjs
+        env:
+          TEST_ENV: staging
+          BUGASURA_API_KEY: ${{ secrets.BUGASURA_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # ─── Deploy report to GitHub Pages (staging only, overwrites previous) ─
+  deploy-report:
+    name: Publish Report to Pages
+    needs: test-staging
+    if: always() && github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
     steps:
       - name: Download Report
         uses: actions/download-artifact@v4
         with:
-          name: playwright-report
+          name: playwright-report-staging-${{ github.run_id }}
           path: playwright-report/
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
