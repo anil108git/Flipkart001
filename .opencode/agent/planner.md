@@ -1,7 +1,7 @@
 ---
 description: Creates comprehensive test plans for a web application or website, using the live app via Playwright MCP and the jira-to-test-plan / requirements-only-planning / test-categorization skills.
 mode: primary
-model: opencode/nemotron-3-ultra-free
+model: opencode/big-pickle
 permission:
   edit: allow
 ---
