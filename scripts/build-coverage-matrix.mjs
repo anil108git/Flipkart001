@@ -74,6 +74,7 @@ const summary = {
   escalated: 0,
   skipped: 0,
   na: 0,
+  blocked: 0,
   unknown: 0,
 };
 

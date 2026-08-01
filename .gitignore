@@ -12,9 +12,6 @@ fixtures/auth/.auth/
 .env*
 !.env.example
 
-# MCP config (may contain API keys)
-mcp.config.json
-
 # Playwright CLI session files
 .playwright-cli/
 

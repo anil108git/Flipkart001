@@ -70,6 +70,63 @@ If the issue key is not known, use JQL with Jira MCP:
 jira_search: jql="project = KAN AND summary ~ 'login' AND status != Closed"
 ```
 
+### Step 1.5 — Grooming gate (no-AC handling)
+
+Before planning, evaluate every Story for readiness. A Story is
+**NEEDS_GROOMING** when it has **zero** acceptance-criteria lines (no
+`*Acceptance Criteria*` heading, checklist, or numbered AC list in the
+description) AND the description does not otherwise state an observable
+outcome.
+
+For each NEEDS_GROOMING Story:
+
+1. **Create a `Question:` bug ticket** via `jira_create_issue`:
+   ```
+   jira_create_issue:
+     project_key: KAN
+     issue_type: Bug
+     summary: Question: [GROOMING] <STORY> lacks acceptance criteria
+     description: |
+       QA cannot plan tests for <STORY> ("<Summary>") because it has no
+       acceptance criteria.
+
+       **Needed:**
+       - 3-5 acceptance criteria lines (observable outcomes)
+       - Priority confirmation
+       - Any implied non-functional or performance requirements
+
+       **Epic:** <EPIC>
+       **Linked to:** <STORY>
+     additional_fields: '{"labels": ["grooming-question", "qa"]}'
+   ```
+   Note the returned key (e.g. `KAN-310`).
+2. **Link the question** to the Story and the Epic via `jira_link_issues`
+   (requires the `jira_links` toolset — see `opencode.json` `TOOLSETS`):
+   ```
+   jira_link_issues: issue_key=<question>, link_to_key=<STORY>
+   jira_link_issues: issue_key=<question>, link_to_key=<EPIC>
+   ```
+3. **Record the block** in `coverage-matrix.json`: add the Story under its
+   Epic with `status: "blocked"` and `blockedReason: "needs-grooming"` plus
+   the question-ticket key.
+4. **Append to `grooming-queue.json`** in the release folder:
+   ```json
+   {
+     "storyKey": "<STORY>",
+     "epicKey": "<EPIC>",
+     "questionKey": "<question>",
+     "askedAt": "YYYY-MM-DDTHH:MM:SSZ",
+     "status": "open"
+   }
+   ```
+5. **Exclude the Story from this release's plan** — do not plan scenarios,
+   do not generate specs, do not write a plan file.
+6. Log the decision (`node scripts/append-decision.mjs`) with
+   `decision: "blocked KAN-101 (needs-grooming) — question KAN-310 raised"`.
+
+The `/recheck-grooming` command later polls these question tickets, reads
+the PM's reply, converts it into AC, and re-plans the unblocked Story.
+
 ### Step 2 — Check for existing coverage in the tickets
 
 Before writing scenarios, look inside the issues for existing planning
@@ -206,6 +263,8 @@ password? AC-2 is silent on this."
 | List project versions | `jira_get_project_versions` |
 | Group epics under parents | `jira_get_project_epic_hierarchy` |
 | Add plan/comment to issue | `jira_add_comment` |
+| Create a `Question:` grooming bug | `jira_create_issue` |
+| Link question → Story/Epic | `jira_link_issues` |
 
 ---
 
@@ -213,6 +272,7 @@ password? AC-2 is silent on this."
 
 - `artifacts/release-<version>-<NN>/stories/test-plan-<STORY>-<version>.md`
 - `artifacts/release-<version>-<NN>/test-plan-<EPIC>-<version>.md`
+- `artifacts/release-<version>-<NN>/grooming-queue.json` (when any Story is NEEDS_GROOMING)
 - Coverage-matrix scenario rows (see release-artifacts skill)
 - Decision-log entries (see release-artifacts skill)
 
@@ -221,6 +281,8 @@ password? AC-2 is silent on this."
 ## What This Skill Must Never Do
 
 - Invent scenarios not traceable to a Jira AC line.
+- Plan a Story with zero AC lines without first running the grooming gate
+  (raise a `Question:` bug, link it, and block the Story).
 - Skip fetching the issue — always pull from Jira MCP first.
 - Confuse a bug ticket with the requirement ticket — fetch the issue that
   actually contains the AC.

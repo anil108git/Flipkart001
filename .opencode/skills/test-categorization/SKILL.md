@@ -78,6 +78,21 @@ optional (see requirements-only-planning skill).
 | `non-functional` | `reliability` | `@reliability` |
 | `performance` | any | `@performance` |
 
+### Priority tags
+
+Every scenario also carries exactly ONE priority tag, inherited from the
+Story's Jira priority:
+
+| Jira priority | Matrix `priority` | Required tag |
+|---------------|-------------------|--------------|
+| Highest, High | `p0` | `@priority-p0` |
+| Medium | `p1` | `@priority-p1` |
+| Low, Lowest | `p2` | `@priority-p2` |
+
+The Planner records `priority` on each matrix scenario; the Generator adds
+the matching `@priority-*` tag to the test. `@priority-p1` is the default
+when Jira priority is unset.
+
 Every test carries at least one tag (existing coding-standards rule).
 
 ---
@@ -91,11 +106,13 @@ scenario records in `coverage-matrix.json`:
 {
   "id": "KAN-101-001",
   "source": "AC-1",
+  "acText": "Search box is visible on the header",
+  "priority": "p1",
   "title": "Search box is visible",
   "category": "positive",
   "subtype": null,
   "complexity": "Simple",
-  "tags": ["@smoke", "@ui"],
+  "tags": ["@smoke", "@ui", "@priority-p1"],
   "status": "planned",
   "na": false,
   "rationale": null,
@@ -131,3 +148,4 @@ For each of the 5 categories on a Story:
 - Give a scenario more than one `category` — use `subtype` for nuance.
 - Mark `na` without a `rationale` in the coverage matrix.
 - Tag a scenario `@performance` without a `performance` category.
+- Omit the `priority` field or the `@priority-*` tag on a scenario — default `p1` when unset.

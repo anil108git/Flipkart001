@@ -65,7 +65,12 @@ skills:
 
 1. `jira_get_issue` the Story (fields include AC, priority, labels,
    fixVersions, parent Epic).
-2. Map every AC line to scenarios across the 5 categories:
+2. **Grooming gate** — if the Story has zero AC lines, do NOT plan it.
+   Raise a `Question:` bug via `jira_create_issue`, link it to the Story
+   and Epic via `jira_link_issues`, record `status: "blocked"` in
+   `coverage-matrix.json`, and append to `grooming-queue.json`. Report the
+   block to the user. (Full procedure: `jira-to-test-plan` Step 1.5.)
+3. Map every AC line to scenarios across the 5 categories:
    positive, negative, edge, non-functional, performance (minimum rule +
    `na`-with-rationale per `test-categorization`).
 3. Write one plan per Story:
@@ -73,7 +78,9 @@ skills:
 4. Write the Epic aggregate plan:
    `artifacts/release-<version>-<NN>/test-plan-<EPIC>-<version>.md`
 5. Append each story's scenario rows to `coverage-matrix.json`
-   (`epics[].stories[].scenarios[]`) with `status: "planned"`.
+   (`epics[].stories[].scenarios[]`) with `status: "planned"`, including
+   `acText` (verbatim AC line) and `priority` (`p0`/`p1`/`p2` from the
+   Story's Jira priority).
 6. Log one planning decision per story:
    ```
    node scripts/append-decision.mjs artifacts/release-<version>-<NN> '{
@@ -101,7 +108,10 @@ Using the `coding-standards` and `test-data-setup` skills:
    ```
    test.describe('[Feature Name] — <STORY> (Epic: <EPIC>)', () => { ... })
    ```
-   and the category tags from `test-categorization`.
+   the category tags from `test-categorization`, the `@priority-*` tag from
+   the scenario priority, and the mandatory
+   `test.info().annotations` AC/story/epic/priority block per test (see
+   coding-standards skill).
 3. Update `coverage-matrix.json` scenario rows to `status: "generated"`
    (add `specFile` + `testName`).
 4. Run `npx tsc --noEmit` and fix any type errors.

@@ -44,6 +44,7 @@ If $ARGUMENTS was not provided, ask:
 4. Parse all scenarios from the plan body:
    - Extract scenario name, Given/When/Then steps, Source AC reference
    - Extract Category (positive/negative/edge/non-functional/performance)
+   - Extract Priority (p0/p1/p2 from the plan header field)
    - Count total scenarios
 5. Display what was parsed:
    ```
@@ -176,6 +177,16 @@ tests/
 Every test MUST have at least one tag. Tags are assigned based on the scenario's Category and Complexity from the plan.
 Apply tags per the [coding-standards skill](.opencode/skills/coding-standards/SKILL.md#test-tags), including the 5-category tags
 `@negative`, `@edge-case`, `@a11y`, `@security`, `@compat`, `@usability`, `@reliability`, `@performance`.
+Each test must ALSO carry its `@priority-p0` / `@priority-p1` / `@priority-p2` tag matching the scenario's `Priority`
+field in the plan.
+
+### AC Annotations (Mandatory)
+
+Every generated `test()` MUST begin with a `test.info().annotations.push(...)`
+call carrying `story`, `epic`, `AC`, and `priority` entries, using the
+scenario's `Source`/AC line text and `Priority` from the plan. Follow the
+[AC annotations rule](.opencode/skills/coding-standards/SKILL.md#ac-annotations-mandatory)
+in the coding-standards skill exactly.
 
 ### Spec template
 
@@ -195,8 +206,14 @@ test.describe('[Feature Name] — [STORY] (Epic: [EPIC])', () => {
     await [feature]Page.goto();
   });
 
-  // @smoke @ui
+  // @smoke @ui @priority-p1
   test('should [expected behavior from scenario]', async ({ page }) => {
+    test.info().annotations.push(
+      { type: 'story', description: '[STORY]' },
+      { type: 'epic', description: '[EPIC]' },
+      { type: 'AC', description: '[AC-n] — [verbatim AC text]' },
+      { type: 'priority', description: '[p0|p1|p2]' }
+    );
     // Given — setup state via page object methods
     // When — perform action via page object method
     // Then — assert using Playwright matchers
@@ -238,6 +255,7 @@ test.describe('[Feature Name] — [STORY] (Epic: [EPIC])', () => {
    @smoke: [N] | @regression: [N] | @e2e: [N]
    @ui: [N] | @negative: [N] | @edge-case: [N]
    @a11y: [N] | @security: [N] | @performance: [N]
+   @priority-p0: [N] | @priority-p1: [N] | @priority-p2: [N]
    ```
 
 ---
@@ -290,3 +308,4 @@ Follow the [What the Generator Must Never Do](.opencode/skills/coding-standards/
 Additional rules:
 - Always run `npx tsc --noEmit` before reporting success.
 - Never create a test without at least one tag — every test must be tagged.
+- Never create a test without the `test.info().annotations` AC/story/epic/priority block.

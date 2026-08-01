@@ -177,18 +177,36 @@ test.describe('Login — KAN-101 (Epic: KAN-45)', () => {
 
   // Happy path — static data
   test('should log in with valid credentials', async ({ page }) => {
+    test.info().annotations.push(
+      { type: 'story', description: 'KAN-101' },
+      { type: 'epic', description: 'KAN-45' },
+      { type: 'AC', description: 'AC-1 — Registered users can log in with email and password' },
+      { type: 'priority', description: 'p1' }
+    );
     await loginPage.login(users.valid.email, users.valid.password);
     await expect(page).toHaveURL('/dashboard');
   });
 
   // Negative path — static data
   test('should show error for invalid password', async () => {
+    test.info().annotations.push(
+      { type: 'story', description: 'KAN-101' },
+      { type: 'epic', description: 'KAN-45' },
+      { type: 'AC', description: 'AC-2 — An error message is shown for invalid credentials' },
+      { type: 'priority', description: 'p1' }
+    );
     await loginPage.login(users.valid.email, 'wrong-password');
     await expect(loginPage.errorMessage).toBeVisible();
   });
 
   // Edge case — dynamic data
   test('should reject email with special characters', async () => {
+    test.info().annotations.push(
+      { type: 'story', description: 'KAN-101' },
+      { type: 'epic', description: 'KAN-45' },
+      { type: 'AC', description: 'AC-2 — An error message is shown for invalid credentials' },
+      { type: 'priority', description: 'p2' }
+    );
     const edgeUser = generateUser({ emailPrefix: '"><script>' });
     await loginPage.login(edgeUser.email, edgeUser.password);
     await expect(loginPage.errorMessage).toBeVisible();
@@ -196,6 +214,23 @@ test.describe('Login — KAN-101 (Epic: KAN-45)', () => {
 
 });
 ```
+
+### AC annotations (mandatory)
+
+Every generated `test()` MUST call `test.info().annotations.push(...)` as
+its FIRST statement, with exactly these entries:
+
+| `type` | `description` | Source |
+|--------|---------------|--------|
+| `story` | Story key (e.g. `KAN-101`) | plan header |
+| `epic` | Epic key (e.g. `KAN-45`) | plan header |
+| `AC` | `AC-<n> — <verbatim AC text>` | scenario `source` + `acText` |
+| `priority` | `p0` \| `p1` \| `p2` | scenario `priority` |
+
+These annotations make the AC, story, epic, and priority visible in the
+Playwright HTML report and feed the coverage matrix (`specFile` +
+`testName` + `acText` + `priority`). They are added by the Generator, never
+hand-written into the plan.
 
 ### Spec file rules
 - **`test.describe` block always references the Story key and Epic key** — e.g. `'Login — KAN-101 (Epic: KAN-45)'` (see epic-story-traceability skill).
@@ -207,6 +242,9 @@ test.describe('Login — KAN-101 (Epic: KAN-45)', () => {
 - **No `test.only`** committed to the repo.
 - **No `page.waitForTimeout()`** anywhere.
 - **Every test must have at least one tag** — see Test Tags section below.
+- **Every test starts with AC/story/epic/priority annotations** — see AC
+  annotations section above. Annotations are the first statement inside each
+  `test()`.
 
 ---
 
@@ -257,6 +295,9 @@ in `coverage-matrix.json`.
 | `@usability` | UX usability checks | Non-functional/usability |
 | `@reliability` | Reliability / recovery | Non-functional/reliability |
 | `@performance` | Load time, rendering, throughput | Performance scenarios |
+| `@priority-p0` | P0 — blocking/high priority (Jira Highest/High) | Highest/High priority scenarios |
+| `@priority-p1` | P1 — default (Jira Medium) | Medium priority scenarios |
+| `@priority-p2` | P2 — low (Jira Low/Lowest) | Low/Lowest priority scenarios |
 
 ### Tag Assignment Rules
 
@@ -269,6 +310,11 @@ in `coverage-matrix.json`.
 | Edge Case | `@edge-case` `@regression` | `@ui` |
 | Non-Functional | `@a11y` / `@security` / `@compat` / `@usability` / `@reliability` (matching subtype) `@regression` | `@ui` |
 | Performance | `@performance` `@regression` | — |
+| Any scenario | `@priority-p0` / `@priority-p1` / `@priority-p2` (matching scenario priority) | — |
+
+Every test carries at least one tag (existing coding-standards rule). The
+`@priority-*` tag is mandatory — the Generator derives it from the
+scenario's `priority` field in the plan/coverage matrix.
 
 ### Tag Usage in Spec Files
 
@@ -334,3 +380,4 @@ See [test-data-setup skill](../test-data-setup/SKILL.md) for data strategy and [
 - Combine two unrelated features into one spec file.
 - Commit `test.only` or `test.skip` without a comment explaining why.
 - Invent a locator for an element not yet confirmed to exist in the live DOM (tag as `TBD` instead).
+- Omit the `test.info().annotations` AC/story/epic/priority block from a test — it breaks RTM traceability.

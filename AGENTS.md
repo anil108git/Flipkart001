@@ -9,7 +9,7 @@ spec development using dedicated opencode free models per task type via multi-mo
   healer, coverage-analyst (subagents)
 - Commands in `.opencode/command/`: `/plan-release`, `/create-testplan`,
   `/generate-specs-from-plan`, `/heal-failed-run`, `/update-requirement`,
-  `/generate-coverage-matrix`
+  `/generate-coverage-matrix`, `/recheck-grooming`
 - Skills in `.opencode/skills/`: coding-standards, requirements-only-planning,
   jira-to-test-plan, test-data-setup, ci-reporting, healing-policy, jira-write-back,
   epic-story-traceability, release-artifacts, test-categorization
@@ -36,9 +36,10 @@ spec development using dedicated opencode free models per task type via multi-mo
 3. **Code Generation** → `/generate-specs-from-plan` → `opencode/north-mini-code-free` → `.ts` files
 4. **Cross-Review** → `opencode/big-pickle` (must differ from generator) → PASS/FAIL report
 5. **Execution** → `npx playwright test`
-6. **Coverage** → `/generate-coverage-matrix` → `opencode/big-pickle` → `coverage-matrix.json`
-7. **Healing** → `/heal-failed-run` → `opencode/mimo-v2.5-free` → fix or escalate
+6. **Coverage** → `/generate-coverage-matrix` → `opencode/big-pickle` → `coverage-matrix.json` + `rtm.md`
+7. **Healing** → `/heal-failed-run` → `opencode/mimo-v2.5-free` → fix (locators only) or escalate
 8. **Defect Reporting** → `opencode/ling-3.0-flash-free` → Jira write-back
+9. **Grooming** → `/recheck-grooming` (no-AC stories blocked with a linked Question bug until PM replies) → `opencode/nemotron-3-ultra-free`
 
 ## Cross-Verification Rules
 
@@ -54,8 +55,14 @@ spec development using dedicated opencode free models per task type via multi-mo
 - Env config via `.env.<env>` using `TEST_ENV`
 - Spec `test.describe` embeds traceability:
   `test.describe('[Feature Name] — <STORY> (Epic: <EPIC>)', () => { ... })`
+- Every `test()` starts with `test.info().annotations` carrying `story`,
+  `epic`, `AC`, and `priority` (see coding-standards skill)
 - Scenario categories: positive / negative / edge / non-functional / performance
-- Every release writes `agent-decision-log.json` + `coverage-matrix.json` under its folder
+- Scenario priority: `@priority-p0` / `@priority-p1` / `@priority-p2` tags inherited from Jira priority
+- Every release writes `agent-decision-log.json` + `coverage-matrix.json` (+ `rtm.md` via `build-rtm.mjs`) under its folder
+- Jira bugs (healer escalation, defect reporting) use **human-readable descriptions** — what the user did,
+  expected vs actual, reproduction steps, impact — never raw Playwright errors/stack traces. Evidence
+  (trace.zip, screenshot) is attached to the issue via `jira_update_issue` attachments
 
 ## Environment Variables
 

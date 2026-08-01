@@ -6,30 +6,36 @@ Visual reference showing what each command and component in the framework is res
 
 ## Command Responsibilities
 
-| Capability | `plan-release` | `create-testplan` | `generate-specs-from-plan` | `update-requirement` | `heal-failed-run` | `generate-coverage-matrix` |
-|------------|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Resolve Jira scope (Story/Epic/JQL)** | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **Derive release version from fixVersion** | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **Scaffold release artifact folder** | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Create plan from Jira issue key** | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Create plan from local .md file** | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Create plan from URL** | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **Classify scenarios (5 categories)** | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ |
-| **Classify scenarios (Complexity)** | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ |
-| **Ensure coverage (positive/negative/edge/nf/perf)** | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ |
-| **Detect requirement changes (diff)** | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| **Update existing plan (incremental)** | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| **Generate spec files (first time)** | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| **Update spec files (incremental)** | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| **Create page objects** | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| **Update page objects** | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| **Apply test tags** | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| **TypeScript validation** | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| **Classify test failures** | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| **Auto-fix locator/copy/route issues** | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| **Escalate to Jira** | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| **Update healing-log.md / decision log** | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
-| **Reconcile results into coverage matrix** | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
+| Capability | `plan-release` | `create-testplan` | `generate-specs-from-plan` | `update-requirement` | `recheck-grooming` | `heal-failed-run` | `generate-coverage-matrix` |
+|------------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Resolve Jira scope (Story/Epic/JQL)** | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Derive release version from fixVersion** | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Scaffold release artifact folder** | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Grooming gate — raise Question bug + block** | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Poll Question bugs for PM reply** | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| **Unblock + re-plan a Story** | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| **Create plan from Jira issue key** | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| **Create plan from local .md file** | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Create plan from URL** | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Classify scenarios (5 categories)** | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ |
+| **Classify scenarios (Complexity)** | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ |
+| **Assign priority (p0/p1/p2)** | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ |
+| **Ensure coverage (positive/negative/edge/nf/perf)** | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ |
+| **Detect requirement changes (diff)** | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| **Update existing plan (incremental)** | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| **Generate spec files (first time)** | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| **Update spec files (incremental)** | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| **Create page objects** | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| **Update page objects** | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| **Apply test tags (incl. priority)** | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| **Add AC/story/epic annotations** | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| **TypeScript validation** | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| **Generate RTM report (rtm.md)** | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Classify test failures** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| **Auto-fix locator/timeout (page objects only)** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| **Escalate to Jira (+human-readable desc +link +attachment)** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| **Update healing-log.md / decision log** | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ | ✅ |
+| **Reconcile results into coverage matrix** | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
 
 ---
 
@@ -123,12 +129,16 @@ Visual reference showing what each command and component in the framework is res
 │   classifyError()                                               │
 │          │                                                      │
 │          ├─► LOCATOR_MISSING ──► AUTO_FIX ──► re-run ──► pass?  │
-│          ├─► COPY_MISMATCH  ──► AUTO_FIX ──► re-run ──► pass?  │
-│          ├─► ROUTE_CHANGE   ──► AUTO_FIX ──► re-run ──► pass?  │
+│          ├─► LOCATOR_AMBIGUOUS─► AUTO_FIX ──► re-run ──► pass?  │
 │          ├─► TIMEOUT        ──► AUTO_FIX ──► re-run ──► pass?  │
+│          ├─► COPY_MISMATCH  ──► ESCALATE ──► Jira issue        │
+│          ├─► ROUTE_CHANGE   ──► ESCALATE ──► Jira issue        │
 │          ├─► FLAKY          ──► ESCALATE ──► Jira issue       │
 │          ├─► ASSERTION_LOGIC──► ESCALATE ──► Jira issue       │
 │          └─► UNKNOWN        ──► ESCALATE ──► Jira issue       │
+│                                                                 │
+│   Escalations: create bug (human-readable description) → link to Story/Epic │
+│   → attach trace + screenshot (evidence files, not stack dumps in Jira)      │
 │                                                                 │
 │   Every action → agent-decision-log.json + coverage-matrix.json │
 │                                                                 │
@@ -201,6 +211,9 @@ What do you want to do?
 ├─► Update plan when requirement file changes
 │     └─► /update-requirement [old-file] [new-file] [plan-file]
 │
+├─► Check whether grooming questions were answered
+│     └─► /recheck-grooming [release-folder]
+│
 ├─► Fix failing Playwright tests
 │     └─► /heal-failed-run [spec-file | last]
 │
@@ -221,7 +234,8 @@ requirements/*.md         →  /create-testplan     →  artifacts/release-<v>-<
 test-plan-*.md            →  /generate-specs-from-plan → tests/kan-*.spec.ts + pages/*.page.ts
 requirements/*.md (old)   →  /update-requirement  →  test-plan-*.md (updated)
 requirements/*.md (new)   →  /update-requirement  →  test-plan-*.md (updated)
-tests/*.spec.ts (failures)→  /heal-failed-run     →  auto-fix or Jira issue
-test-results/results.json →  /generate-coverage-matrix → coverage-matrix.json (summary)
+grooming-queue.json       →  /recheck-grooming    →  Story re-planned + unblocked
+tests/*.spec.ts (failures)→  /heal-failed-run     →  auto-fix (page object) or Jira issue (human-readable + linked + trace/screenshot attached)
+test-results/results.json →  /generate-coverage-matrix → coverage-matrix.json (summary) + rtm.md
 all phases               →  append-decision.mjs   →  agent-decision-log.json
 ```

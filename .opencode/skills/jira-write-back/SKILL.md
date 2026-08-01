@@ -230,6 +230,8 @@ are posted once per Epic.
 | Post Epic roll-up comment | `jira_add_comment` |
 | Update status custom field | `jira_update_issue` |
 | Discover custom field IDs | `jira_search_fields` |
+| Link bug → Story/Epic (used by healer) | `jira_link_issues` |
+| Upload trace/screenshot (used by healer) | `jira_update_issue` (`attachments`) |
 
 ---
 

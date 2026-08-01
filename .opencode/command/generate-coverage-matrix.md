@@ -33,12 +33,17 @@ Follow the `release-artifacts` and `test-categorization` skills.
    ```
    (Optionally a custom results file:
    `node scripts/build-coverage-matrix.mjs <releaseFolder> test-results/results.json`.)
-3. Read the updated `coverage-matrix.json` and report the summary.
-4. Audit coverage gaps per `test-categorization`:
+3. Generate the human-readable traceability report:
+   ```
+   node scripts/build-rtm.mjs <releaseFolder>
+   ```
+4. Read the updated `coverage-matrix.json` and report the summary.
+5. Audit coverage gaps per `test-categorization`:
    - Every Story has ≥1 positive + ≥1 negative + ≥1 edge per AC.
    - Non-functional/performance are planned or `na` with a rationale.
    - Flag any `na` without a rationale.
-5. Log a decision entry:
+   - Flag any scenario missing `acText` or `priority`.
+6. Log a decision entry:
    ```
    node scripts/append-decision.mjs <releaseFolder> '{
      "phase": "coverage-analysis",
@@ -47,7 +52,7 @@ Follow the `release-artifacts` and `test-categorization` skills.
      "input": "<releaseFolder>",
      "decision": "reconciled matrix / found N gaps",
      "rationale": "<details>",
-     "outputArtifacts": ["coverage-matrix.json"]
+     "outputArtifacts": ["coverage-matrix.json", "rtm.md"]
    }'
    ```
 
@@ -55,7 +60,10 @@ Follow the `release-artifacts` and `test-categorization` skills.
 
 ```
 Coverage summary:
-  passed: N | failed: N | skipped: N | escalated: N | planned: N | na: N
+  passed: N | failed: N | skipped: N | escalated: N | planned: N | na: N | blocked: N
+
+rtm.md regenerated: <releaseFolder>/rtm.md
+Priority: p0: N | p1: N | p2: N
 
 Gaps found: [N]
   Story      | Category       | Issue

@@ -22,10 +22,15 @@ Follow the `release-artifacts` and `test-categorization` skills.
    ```
    (Optionally pass a custom results file:
    `node scripts/build-coverage-matrix.mjs <folder> test-results/results.json`.)
-3. Review the recomputed summary and report deltas to the user:
+3. Regenerate the traceability report:
+   ```
+   node scripts/build-rtm.mjs artifacts/release-<version>-<NN>
+   ```
+4. Review the recomputed summary and report deltas to the user:
    ```
    Coverage after run <id>:
-     passed: N | failed: N | skipped: N | escalated: N | planned: N | na: N
+     passed: N | failed: N | skipped: N | escalated: N | planned: N | na: N | blocked: N
+   rtm.md: artifacts/release-<version>-<NN>/rtm.md (p0: N | p1: N | p2: N)
    ```
 
 ### B — Audit coverage gaps
@@ -37,6 +42,7 @@ Cross-check the matrix against the 5-category minimum rule
 - Non-functional/performance are either planned or recorded `na` with a
   rationale.
 - Any `na` without a rationale → flag it.
+- Any scenario missing `acText` or `priority` → flag it.
 
 Report gaps as a table:
 ```
@@ -56,7 +62,7 @@ node scripts/append-decision.mjs artifacts/release-<version>-<NN> '{
   "input": "<run id or audit request>",
   "decision": "reconciled matrix / found N gaps",
   "rationale": "<details>",
-  "outputArtifacts": ["coverage-matrix.json"]
+  "outputArtifacts": ["coverage-matrix.json", "rtm.md"]
 }'
 ```
 

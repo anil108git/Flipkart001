@@ -16,7 +16,8 @@
       "environment": {
         "JIRA_URL": "https://kanilme.atlassian.net",
         "JIRA_USERNAME": "{env:JIRA_USER_EMAIL}",
-        "JIRA_API_TOKEN": "{env:JIRA_API_TOKEN}"
+        "JIRA_API_TOKEN": "{env:JIRA_API_TOKEN}",
+        "TOOLSETS": "default,jira_links,jira_attachments"
       }
     }
   }

@@ -257,7 +257,7 @@ See [responsibility-map](responsibility-map.md) for the full component-to-purpos
 |----------|----------|
 | Skills (10) | `.opencode/skills/*/SKILL.md` |
 | Agents (5) | `.opencode/agent/*.md` |
-| Commands (6) | `.opencode/command/*.md` |
+| Commands (7) | `.opencode/command/*.md` |
 | MCP config | `opencode.json` |
 
 ## Data Flow

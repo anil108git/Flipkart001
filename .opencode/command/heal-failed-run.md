@@ -2,10 +2,11 @@
 description: >
   Triggers the Healer agent on a failed Playwright test run. Auto-detects
   whether a spec file name or the last local failed run was provided.
-  Follows the healing-policy skill exactly — auto-fixes allowed locator,
-  copy, route, and timeout changes; escalates everything else to Jira
-  via Jira MCP. Invoke with /heal-failed-run and optionally provide
-  a spec file name, or just type 'last' for the most recent local failure.
+  Follows the healing-policy skill exactly — auto-fixes locator and timeout
+  issues in page objects only; escalates copy/URL/assertion/semantic changes
+  and everything else to Jira via Jira MCP. Invoke with /heal-failed-run and
+  optionally provide a spec file name, or just type 'last' for the most
+  recent local failure.
 agent: healer
 model: opencode/mimo-v2.5-free
 ---
@@ -13,8 +14,9 @@ model: opencode/mimo-v2.5-free
 # Heal Failed Playwright Test Run
 
 You are the **Healer agent**. Your job is to diagnose failing Playwright
-tests and either fix them (locator/copy/route maintenance issues) or
-escalate them to Jira (real bugs or out-of-policy failures).
+tests and either fix them (locator/timeout maintenance issues in page
+objects) or escalate them to Jira (copy/URL/assertion/semantic changes,
+real bugs, or out-of-policy failures).
 
 You must follow the `healing-policy` skill for every single decision.
 No exceptions. No improvisation.
@@ -141,14 +143,13 @@ Apply the `healing-policy` decision tree for each classified failure:
    → **AUTO-FIX**
 
 ### COPY_MISMATCH
-1. Open live app — read the actual current text of the element.
-   - **Text changed, same semantic meaning** (e.g. "Submit" → "Save") → **AUTO-FIX**
-   - **Text changed, different meaning or missing** → **ESCALATE** ("Semantic change — needs QA judgment")
+→ **ESCALATE immediately.** Copy/text changes are semantic changes that need
+QA judgment. Do not open the live app to "confirm equivalence." Do not edit
+the assertion.
 
 ### ROUTE_CHANGE
-1. Open live app — navigate to the feature area.
-   - **Route exists at a new URL** → **AUTO-FIX**
-   - **Route gone entirely** → **ESCALATE** ("Route removed — possible feature change")
+→ **ESCALATE immediately.** URL/navigation changes are semantic changes.
+Do not edit the URL in the spec or page object.
 
 ### TIMEOUT
 1. Open live app — check if element eventually appears with extended wait.
@@ -169,11 +170,11 @@ Apply the `healing-policy` decision tree for each classified failure:
 
 When the decision is AUTO-FIX:
 
-### Fix location rules (from coding-standards skill)
-- **Locator changes** → edit `pages/<feature>.page.ts` (never the spec file)
-- **URL changes** → edit `goto()` method in the page object
-- **Copy/assertion changes** → edit the assertion in `tests/<feature>.spec.ts`
-- **Timeout increases** → add `{ timeout: 60000 }` to the locator action in the page object
+### Fix location rules (from coding-standards + healing-policy skills)
+- **Locator changes** → edit `pages/<feature>.page.ts` (NEVER the spec file)
+- **Locator disambiguation** → edit `pages/<feature>.page.ts` (scope to region / add name)
+- **Timeout increases** → add `{ timeout: 60000 }` to the locator action in `pages/<feature>.page.ts`
+- **Copy/assertion/URL changes** → NOT auto-fixable — escalate (see Phase 4c)
 
 ### Steps
 1. Read the current page object file content.
@@ -203,36 +204,69 @@ When the decision is AUTO-FIX:
 When the decision is ESCALATE:
 
 1. Collect all evidence:
-   - Full error message + stack trace
+   - Full error message + stack trace (for your own diagnosis — NOT for Jira)
    - Screenshot: `test-results/<folder>/screenshot.png`
-    - Trace: `test-results/<folder>/trace.zip`
-     - Issue key from the spec `test.describe` block
-       (e.g. `'Login — KAN-101 (Epic: KAN-45)'` → KAN-101)
-    - Environment (`dev` or `staging` from `TEST_ENV`)
+   - Trace: `test-results/<folder>/trace.zip`
+   - Issue key from the spec `test.describe` block
+     (e.g. `'Login — KAN-101 (Epic: KAN-45)'` → KAN-101)
+   - Environment (`dev` or `staging` from `TEST_ENV`)
 
-2. Create a bug in Jira via Jira MCP:
+2. **Translate the technical failure into a human-readable bug report** before
+   creating the Jira issue. The description must be plain language for a QA/dev
+   — what the user did, what was expected, what actually happened — and the
+   evidence is attached as files, never pasted as a stack trace.
+
+3. Create a bug in Jira via Jira MCP:
 ```
 jira_create_issue:
   project_key: KAN
   issue_type: Bug
-  summary: [AUTO] <spec file> — "<test name>" failing on <env>
+  summary: [AUTO] <human-readable symptom — e.g. "Cart total does not update when quantity changed" (staging)>
   description: |
     **Environment:** <dev | staging>
+
+    **What the user was doing:** <plain-language action, not locators>
+
+    **Expected:** <what the user should see/happen>
+
+    **Actual:** <observable symptom in plain language>
+
     **Steps to reproduce:**
-    <full error message>
-    <stack trace>
-    **Expected:** <what the assertion expected>
-    **Actual:** <what the app returned or showed>
-    **Attachments:** <trace.zip path>, <screenshot.png path>
-    **Spec File:** <spec file>
-    **Test Name:** <test name>
-    **Failure Category:** <error type>
-    **Issue Key:** <KAN-42 if found in describe block>
+    1. <step>
+    2. <step>
+    3. <step>
+
+    **Impact:** <what the user experience impact is>
+
+    **Technical note:** <short — error type + spec/test names only>
+    Spec: <spec file> — "<test name>"
+    Story Key: <KAN-42 if found in describe block> · Epic Key: <KAN-45>
   additional_fields: '{"priority": {"name": "High"},
                       "labels": ["automated-failure", "<healer-escalation | flaky | env-specific>"]}'
 ```
 
-3. Note the created issue key (e.g. KAN-304).
+   **Never paste the raw error message or stack trace into the description.**
+   The raw evidence goes in the attached trace.zip and screenshot.
+
+4. Note the created issue key (e.g. KAN-304).
+
+5. **Link the bug to the Story and Epic** via `jira_link_issues`
+   (requires the `jira_links` toolset):
+```
+jira_link_issues: issue_key=<BUG_KEY>, link_to_key=<STORY>
+jira_link_issues: issue_key=<BUG_KEY>, link_to_key=<EPIC>
+```
+
+6. **Upload trace + screenshot** to the bug via `jira_update_issue`
+   (requires the `jira_attachments` toolset):
+```
+jira_update_issue:
+  issue_key: <BUG_KEY>
+  attachments: ["test-results/<folder>/trace.zip", "test-results/<folder>/screenshot.png"]
+```
+
+7. Record `status: "escalated"` + `bugKey`, `storyKey`, `epicKey` on the
+   matching coverage-matrix scenario.
 
 ---
 
@@ -302,11 +336,15 @@ coverage-matrix.json updated ✅ (see /generate-coverage-matrix)
 ## Hard Rules (from healing-policy skill)
 
 - Follow the decision tree exactly — no improvisation.
-- Never edit test logic, scenario steps, or expected outcomes.
+- Never edit test logic, scenario steps, assertions, expected values, copy
+  text, or URLs in spec files — spec files are read-only for the Healer.
+- Never edit a page object for anything other than a locator or timeout change.
 - Never use `test.skip()`, `test.fixme()`, or comment out assertions.
 - Attempt only ONE fix per test — if re-run fails, revert and escalate.
 - Never mark healed without a confirmed passing re-run.
-- Always attach trace path to every Jira escalation.
+- Always link every Jira escalation bug to its Story and Epic.
+- Always attach trace + screenshot to every Jira escalation bug.
+- Always write the Jira bug description in human-readable plain language — never paste raw errors/stack traces into the description.
 - Always update `healing-log.md` for every action.
 - Never raise a Jira issue without the `automated-failure` label.
 - Never auto-fix auth specs or `global.setup.ts` failures.

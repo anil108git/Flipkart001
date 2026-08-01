@@ -48,6 +48,12 @@ Use the Jira MCP to fetch the ticket. Extract:
 
 If the Jira MCP is unavailable, ask the user to paste the ticket text directly.
 
+**Grooming gate:** if the ticket has **zero** AC lines, do NOT write a plan.
+Stop and follow the `jira-to-test-plan` skill Step 1.5 — raise a
+`Question:` bug, link it to the Story/Epic, and mark the Story blocked in
+`coverage-matrix.json` + `grooming-queue.json`. Planning resumes via
+`/recheck-grooming` once the PM replies.
+
 ### Step 2 — Map AC lines to scenarios
 Each acceptance criteria line = one or more scenarios. Work through them in order:
 - One scenario per distinct user behavior or outcome described

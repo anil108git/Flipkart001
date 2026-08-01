@@ -31,6 +31,10 @@ All commands available in the AI-powered Playwright E2E framework.
 | `npx playwright test --project=chromium` | Run Chromium project only |
 | `npx playwright test tests/login.spec.ts` | Run specific spec file |
 | `npx playwright test --grep "should login"` | Run tests matching pattern |
+| `npx playwright test --grep "@priority-p0"` | Run only P0 (blocking) tests |
+| `npx playwright test --grep "@priority-p1"` | Run only P1 tests |
+| `npx playwright test --grep "@priority-p2"` | Run only P2 tests |
+| `npx playwright test --grep "@smoke"` | Run smoke tests |
 | `npx playwright test --retries=0` | Run without retries |
 | `npx playwright test --retries=2` | Run with 2 retries |
 | `npx playwright test --workers=4` | Run with 4 parallel workers |
@@ -47,6 +51,7 @@ All commands available in the AI-powered Playwright E2E framework.
 | `node scripts/init-release.mjs <version> <EPIC_KEY>` | Scaffold `artifacts/release-<version>-<NN>/` (auto-increment) |
 | `node scripts/append-decision.mjs <releaseFolder> '<json>'` | Append a decision-log entry |
 | `node scripts/build-coverage-matrix.mjs <releaseFolder> [results.json]` | Recompute coverage-matrix.json summary |
+| `node scripts/build-rtm.mjs <releaseFolder>` | Generate human-readable `rtm.md` (Requirements Traceability Matrix) |
 | `node scripts/ci-heal.mjs ...` | CI healing (decision-log aware) |
 
 ---
@@ -86,6 +91,13 @@ These commands are defined in `.opencode/command/` and invoked inside opencode.
 |---------|-------------|
 | `/update-requirement` | Update plan when requirement changes |
 | `/update-requirement old.md new.md artifacts/.../test-plan.md` | Full update command |
+
+### Grooming Recheck
+
+| Command | Description |
+|---------|-------------|
+| `/recheck-grooming` | Poll open grooming Question bugs; re-plan answered Stories |
+| `/recheck-grooming artifacts/release-v1.2-01` | Recheck a specific release folder's grooming queue |
 
 ### Test Healing
 

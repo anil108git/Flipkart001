@@ -36,6 +36,8 @@ artifacts/
 └── release-v1.2-01/                        # release-<version>-<NN>
     ├── agent-decision-log.json             # append-only audit trail
     ├── coverage-matrix.json                # machine-readable coverage
+    ├── grooming-queue.json                 # open grooming questions (if any)
+    ├── rtm.md                              # human-readable Requirements Traceability Matrix (generated)
     ├── test-plan-KAN-45-v1.2.md            # epic aggregate plan
     └── stories/
         ├── test-plan-KAN-101-v1.2.md       # per-story plan
@@ -105,11 +107,13 @@ from `test-results/results.json` after each run.
             {
               "id": "KAN-101-001",
               "source": "AC-1",
+              "acText": "Search box is visible on the header",
+              "priority": "p1",
               "title": "Search box is visible",
               "category": "positive",
               "subtype": null,
               "complexity": "Simple",
-              "tags": ["@smoke", "@ui"],
+              "tags": ["@smoke", "@ui", "@priority-p1"],
               "status": "passed",
               "na": false,
               "rationale": null,
@@ -120,11 +124,13 @@ from `test-results/results.json` after each run.
             {
               "id": "KAN-101-006",
               "source": "AC-6",
+              "acText": "Search response time under 2 seconds",
+              "priority": "p0",
               "title": "Search response time under 2s",
               "category": "performance",
               "subtype": "performance-load",
               "complexity": "Medium",
-              "tags": ["@performance"],
+              "tags": ["@performance", "@priority-p0"],
               "status": "planned",
               "na": false,
               "rationale": null,
@@ -135,11 +141,13 @@ from `test-results/results.json` after each run.
             {
               "id": "KAN-101-007",
               "source": "AC-7",
+              "acText": "Screen reader support for search",
+              "priority": "p2",
               "title": "Screen-reader support for search",
               "category": "non-functional",
               "subtype": "accessibility",
               "complexity": "Simple",
-              "tags": ["@a11y"],
+              "tags": ["@a11y", "@priority-p2"],
               "status": "na",
               "na": true,
               "rationale": "No accessibility requirement in AC — excluded deliberately",
@@ -173,11 +181,26 @@ from `test-results/results.json` after each run.
 |-------|---------|
 | `id` | `<STORY>-<NNN>` sequential per story |
 | `source` | AC line or description reference the scenario traces to |
+| `acText` | Verbatim text of the AC line the scenario maps to (RTM source) |
+| `priority` | `p0` \| `p1` \| `p2` — inherited from Jira priority: Highest/High→`p0`, Medium→`p1`, Low/Lowest→`p2` |
 | `category` | `positive` \| `negative` \| `edge` \| `non-functional` \| `performance` |
 | `subtype` | see test-categorization skill |
 | `complexity` | `Simple` \| `Medium` \| `Complex` |
-| `status` | `planned` \| `generated` \| `passed` \| `failed` \| `escalated` \| `skipped` \| `na` |
+| `status` | `planned` \| `generated` \| `passed` \| `failed` \| `escalated` \| `skipped` \| `na` \| `blocked` |
 | `na` + `rationale` | MUST be set together when a category is excluded |
+| `blockedReason` | only on `status: "blocked"` — e.g. `needs-grooming` + question key |
+
+### Priority mapping
+
+| Jira priority | Matrix `priority` | Tag |
+|---------------|-------------------|-----|
+| Highest, High | `p0` | `@priority-p0` |
+| Medium | `p1` | `@priority-p1` |
+| Low, Lowest | `p2` | `@priority-p2` |
+
+The Planner inherits `priority` from the issue's Jira priority at planning
+time; the Generator must add the matching `@priority-*` tag to the test (see
+test-categorization skill).
 
 ---
 
@@ -204,6 +227,7 @@ never relies on prior values.
 | `node scripts/init-release.mjs <version> [epicKey]` | create next release folder |
 | `node scripts/append-decision.mjs <folder> '<json>'` | append a decision-log entry |
 | `node scripts/build-coverage-matrix.mjs <folder> [results.json]` | refresh coverage-matrix |
+| `node scripts/build-rtm.mjs <folder>` | generate human-readable `rtm.md` from coverage-matrix |
 | `node scripts/ci-heal.mjs` | CI healer (appends decisions too) |
 
 ---

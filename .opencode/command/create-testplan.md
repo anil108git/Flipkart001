@@ -233,7 +233,11 @@ Next step: QA/BA review → /generate-specs-from-plan artifacts/release-<version
 ```
 
 4. Append the story's scenario rows to `coverage-matrix.json` with
-   `status: "planned"` (see `release-artifacts` skill).
+   `status: "planned"` — each row carries `acText` (verbatim AC line) and
+   `priority` (`p0`/`p1`/`p2` from Jira priority) per the
+   `release-artifacts` skill. If the Story has zero AC lines, run the
+   grooming gate from `jira-to-test-plan` Step 1.5 (raise a `Question:`
+   bug, link it, block the Story) instead of writing a plan.
 
 5. Confirm to the user:
    > "Test plan saved to `artifacts/release-<version>-<NN>/stories/test-plan-<STORY>-<version>.md`.
