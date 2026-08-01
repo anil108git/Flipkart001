@@ -1,14 +1,11 @@
 ---
-name: update-requirement
 description: >
   Detects changes between old and new requirement files by AC ID, then
   incrementally updates only the affected scenarios in the existing test
   plan. Does NOT update spec files — run /generate-specs-from-plan after
   plan is updated. Invoke with /update-requirement and provide the paths.
-mode: agent
-tools:
-  - filesystem
-  - playwright-mcp
+agent: planner
+model: opencode/nemotron-3-ultra-free
 ---
 
 # Update Plan on Requirement Change
@@ -30,22 +27,22 @@ Follow every phase in order. Do not skip phases.
 
 ## Input
 
-**Old requirement file (previous version):** {{OLD_REQUIREMENT}}
-**New requirement file (current version):** {{NEW_REQUIREMENT}}
-**Existing plan file:** {{PLAN_FILE}}
+**Old requirement file (previous version):** $ARGUMENTS_0
+**New requirement file (current version):** $ARGUMENTS_1
+**Existing plan file:** $ARGUMENTS_2
 
 If any input was not provided, ask:
 > "Please provide:
 > 1. Path to the OLD requirement file (previous version — git version or backup)
 > 2. Path to the NEW requirement file (current/updated version)
-> 3. Path to the existing plan in specs/"
+> 3. Path to the existing plan in the release folder"
 
 ---
 
 ## Phase 1 — Extract AC IDs from Both Versions
 
 ### Step 1: Parse old requirement file
-Read {{OLD_REQUIREMENT}} and extract every AC ID.
+Read $ARGUMENTS_0 and extract every AC ID.
 AC IDs follow patterns like:
 - `HEADER-001`, `TAB-001`, `BANNER-001`
 - `AC-1`, `AC-2` (numbered)
@@ -54,7 +51,7 @@ AC IDs follow patterns like:
 Store as: `Map<AC_ID, { scenario, expectedResult, type, section }>`
 
 ### Step 2: Parse new requirement file
-Read {{NEW_REQUIREMENT}} and extract every AC ID using the same pattern.
+Read $ARGUMENTS_1 and extract every AC ID using the same pattern.
 Store as the same Map structure.
 
 ### Step 3: Display extraction summary
@@ -114,7 +111,7 @@ Ask:
 
 ## Phase 3 — Update the Test Plan
 
-Read the existing {{PLAN_FILE}}.
+Read the existing $ARGUMENTS_2.
 
 ### For UNCHANGED scenarios
 - Do nothing — preserve exactly as-is
@@ -146,7 +143,7 @@ Read the existing {{PLAN_FILE}}.
 - Change Status to `OUT OF SCOPE`
 
 ### Save the updated plan
-Write the updated plan back to {{PLAN_FILE}}.
+Write the updated plan back to $ARGUMENTS_2.
 
 ---
 
@@ -158,18 +155,18 @@ Plan update complete
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Requirement diff:
-  Old: {{OLD_REQUIREMENT}} ([N] AC lines)
-  New: {{NEW_REQUIREMENT}} ([N] AC lines)
+  Old: $ARGUMENTS_0 ([N] AC lines)
+  New: $ARGUMENTS_1 ([N] AC lines)
   Delta: +[N] added, ~[N] modified, -[N] removed
 
-Plan update ({{PLAN_FILE}}):
+Plan update ($ARGUMENTS_2):
   ✓ [N] unchanged (preserved)
   ✓ [N] updated
   ✓ [N] added
   ✓ [N] marked OUT OF SCOPE
 
 Next step:
-  Run /generate-specs-from-plan {{PLAN_FILE}}
+  Run /generate-specs-from-plan $ARGUMENTS_2
   to update spec files and page objects with these changes.
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

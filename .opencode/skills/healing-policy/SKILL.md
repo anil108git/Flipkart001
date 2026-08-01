@@ -5,7 +5,7 @@ description: >
   test failure. Triggers when a user says "heal failing tests", "fix broken
   specs", "tests are failing after deployment", or when CI reports test
   failures. Defines exactly what the Healer is allowed to fix automatically,
-  what it must escalate, and how to raise a bug in Bugasura via Bugasura MCP
+  what it must escalate, and how to raise a bug in Jira via Jira MCP
   when escalation is required. The Healer must consult this policy before
   taking any action on a failing test — auto-fixing and escalating without
   this policy is not permitted.
@@ -20,7 +20,7 @@ description: >
    scenario coverage, or expected outcomes.
 2. **When in doubt, escalate** — If the Healer cannot determine with
    confidence that a failure is a test maintenance issue (not a real bug),
-   it stops and raises a Bugasura issue. False negatives (missed real bugs)
+   it stops and raises a Jira issue. False negatives (missed real bugs)
    are worse than false positives (unnecessary escalations).
 3. **One fix per test** — The Healer attempts a single targeted fix per
    failing test. If the fix does not resolve the failure on re-run, it
@@ -98,7 +98,7 @@ or page object files without human approval:
 
 ## What the Healer CANNOT Auto-Fix (Always Escalate)
 
-The Healer must stop and raise a Bugasura bug for any of the following:
+The Healer must stop and raise a Jira bug for any of the following:
 
 - Element no longer exists in the DOM (possible feature removal or regression)
 - Assertion logic is wrong (expected outcome changed — needs QA judgment)
@@ -113,42 +113,80 @@ The Healer must stop and raise a Bugasura bug for any of the following:
 
 ---
 
-## Escalation — Raising a Bug in Bugasura via Bugasura MCP
+## Escalation — Raising a Bug in Jira via Jira MCP
 
-When escalation is required, the Healer uses the Bugasura MCP to create
-a bug ticket. It must never skip this step or leave the failure undocumented.
+When escalation is required, the Healer uses the Jira MCP to create
+a bug ticket in the **KAN** project. It must never skip this step or leave
+the failure undocumented.
 
-### Bugasura MCP config
+### Jira MCP config
 
-Configured in `mcp.config.json` — see [MCP config](../../../mcp.config.json). `BUGASURA_API_KEY` must be set in `.env.dev`, `.env.staging`, and CI secrets. Never hardcode it.
+Configured in `opencode.json` — see [opencode.json](../../../opencode.json). `JIRA_API_TOKEN` and `JIRA_USER_EMAIL` must be set in `.env`, `.env.dev`, `.env.staging`, and CI secrets. Never hardcode them.
 
 ### Bug ticket fields — required for every escalation
 
 | Field | Value |
 |-------|-------|
-| **Title** | `[AUTO] <spec file name> — <test name> failing on <env>` |
-| **Severity** | `HIGH` if blocking a feature flow; `MEDIUM` for isolated edge case |
+| **Project key** | `KAN` |
+| **Issue type** | `Bug` |
+| **Summary** | `[AUTO] <spec file name> — <test name> failing on <env>` |
+| **Priority** | `High` if blocking a feature flow; `Medium` for isolated edge case |
 | **Environment** | `dev` or `staging` — whichever the test ran against |
-| **Steps to reproduce** | Exact Playwright error message + stack trace |
-| **Expected result** | What the test assertion expected |
-| **Actual result** | What the app returned/showed |
+| **Description** | Exact Playwright error message + stack trace, expected vs actual result |
 | **Attachments** | Playwright trace file path + screenshot path (from `test-results/`) |
-| **Custom fields** | `{ "Spec File": "tests/login.spec.ts", "Test Name": "should show error for invalid password", "Failure Category": "LOCATOR_MISSING / ASSERTION_MISMATCH / FLAKY / OTHER" }` |
-| **Label** | `automated-failure` + one of: `healer-escalation`, `flaky`, `env-specific` |
+| **Labels** | `automated-failure` + one of: `healer-escalation`, `flaky`, `env-specific` |
 
-### Escalation prompt the Healer sends to Bugasura MCP
+### Escalation prompt the Healer sends to Jira MCP
 ```
-Create a bug in Bugasura with the following details:
-- Title: [AUTO] tests/login.spec.ts — "should show error for invalid password" failing on staging
-- Severity: HIGH
-- Environment: staging
-- Steps to reproduce: <paste exact Playwright error and stack trace>
-- Expected: Error message visible after invalid password submission
-- Actual: Element 'alert' role not found in DOM within 30000ms
-- Attachments: test-results/login-failing/trace.zip, test-results/login-failing/screenshot.png
-- Custom fields: {"Spec File": "tests/login.spec.ts", "Test Name": "should show error for invalid password", "Failure Category": "LOCATOR_MISSING"}
-- Labels: automated-failure, healer-escalation
+jira_create_issue:
+  project_key: KAN
+  issue_type: Bug
+  summary: [AUTO] tests/kan-101-header.spec.ts — "should show error for invalid password" failing on staging
+  description: |
+    **Environment:** staging
+
+    **Steps to reproduce:**
+    <paste exact Playwright error and stack trace>
+
+    **Expected:** Error message visible after invalid password submission
+    **Actual:** Element 'alert' role not found in DOM within 30000ms
+
+    **Attachments:** test-results/login-failing/trace.zip, test-results/login-failing/screenshot.png
+    **Spec File:** tests/kan-101-header.spec.ts
+    **Test Name:** should show error for invalid password
+    **Story Key:** KAN-101
+    **Epic Key:** KAN-45
+    **Failure Category:** LOCATOR_MISSING
+  additional_fields: '{"priority": {"name": "High"}, "labels": ["automated-failure", "healer-escalation"]}'
 ```
+
+The Healer extracts `Story Key` and `Epic Key` from the spec's
+`test.describe` block (`'Header — KAN-101 (Epic: KAN-45)'`).
+
+---
+
+## Coverage Matrix + Decision Log Updates
+
+After EVERY action — fix or escalation — the Healer must:
+
+1. **Update the coverage matrix** — find the scenario(s) in
+   `coverage-matrix.json` matching the failing test (`specFile` +
+   `testName`) and set status:
+   - `passed` after a confirmed re-run
+   - `escalated` after raising a Jira bug
+2. **Append a decision-log entry**:
+   ```
+   node scripts/append-decision.mjs artifacts/release-<version>-<NN> '{
+     "phase": "healing",
+     "agent": "healer",
+     "model": "opencode/mimo-v2.5-free",
+     "input": "<spec> :: <test name>",
+     "decision": "AUTO-FIX | ESCALATED (KAN-304) | FLAKY",
+     "rationale": "<failure type + reason>"
+   }'
+   ```
+3. The `scripts/ci-heal.mjs` pipeline does the same automatically when run
+   in CI.
 
 ---
 
@@ -181,7 +219,7 @@ Every action the Healer takes — fix or escalation — must be appended to
 **Error:** `getByTestId('payment-submit')` not found — element absent from DOM
 
 **Action taken:** ESCALATED
-**Bugasura ticket:** BUG-1042
+**Jira issue:** KAN-304
 **Reason:** Payment submit button not present — possible regression or feature flag issue
 **Files changed:** None
 
@@ -196,8 +234,8 @@ Every action the Healer takes — fix or escalation — must be appended to
 - Use `test.skip()`, `test.fixme()`, or comment out assertions to silence a failure.
 - Attempt more than one fix per test before escalating.
 - Mark a test as healed without a confirmed passing re-run.
-- Create a Bugasura ticket without attaching the Playwright trace file.
+- Create a Jira issue without attaching the Playwright trace file.
 - Delete or archive a failing test — escalate instead.
 - Auto-fix failures in auth-specific specs or `global.setup.ts` — always escalate these.
 - Modify `playwright.config.ts` retry count to mask flaky tests.
-- Raise a Bugasura ticket without the `automated-failure` label.
+- Raise a Jira issue without the `automated-failure` label.

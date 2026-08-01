@@ -32,7 +32,8 @@ jobs:
         run: npx playwright test
         env:
           TEST_ENV: dev
-          BUGASURA_API_KEY: ${{ secrets.BUGASURA_API_KEY }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+          JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
       - name: Upload HTML Report
         uses: actions/upload-artifact@v4
         if: always()
@@ -73,7 +74,8 @@ jobs:
         run: npx playwright test
         env:
           TEST_ENV: staging
-          BUGASURA_API_KEY: ${{ secrets.BUGASURA_API_KEY }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+          JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
       - name: Upload HTML Report
         uses: actions/upload-artifact@v4
         if: always()
@@ -98,7 +100,8 @@ jobs:
         run: node scripts/ci-heal.mjs
         env:
           TEST_ENV: staging
-          BUGASURA_API_KEY: ${{ secrets.BUGASURA_API_KEY }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+          JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # ─── Deploy report to GitHub Pages (staging only, overwrites previous) ─

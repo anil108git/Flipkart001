@@ -1,6 +1,6 @@
 # Test Plan: Flipkart Header Section
 Source file: requirements/flipkart-foryou-tab.md
-Bugasura Requirement: N/A
+Jira Issue: N/A
 Status: READY — live app verified, selectors confirmed
 Created: 2026-07-27
 Author: QA (generated from requirement file)

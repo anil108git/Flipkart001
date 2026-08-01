@@ -145,7 +145,7 @@ import { LoginPage } from '../pages/login.page';
 // Override project storageState for this spec only
 test.use({ storageState: { cookies: [], origins: [] } });
 
-test.describe('Login — AUTH-42', () => {
+test.describe('Login — KAN-101 (Epic: KAN-45)', () => {
   test('should log in with valid credentials', async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.goto();

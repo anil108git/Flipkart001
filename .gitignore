@@ -17,3 +17,6 @@ mcp.config.json
 
 # Playwright CLI session files
 .playwright-cli/
+
+# Generated release artifacts (coverage matrices, decision logs, test plans)
+artifacts/

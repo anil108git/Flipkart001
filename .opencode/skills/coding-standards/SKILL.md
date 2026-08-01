@@ -166,7 +166,7 @@ import { LoginPage } from '../pages/login.page';
 import { users } from '../fixtures/data/users.json';   // static happy path data
 import { generateUser } from '../fixtures/data/generators'; // dynamic edge case data
 
-test.describe('Login — AUTH-42', () => {
+test.describe('Login — KAN-101 (Epic: KAN-45)', () => {
 
   let loginPage: LoginPage;
 
@@ -198,7 +198,8 @@ test.describe('Login — AUTH-42', () => {
 ```
 
 ### Spec file rules
-- **`test.describe` block always references the Jira ticket ID** — e.g. `'Login — AUTH-42'`.
+- **`test.describe` block always references the Story key and Epic key** — e.g. `'Login — KAN-101 (Epic: KAN-45)'` (see epic-story-traceability skill).
+- **Spec file names carry the Story key prefix** — `tests/kan-101-login.spec.ts`.
 - **Test name describes the expected behavior**, not the action — `'should show error for invalid password'` not `'enter wrong password'`.
 - **All page interactions via page object** — no raw `page.click()` or `page.fill()` in spec files.
 - **All assertions in spec files** — no assertions inside page objects.
@@ -211,15 +212,22 @@ test.describe('Login — AUTH-42', () => {
 
 ## Test Categorization
 
-### Test Case Types
+### Test Case Categories (5-category model)
 
-Every feature MUST include all three types:
+Every feature MUST be assessed across all five categories. See the
+`test-categorization` skill for the full rules, subtypes, and NA handling.
 
-| Type | Description | Example |
-|------|-------------|---------|
+| Category | Description | Example |
+|----------|-------------|---------|
 | **Positive** | Happy path — valid input, expected behavior | User logs in with correct credentials |
 | **Negative** | Error paths — invalid input, error handling | User logs in with wrong password |
 | **Edge Case** | Boundary conditions, unusual inputs | Empty fields, max length, special characters |
+| **Non-Functional** | Quality attributes — accessibility, security, compatibility, usability, reliability | Screen-reader support, keyboard navigation |
+| **Performance** | Load, response time, throughput, resource use | Search responds within 2 seconds |
+
+Mandatory minimum per AC: ≥1 positive + ≥1 negative + ≥1 edge.
+Non-functional/performance added when implied, else `na` with a rationale
+in `coverage-matrix.json`.
 
 ### Complexity Levels
 
@@ -243,24 +251,29 @@ Every feature MUST include all three types:
 | `@ui` | UI element verification | Element visibility, layout |
 | `@negative` | Error handling and validation | All Negative scenarios |
 | `@edge-case` | Boundary and unusual inputs | All Edge Case scenarios |
-| `@accessibility` | A11y compliance | Keyboard, screen reader |
-| `@performance` | Load time, rendering | Performance scenarios |
-| `@security` | Security validation | XSS, injection, auth |
+| `@a11y` | Accessibility compliance | Non-functional/accessibility |
+| `@security` | Security validation | Non-functional/security |
+| `@compat` | Cross-browser/viewport compatibility | Non-functional/compatibility |
+| `@usability` | UX usability checks | Non-functional/usability |
+| `@reliability` | Reliability / recovery | Non-functional/reliability |
+| `@performance` | Load time, rendering, throughput | Performance scenarios |
 
 ### Tag Assignment Rules
 
-| Scenario Type | Required Tags | Optional Tags |
-|---------------|---------------|---------------|
+| Scenario Category | Required Tags | Optional Tags |
+|-------------------|---------------|---------------|
 | Positive + Simple | `@smoke` `@ui` | `@regression` |
 | Positive + Medium | `@smoke` `@regression` | `@e2e` |
 | Positive + Complex | `@e2e` `@regression` | `@smoke` |
 | Negative | `@negative` `@regression` | `@ui` |
 | Edge Case | `@edge-case` `@regression` | `@ui` |
+| Non-Functional | `@a11y` / `@security` / `@compat` / `@usability` / `@reliability` (matching subtype) `@regression` | `@ui` |
+| Performance | `@performance` `@regression` | — |
 
 ### Tag Usage in Spec Files
 
 ```typescript
-test.describe('[Feature Name] — [REQ-ID]', () => {
+test.describe('[Feature Name] — KAN-101 (Epic: KAN-45)', () => {
 
   // @smoke @ui
   test('should display search input field', async ({ page }) => {
@@ -269,6 +282,11 @@ test.describe('[Feature Name] — [REQ-ID]', () => {
 
   // @negative @regression
   test('should show error for empty search', async ({ page }) => {
+    // ...
+  });
+
+  // @a11y @regression
+  test('should support keyboard navigation of search results', async ({ page }) => {
     // ...
   });
 
@@ -292,13 +310,13 @@ See [test-data-setup skill](../test-data-setup/SKILL.md) for data strategy and [
 |----------|-----------|---------|
 | Page object file | `kebab-case.page.ts` | `login.page.ts` |
 | Component file | `kebab-case.component.ts` | `navbar.component.ts` |
-| Spec file | `kebab-case.spec.ts` | `login.spec.ts` |
+| Spec file | `kan-<storynum>-kebab-case.spec.ts` | `kan-101-header.spec.ts` |
 | Page object class | `PascalCase + Page` | `LoginPage` |
 | Component class | `PascalCase + Component` | `NavbarComponent` |
 | Locator properties | `camelCase`, descriptive noun | `signInButton`, `errorMessage` |
 | Action methods | `camelCase`, verb-first | `login()`, `submitEmpty()`, `selectPlan()` |
 | State/getter methods | `camelCase`, `get`-prefixed | `getErrorText()`, `getSelectedPlan()` |
-| Test describe block | `'FeatureName — TICKET-ID'` | `'Login — AUTH-42'` |
+| Test describe block | `'FeatureName — STORY-ID (Epic: EPIC-ID)'` | `'Login — KAN-101 (Epic: KAN-45)'` |
 | Test name | `'should [expected behavior]'` | `'should show error for invalid password'` |
 | Static data file | `kebab-case.json` | `users.json`, `products.json` |
 | Generator function | `generate`-prefixed | `generateUser()`, `generateOrder()` |

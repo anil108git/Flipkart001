@@ -40,16 +40,36 @@ All commands available in the AI-powered Playwright E2E framework.
 
 ---
 
-## Slash Commands (Prompts)
+## Release Pipeline Scripts
 
-These commands are used in VS Code with GitHub Copilot or Claude Code.
+| Command | Description |
+|---------|-------------|
+| `node scripts/init-release.mjs <version> <EPIC_KEY>` | Scaffold `artifacts/release-<version>-<NN>/` (auto-increment) |
+| `node scripts/append-decision.mjs <releaseFolder> '<json>'` | Append a decision-log entry |
+| `node scripts/build-coverage-matrix.mjs <releaseFolder> [results.json]` | Recompute coverage-matrix.json summary |
+| `node scripts/ci-heal.mjs ...` | CI healing (decision-log aware) |
+
+---
+
+## Slash Commands (opencode)
+
+These commands are defined in `.opencode/command/` and invoked inside opencode.
+
+### Release Planning (one-shot orchestrator)
+
+| Command | Description |
+|---------|-------------|
+| `/plan-release` | Full pipeline: scope → plan → generate → review → artifacts |
+| `/plan-release KAN-45` | Plan + generate from an Epic key |
+| `/plan-release KAN-101` | Plan + generate from a Story key |
+| `/plan-release 'fixVersion = "v1.2" AND project = KAN'` | Plan + generate from JQL |
 
 ### Test Plan Creation
 
 | Command | Description |
 |---------|-------------|
 | `/create-testplan` | Create test plan from any requirement source |
-| `/create-testplan REQ-42` | Create plan from Bugasura requirement |
+| `/create-testplan KAN-101` | Create plan from Jira issue |
 | `/create-testplan requirements/flipkart.md` | Create plan from local file |
 | `/create-testplan https://...` | Create plan from URL |
 
@@ -58,14 +78,14 @@ These commands are used in VS Code with GitHub Copilot or Claude Code.
 | Command | Description |
 |---------|-------------|
 | `/generate-specs-from-plan` | Generate spec files from approved plan |
-| `/generate-specs-from-plan specs/flipkart.md` | Generate from specific plan |
+| `/generate-specs-from-plan artifacts/release-v1.2-01/stories/test-plan-KAN-101-v1.2.md` | Generate from specific plan |
 
 ### Incremental Updates
 
 | Command | Description |
 |---------|-------------|
 | `/update-requirement` | Update plan when requirement changes |
-| `/update-requirement old.md new.md specs/plan.md` | Full update command |
+| `/update-requirement old.md new.md artifacts/.../test-plan.md` | Full update command |
 
 ### Test Healing
 
@@ -74,6 +94,13 @@ These commands are used in VS Code with GitHub Copilot or Claude Code.
 | `/heal-failed-run` | Fix failing tests (auto-detect last run) |
 | `/heal-failed-run tests/login.spec.ts` | Fix specific spec file |
 | `/heal-failed-run last` | Fix most recent local failure |
+
+### Coverage
+
+| Command | Description |
+|---------|-------------|
+| `/generate-coverage-matrix` | Reconcile latest run into coverage matrix |
+| `/generate-coverage-matrix artifacts/release-v1.2-01` | Reconcile a specific release folder |
 
 ---
 
@@ -96,7 +123,8 @@ These commands are used in VS Code with GitHub Copilot or Claude Code.
 | `API_URL` | URL | API endpoint URL |
 | `TEST_USER_EMAIL` | Email | Test user email |
 | `TEST_USER_PASSWORD` | Password | Test user password |
-
+| `JIRA_API_TOKEN` | Token | Jira API token (Atlassian Cloud) |
+| `JIRA_USER_EMAIL` | Email | Email associated with the Jira token |
 
 ### Usage Examples
 
@@ -115,12 +143,9 @@ TEST_ENV=staging npx playwright test
 | `npx playwright install --with-deps` | Install Playwright browsers + OS deps |
 | `npx playwright test` | Run all tests in CI |
 
-
 ---
 
-
-
----## Quick Reference
+## Quick Reference
 
 ### First Time Setup
 ```bash
@@ -128,6 +153,21 @@ npm ci                          # Install dependencies
 npx playwright install          # Install browsers
 npx tsc --noEmit                # Verify TypeScript
 npm test                        # Run tests
+```
+
+### Plan + Generate a Release (one-shot)
+```bash
+# 1. Resolve scope + scaffold + plan + generate + review
+/plan-release KAN-45
+
+# 2. Run tests
+npm test
+
+# 3. Reconcile coverage
+/generate-coverage-matrix
+
+# 4. Fix any failures
+/heal-failed-run
 ```
 
 ### Daily Development
@@ -141,17 +181,20 @@ npm run test:report             # View report
 ### When Requirement Changes
 ```bash
 # 1. Create/update plan
-/create-testplan requirements/flipkart.md
+/update-requirement old.md new.md artifacts/release-<v>-<NN>/stories/test-plan-<STORY>-<v>.md
 
-# 2. Human reviews plan in specs/
+# 2. Human reviews plan in the release folder
 
 # 3. Generate/update specs
-/generate-specs-from-plan specs/flipkart.md
+/generate-specs-from-plan artifacts/release-<v>-<NN>/stories/test-plan-<STORY>-<v>.md
 
 # 4. Run tests
 npm test
 
-# 5. Fix any failures
+# 5. Reconcile coverage
+/generate-coverage-matrix
+
+# 6. Fix any failures
 /heal-failed-run
 ```
 

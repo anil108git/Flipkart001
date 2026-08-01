@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-import { readFileSync, writeFileSync, existsSync, appendFileSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, appendFileSync, readdirSync } from 'fs';
 import { execSync } from 'child_process';
+import { join } from 'path';
 
 const RESULTS_JSON = 'test-results/results.json';
 const HEALING_LOG = 'healing-log-ci.md';
@@ -8,6 +9,29 @@ const REPO = process.env.GITHUB_REPOSITORY ?? 'unknown/repo';
 const RUN_ID = process.env.GITHUB_RUN_ID ?? 'local';
 const SHA = process.env.GITHUB_SHA ?? 'HEAD';
 const ENV = process.env.TEST_ENV ?? 'dev';
+
+// Latest release artifact folder (best-effort) — for decision logging.
+function latestReleaseFolder() {
+  if (!existsSync('artifacts')) return null;
+  const dirs = readdirSync('artifacts').filter((d) => /^release-.+-\d+$/.test(d));
+  if (dirs.length === 0) return null;
+  dirs.sort();
+  return join('artifacts', dirs[dirs.length - 1]);
+}
+
+function appendDecision(entry) {
+  try {
+    const folder = latestReleaseFolder();
+    if (!folder) return;
+    const logPath = join(folder, 'agent-decision-log.json');
+    if (!existsSync(logPath)) return;
+    const log = JSON.parse(readFileSync(logPath, 'utf-8'));
+    log.push({ timestamp: new Date().toISOString(), source: 'ci-heal', runId: RUN_ID, ...entry });
+    writeFileSync(logPath, JSON.stringify(log, null, 2) + '\n', 'utf-8');
+  } catch {
+    // best-effort — never fail the healer because logging failed
+  }
+}
 
 function fail(msg) {
   console.error(`[ci-heal] FAIL: ${msg}`);
@@ -154,6 +178,16 @@ async function main() {
   // 5. Check if any files were changed overall
   const totalDiff = run('git diff --stat', { timeout: 10_000 });
   const hasChanges = totalDiff.length > 0;
+
+  appendDecision({
+    phase: 'healing',
+    agent: 'healer',
+    model: 'opencode/mimo-v2.5-free',
+    input: [...failingSpecs.keys()].join(', '),
+    decision: hasChanges ? 'auto-fixed (PR created)' : 'escalated / no fix applied',
+    rationale: `Specs processed: ${results_log.length}; fixed: ${results_log.filter(r => r.status === 'FIXED').length}; not fixed: ${results_log.filter(r => r.status !== 'FIXED').length}`,
+    outputArtifacts: [HEALING_LOG],
+  });
 
   if (hasChanges) {
     // Create a fix PR

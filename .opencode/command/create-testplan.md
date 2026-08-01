@@ -1,23 +1,19 @@
 ---
-name: create-testplan
 description: >
-  Creates a structured test plan in specs/ from ANY requirement source.
-  Auto-detects input type: Bugasura REQ-ID, local Markdown file, or URL.
-  Follows requirements-only-planning, bugasura-to-test-plan, and
-  coding-standards skills. Invoke with /create-testplan and provide
-  the source when prompted.
-mode: agent
-tools:
-  - bugasura
-  - filesystem
-  - playwright-mcp
+  Creates structured test plans from ANY requirement source — Jira issue
+  key, Epic key, JQL filter, local Markdown file, or URL. Follows
+  requirements-only-planning, jira-to-test-plan, test-categorization, and
+  coding-standards skills. Invoke with /create-testplan and provide the
+  source when prompted.
+agent: planner
+model: opencode/nemotron-3-ultra-free
 ---
 
 # Create Test Plan from Requirement Source
 
 You are acting as the **Planner agent**. Your only job is to read a
-requirement from ANY source and produce a structured test plan file
-in `specs/`. You are NOT generating any spec code — that happens
+requirement from ANY source and produce a structured test plan file.
+You are NOT generating any spec code — that happens
 separately via `/generate-specs-from-plan`.
 
 Follow every phase in order. Do not skip phases. Do not proceed to the
@@ -27,13 +23,13 @@ next phase without completing the current one.
 
 ## Input
 
-**Requirement source:** {{SOURCE}}
+**Requirement source:** $ARGUMENTS
 
-If SOURCE was not provided, ask:
+If $ARGUMENTS was not provided, ask:
 > "Please provide the requirement source:
-> - Bugasura REQ-ID (e.g. `REQ-42`)
+> - Jira issue key (e.g. `KAN-101`) or Epic key (e.g. `KAN-45`)
 > - Local file path (e.g. `requirements/flipkart-foryou-tab.md`)
-> - URL (e.g. `https://jira.example.com/browse/PROJ-123`)"
+> - URL (e.g. `https://kanilme.atlassian.net/browse/KAN-101`)"
 
 ---
 
@@ -43,34 +39,38 @@ Auto-detect the input type:
 
 | Pattern | Source Type | Action |
 |---------|-------------|--------|
-| Starts with `REQ-` or `req-` | Bugasura REQ-ID | Go to Phase 1A |
+| Matches `<KEY>-<NUM>` e.g. `KAN-101` | Jira issue key | Go to Phase 1A |
 | Ends with `.md` or `.markdown` | Local Markdown file | Go to Phase 1B |
 | Starts with `http://` or `https://` | URL | Go to Phase 1C |
 | Anything else | Unknown | Ask user to clarify |
 
 Display detection:
 ```
-Detected source type: [Bugasura REQ-ID | Local file | URL]
-Source: {{SOURCE}}
+Detected source type: [Jira issue key | Local file | URL]
+Source: $ARGUMENTS
 ```
 
 ---
 
-## Phase 1A — Fetch from Bugasura
+## Phase 1A — Fetch from Jira
 
-Using the `bugasura-to-test-plan` skill and Bugasura MCP:
+Using the `jira-to-test-plan` and `epic-story-traceability` skills and
+Jira MCP:
 
-1. Fetch the requirement for **{{SOURCE}}** via Bugasura MCP.
+1. Resolve **$ARGUMENTS** to a Story (and its parent Epic) via Jira MCP
+   (`jira_get_issue`, `jira_search`).
 2. Extract and display:
-   - Requirement title
+   - Issue summary (title)
+   - Story key + parent Epic key
    - Description / user story
    - All acceptance criteria lines — numbered exactly as they appear
    - Priority (High / Medium / Low)
-   - Linked existing test cases in Bugasura (if any)
-   - Linked bugs or known issues (if any)
+   - Labels (if any)
+   - Linked subtasks or child issues (if any)
+   - fixVersions (release version)
 3. Confirm with the user:
-   > "Fetched **{{SOURCE}}: [title]**.
-   > Found [N] acceptance criteria lines and [N] existing linked test cases.
+   > "Fetched **$ARGUMENTS: [summary]** (Story, Epic: [KEY]).
+   > Found [N] acceptance criteria lines.
    > Shall I proceed with generating the test plan? Reply 'yes' or correct me."
 
 **Do not proceed to Phase 2 without confirmation.**
@@ -79,9 +79,9 @@ Using the `bugasura-to-test-plan` skill and Bugasura MCP:
 
 ## Phase 1B — Read Local Markdown File
 
-1. Read the file at **{{SOURCE}}** from the filesystem.
+1. Read the file at **$ARGUMENTS** from the filesystem.
 2. If the file does not exist, stop and tell the user:
-   > "File not found at `{{SOURCE}}`. Please check the path and try again."
+   > "File not found at `$ARGUMENTS`. Please check the path and try again."
 3. Parse the file and extract the following sections.
    Use flexible matching — requirement files vary in structure:
 
@@ -106,7 +106,7 @@ Using the `bugasura-to-test-plan` skill and Bugasura MCP:
    Selectors found: [Yes/No]
    ```
 5. Ask the user to confirm:
-   > "I've parsed `{{SOURCE}}` and found [N] acceptance criteria lines.
+   > "I've parsed `$ARGUMENTS` and found [N] acceptance criteria lines.
    > Does this look correct? Reply 'yes' to proceed or tell me what I missed."
 
 **Do not proceed to Phase 2 without confirmation.**
@@ -115,29 +115,30 @@ Using the `bugasura-to-test-plan` skill and Bugasura MCP:
 
 ## Phase 1C — Fetch from URL
 
-1. Fetch the content at **{{SOURCE}}** using the playwright-mcp or web fetch tool.
+1. Fetch the content at **$ARGUMENTS** using the playwright-mcp or web fetch tool.
 2. If the URL is inaccessible, stop and tell the user:
-   > "Could not access `{{SOURCE}}`. Please check the URL or provide the content directly."
+   > "Could not access `$ARGUMENTS`. Please check the URL or provide the content directly."
 3. Parse the fetched content the same way as Phase 1B (extract ACs, story, etc.)
 4. Confirm with the user.
 
 ---
 
-## Phase 2 — Check Existing Test Cases (Bugasura only)
+## Phase 2 — Check Existing Coverage (Jira only)
 
 **Skip this phase for local files and URLs.**
 
-If source is Bugasura:
+If source is a Jira issue:
 
-1. Ask Bugasura MCP: list all test cases linked to **{{SOURCE}}**.
-2. If existing test cases are found:
+1. Ask Jira MCP: fetch **$ARGUMENTS** with comments and check for linked
+   subtasks/child issues that describe test scenarios.
+2. If existing scenarios are found:
    - Use them as the baseline scenario list.
-   - Mark each as `SOURCE: Bugasura test case [ID]`.
+   - Mark each as `SOURCE: Jira issue [KEY]`.
    - Only write NEW scenarios for AC lines not already covered.
-   - Inform the user: "Found [N] existing test cases — reusing as baseline,
+   - Inform the user: "Found [N] existing scenarios — reusing as baseline,
      writing [N] new scenarios for uncovered AC lines."
-3. If no test cases exist:
-   - Inform the user: "No existing test cases found — writing all scenarios
+3. If none exist:
+   - Inform the user: "No existing scenarios found — writing all scenarios
      fresh from AC lines."
 
 For local files and URLs:
@@ -184,45 +185,58 @@ Ask the user:
 
 ## Phase 5 — Write Test Plan Scenarios
 
-Using the [requirements-only-planning](../.claude/skills/requirements-only-planning/SKILL.md) skill and (if Bugasura source) [bugasura-to-test-plan](../.claude/skills/bugasura-to-test-plan/SKILL.md) skill:
+Using the [requirements-only-planning](.opencode/skills/requirements-only-planning/SKILL.md) skill and (if Jira source) [jira-to-test-plan](.opencode/skills/jira-to-test-plan/SKILL.md) skill:
 
 ### Rules (from skills)
 - One or more scenarios per AC line, Given/When/Then format, no selectors
-- Mandatory coverage: Positive, Negative, and Edge Case for every feature
-- Classify by Type and Complexity per [coding-standards](../.claude/skills/coding-standards/SKILL.md#test-categorization)
+- Mandatory coverage: 5 categories — Positive, Negative, Edge Case,
+  Non-Functional, and Performance (minimum rule + `na`-with-rationale per
+  [test-categorization](.opencode/skills/test-categorization/SKILL.md))
+- Classify by Category, Subtype, and Complexity per [coding-standards](.opencode/skills/coding-standards/SKILL.md#test-categorization)
 - Tag gaps as TBD, ASSUMPTION, SUGGESTED, or OPEN QUESTION
-- For Bugasura sources, post OPEN QUESTION comments via Bugasura MCP
+- For Jira sources, post OPEN QUESTION comments via Jira MCP
 - For local files/URLs, add a `## Notes` section summarising gaps
 
 ---
 
-## Phase 6 — Save Plan to specs/
+## Phase 6 — Save Plan to Release Folder
 
-1. Derive the file name from the feature name:
-   `specs/[kebab-case-feature-name].md`
-   e.g. "User Login Feature" → `specs/user-login-feature.md`
-
-2. If a file with that name already exists in `specs/`, ask:
-   > "`specs/[name].md` already exists. Overwrite, create a new version
-   > (`specs/[name]-v2.md`), or cancel?"
+1. Determine the release folder. For a Jira source, scaffold it if needed:
+   ```
+   node scripts/init-release.mjs <version> <EPIC_KEY>
+   ```
+   (see the `release-artifacts` skill). For a local file/URL with no Jira
+   keys, use the last scaffolded folder or prompt the user.
+2. Save one plan per story to:
+   `artifacts/release-<version>-<NN>/stories/test-plan-<STORY>-<version>.md`
+   and (for epic scope) the aggregate to:
+   `artifacts/release-<version>-<NN>/test-plan-<EPIC>-<version>.md`
 
 3. Save with this exact header:
 
 ```markdown
 # Test Plan: [Feature Name]
-Source: {{SOURCE}} ([source type])
+Story: [STORY-ID]
+Epic: [EPIC-ID]
+Release: [version]
+Source: $ARGUMENTS ([source type])
 Status: DRAFT — requirements-only, feature not yet built
        | DRAFT — pending live Planner verification (delete one)
 Created: YYYY-MM-DD
 Grounding: [Source description] | Live app available at [URL] (delete one)
+Categories: positive [n] | negative [n] | edge [n] | non-functional [n] | performance [n]
+NA rationale: [excluded categories + why]
 Spec file (to be generated): tests/[feature-name].spec.ts
-Next step: QA/BA review → /generate-specs-from-plan specs/[file-name].md for spec generation
+Next step: QA/BA review → /generate-specs-from-plan artifacts/release-<version>-<NN>/stories/test-plan-<STORY>-<version>.md for spec generation
 
 ---
 ```
 
-4. Confirm to the user:
-   > "Test plan saved to `specs/[file-name].md`.
+4. Append the story's scenario rows to `coverage-matrix.json` with
+   `status: "planned"` (see `release-artifacts` skill).
+
+5. Confirm to the user:
+   > "Test plan saved to `artifacts/release-<version>-<NN>/stories/test-plan-<STORY>-<version>.md`.
    > Summary:
    > - [N] scenarios written
    > - [N] TBD items (resolve during live verification)
@@ -232,10 +246,11 @@ Next step: QA/BA review → /generate-specs-from-plan specs/[file-name].md for s
    >
    > Categorization:
    > - Positive: [N] | Negative: [N] | Edge Case: [N]
+   > - Non-Functional: [N] | Performance: [N]
    > - Simple: [N] | Medium: [N] | Complex: [N]
    >
    > Next: review the plan, resolve open items, then run
-   > `/generate-specs-from-plan specs/[file-name].md` to generate
+   > `/generate-specs-from-plan` with the plan path to generate
    > page objects and spec files."
 
 ---
@@ -249,11 +264,13 @@ Before finalizing the plan, validate that all required coverage exists:
 ✓ Positive scenarios exist for every AC line
 ✓ Negative scenarios exist for every input/action
 ✓ Edge cases exist for every input field (empty, boundary, special chars)
+✓ Non-Functional scenarios exist or are 'na' with rationale
+✓ Performance scenarios exist or are 'na' with rationale
 ✓ Complexity distribution is reasonable (not all simple, not all complex)
 ```
 
 ### If coverage is incomplete
-If any category has 0 scenarios, ask:
+If any mandatory category has 0 scenarios and no `na` rationale, ask:
 > "The plan has [N] positive but 0 negative scenarios for [section].
 > Should I add negative test cases? Reply 'yes' or 'skip'."
 
@@ -261,11 +278,13 @@ If any category has 0 scenarios, ask:
 ```
 Coverage Summary:
 ┌─────────────────┬───────┬─────────────────────────────┐
-│ Type            │ Count │ Percentage                  │
+│ Category        │ Count │ Percentage                  │
 ├─────────────────┼───────┼─────────────────────────────┤
 │ Positive        │ [N]   │ [N]% of total               │
 │ Negative        │ [N]   │ [N]% of total               │
 │ Edge Case       │ [N]   │ [N]% of total               │
+│ Non-Functional  │ [N]   │ [N]% of total               │
+│ Performance     │ [N]   │ [N]% of total               │
 ├─────────────────┼───────┼─────────────────────────────┤
 │ Simple          │ [N]   │ Quick to execute             │
 │ Medium          │ [N]   │ Standard flow tests          │
@@ -273,25 +292,20 @@ Coverage Summary:
 └─────────────────┴───────┴─────────────────────────────┘
 Total scenarios: [N]
 ```
+If a category is `na`, show it as `na (reason)` instead of a count.
 
 ---
 
-## Phase 8 — Sync to Bugasura (Bugasura source only, optional)
+## Phase 8 — Sync to Jira (Jira source only, optional)
 
 **Skip this phase for local files and URLs.**
 
 If the user replies 'yes' to syncing:
 
-For each new scenario (not sourced from an existing Bugasura test case),
-create a linked test case in Bugasura under **{{SOURCE}}**:
-
+Add a comment to the Jira issue linking the plan for review:
 ```
-"Create test case in Bugasura under requirement {{SOURCE}}:
-- Title: [scenario name]
-- Preconditions: [Given clause]
-- Steps: [When clause]
-- Expected result: [Then clause]
-- Status: Draft"
+jira_add_comment: issue_key="$ARGUMENTS",
+  body="Test plan created — see artifacts/release-<version>-<NN>/stories/test-plan-<STORY>-<version>.md. Review before generating specs."
 ```
 
 ---
@@ -302,6 +316,7 @@ create a linked test case in Bugasura under **{{SOURCE}}**:
 - Never mark Status as READY — only a live Planner pass can do that.
 - Never invent or skip scenarios — every AC line must be addressed.
 - Never guess missing detail — tag as TBD, ASSUMPTION, or OPEN QUESTION.
-- Always include positive, negative, and edge case scenarios — no exceptions.
-- Always classify each scenario by Type and Complexity.
+- Always include the 5 categories — positive, negative, edge case,
+  non-functional, performance — no exceptions (`na` requires a rationale).
+- Always classify each scenario by Category, Subtype, and Complexity.
 - Always display coverage summary before saving.

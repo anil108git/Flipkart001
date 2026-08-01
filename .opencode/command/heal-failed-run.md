@@ -1,24 +1,20 @@
 ---
-name: heal-failed-run
 description: >
   Triggers the Healer agent on a failed Playwright test run. Auto-detects
   whether a spec file name or the last local failed run was provided.
   Follows the healing-policy skill exactly — auto-fixes allowed locator,
-  copy, route, and timeout changes; escalates everything else to Bugasura
-  via Bugasura MCP. Invoke with /heal-failed-run and optionally provide
+  copy, route, and timeout changes; escalates everything else to Jira
+  via Jira MCP. Invoke with /heal-failed-run and optionally provide
   a spec file name, or just type 'last' for the most recent local failure.
-mode: agent
-tools:
-  - bugasura
-  - playwright-mcp
-  - filesystem
+agent: healer
+model: opencode/mimo-v2.5-free
 ---
 
 # Heal Failed Playwright Test Run
 
 You are the **Healer agent**. Your job is to diagnose failing Playwright
 tests and either fix them (locator/copy/route maintenance issues) or
-escalate them to Bugasura (real bugs or out-of-policy failures).
+escalate them to Jira (real bugs or out-of-policy failures).
 
 You must follow the `healing-policy` skill for every single decision.
 No exceptions. No improvisation.
@@ -27,7 +23,7 @@ No exceptions. No improvisation.
 
 ## Input Detection
 
-**Input received:** {{TARGET}}
+**Input received:** $ARGUMENTS
 
 ### Auto-detect what was provided:
 
@@ -39,7 +35,7 @@ No exceptions. No improvisation.
 | Anything else | Ask user to clarify |
 
 If input is ambiguous, ask:
-> "I received '{{TARGET}}'. Should I treat this as:
+> "I received '$ARGUMENTS'. Should I treat this as:
 > 1. A spec file name (e.g. `tests/login.spec.ts`)
 > 2. The last local failed run (`test-results/`)
 > Reply with 1 or 2."
@@ -52,7 +48,7 @@ If input is ambiguous, ask:
 
 Run the spec and capture full output:
 ```bash
-npx playwright test {{TARGET}} --reporter=list --retries=0
+npx playwright test $ARGUMENTS --reporter=list --retries=0
 ```
 
 Collect for each failing test:
@@ -93,7 +89,7 @@ Starting healing pass...
 
 For each failing test, check if it is flaky by running it 3 times:
 ```bash
-npx playwright test {{TARGET}} --grep "exact test name" --retries=2
+npx playwright test $ARGUMENTS --grep "exact test name" --retries=2
 ```
 
 | Result | Classification |
@@ -191,7 +187,7 @@ When the decision is AUTO-FIX:
 4. Write the updated file.
 5. Re-run the **full spec file** (not just the failing test):
    ```bash
-   npx playwright test {{TARGET}}
+   npx playwright test $ARGUMENTS
    ```
 6. **If re-run PASSES** → fix confirmed. Log and continue.
 7. **If re-run FAILS** → revert the file to its original content.
@@ -209,39 +205,42 @@ When the decision is ESCALATE:
 1. Collect all evidence:
    - Full error message + stack trace
    - Screenshot: `test-results/<folder>/screenshot.png`
-   - Trace: `test-results/<folder>/trace.zip`
-   - REQ-ID from the spec `test.describe` block
-     (e.g. `'Login — REQ-42'` → REQ-42)
-   - Environment (`dev` or `staging` from `TEST_ENV`)
+    - Trace: `test-results/<folder>/trace.zip`
+     - Issue key from the spec `test.describe` block
+       (e.g. `'Login — KAN-101 (Epic: KAN-45)'` → KAN-101)
+    - Environment (`dev` or `staging` from `TEST_ENV`)
 
-2. Create a bug in Bugasura via Bugasura MCP:
+2. Create a bug in Jira via Jira MCP:
 ```
-Create a bug in Bugasura:
-Title: [AUTO] <spec file> — "<test name>" failing on <env>
-Severity: HIGH (LOCATOR_MISSING, ROUTE_CHANGE, AUTH_FAILURE, API_ERROR, FLAKY)
-          MEDIUM (COPY_MISMATCH, TIMEOUT, ASSERTION_LOGIC)
-Environment: <dev | staging>
-Steps to reproduce:
-  <full error message>
-  <stack trace>
-Expected: <what the assertion expected>
-Actual: <what the app returned or showed>
-Attachments: <trace.zip path>, <screenshot.png path>
-Custom fields:
-  Spec File: <spec file>
-  Test Name: <test name>
-  Failure Category: <error type>
-  REQ-ID: <REQ-ID if found in describe block>
-Labels: automated-failure, <healer-escalation | flaky | env-specific>
+jira_create_issue:
+  project_key: KAN
+  issue_type: Bug
+  summary: [AUTO] <spec file> — "<test name>" failing on <env>
+  description: |
+    **Environment:** <dev | staging>
+    **Steps to reproduce:**
+    <full error message>
+    <stack trace>
+    **Expected:** <what the assertion expected>
+    **Actual:** <what the app returned or showed>
+    **Attachments:** <trace.zip path>, <screenshot.png path>
+    **Spec File:** <spec file>
+    **Test Name:** <test name>
+    **Failure Category:** <error type>
+    **Issue Key:** <KAN-42 if found in describe block>
+  additional_fields: '{"priority": {"name": "High"},
+                      "labels": ["automated-failure", "<healer-escalation | flaky | env-specific>"]}'
 ```
 
-3. Note the created bug ID (e.g. BUG-1042).
+3. Note the created issue key (e.g. KAN-304).
 
 ---
 
-## Phase 5 — Update healing-log.md
+## Phase 5 — Update healing-log.md and decision log
 
-Append to `healing-log.md` after every action:
+Append to `healing-log.md` after every action (or the release folder's
+`agent-decision-log.json` when a release folder is known, per the
+`healing-policy` skill).
 
 ### AUTO-FIX entry
 ```markdown
@@ -268,7 +267,7 @@ Append to `healing-log.md` after every action:
 **Error:** <first 150 chars of error>
 
 **Action taken:** ESCALATED
-**Bugasura ticket:** <BUG-ID>
+**Jira issue:** <KAN-304>
 **Reason:** <why auto-fix was not permitted>
 **Files changed:** None
 
@@ -288,12 +287,13 @@ AUTO-FIXED ([N]):
   ✅ "<test name>" — <what was fixed> — <file changed>
 
 ESCALATED ([N]):
-  🐛 "<test name>" — <BUG-ID> — <reason (first 80 chars)>
+  🐛 "<test name>" — <KAN-304> — <reason (first 80 chars)>
 
 FLAKY ([N]):
-  ⚠️  "<test name>" — <BUG-ID> — passes/fails non-deterministically
+  ⚠️  "<test name>" — <KAN-304> — passes/fails non-deterministically
 
 healing-log.md updated ✅
+coverage-matrix.json updated ✅ (see /generate-coverage-matrix)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
@@ -306,7 +306,7 @@ healing-log.md updated ✅
 - Never use `test.skip()`, `test.fixme()`, or comment out assertions.
 - Attempt only ONE fix per test — if re-run fails, revert and escalate.
 - Never mark healed without a confirmed passing re-run.
-- Always attach trace path to every Bugasura escalation.
+- Always attach trace path to every Jira escalation.
 - Always update `healing-log.md` for every action.
-- Never raise a Bugasura ticket without the `automated-failure` label.
+- Never raise a Jira issue without the `automated-failure` label.
 - Never auto-fix auth specs or `global.setup.ts` failures.

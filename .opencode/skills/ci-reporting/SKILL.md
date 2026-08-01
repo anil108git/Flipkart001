@@ -22,11 +22,14 @@ description: >
    to it without requiring repo access.
 3. **Flaky tests are quarantined, not ignored** — A flaky test is never
    silently retried into a pass. It is flagged, quarantined, and a
-   Bugasura ticket is raised.
+   Jira issue is raised.
 4. **Traces are always uploaded for failures** — A failing test without
    a trace is undebuggable. Trace upload is non-negotiable.
 5. **Staging runs are never merge-blocking** — Only the dev environment
    run gates the PR. Staging is a post-merge verification step.
+6. **Release artifacts travel with the run** — `artifacts/` (decision log,
+   coverage matrix, test plans) is uploaded as a CI artifact so the
+   coverage-analyst and Jira write-back can consume it after the run.
 
 ---
 
@@ -39,8 +42,10 @@ PR opened / push to branch
         │     Run tests against dev environment
         │     Retry failed tests once
         │     Upload traces for failures
+        │     Upload release artifacts (artifacts/)
         │     Publish HTML report to GitHub Pages
-        │     Trigger Jira write-back
+        │     Update coverage matrix (build-coverage-matrix.mjs)
+        │     Trigger Jira write-back (Story + Epic roll-up)
         │     MERGE-BLOCKING ✅
         │
 Merge to main
@@ -49,8 +54,10 @@ Merge to main
               Run tests against staging environment
               Retry failed tests once
               Upload traces for failures
+              Upload release artifacts (artifacts/)
               Publish HTML report to GitHub Pages
-              Trigger Jira write-back
+              Update coverage matrix (build-coverage-matrix.mjs)
+              Trigger Jira write-back (Story + Epic roll-up)
               Trigger Healer agent on failure
               NOT merge-blocking ℹ️
 ```
@@ -113,7 +120,6 @@ jobs:
           TEST_USER_PASSWORD: ${{ secrets.DEV_TEST_USER_PASSWORD }}
           JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
           JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
-          BUGASURA_API_KEY: ${{ secrets.BUGASURA_API_KEY }}
 
       - name: Upload traces (failures only)
         if: failure()
@@ -121,6 +127,14 @@ jobs:
         with:
           name: playwright-traces-dev-${{ github.run_id }}
           path: test-results/
+          retention-days: 14
+
+      - name: Upload release artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-artifacts-dev-${{ github.run_id }}
+          path: artifacts/
           retention-days: 14
 
       - name: Upload HTML report
@@ -179,7 +193,6 @@ jobs:
           TEST_USER_PASSWORD: ${{ secrets.STAGING_TEST_USER_PASSWORD }}
           JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
           JIRA_USER_EMAIL: ${{ secrets.JIRA_USER_EMAIL }}
-          BUGASURA_API_KEY: ${{ secrets.BUGASURA_API_KEY }}
 
       - name: Upload traces (failures only)
         if: failure()
@@ -187,6 +200,14 @@ jobs:
         with:
           name: playwright-traces-staging-${{ github.run_id }}
           path: test-results/
+          retention-days: 14
+
+      - name: Upload release artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-artifacts-staging-${{ github.run_id }}
+          path: artifacts/
           retention-days: 14
 
       - name: Upload HTML report
@@ -269,12 +290,12 @@ Test fails on first attempt
         ├─ Retry 1: PASSES → Flaky detected
         │     Do NOT mark as passed
         │     Tag result as FLAKY in run summary
-        │     Raise Bugasura ticket with label: flaky
+        │     Raise Jira issue with label: flaky
         │     Do NOT block merge for flaky failures
         │
         └─ Retry 1: FAILS → Consistent failure
               Block merge (dev only)
-              Raise Bugasura ticket with label: healer-escalation
+              Raise Jira issue with label: healer-escalation
               Trigger Healer agent (staging only, post-merge)
 ```
 
@@ -320,7 +341,6 @@ before the first pipeline run:
 | `STAGING_TEST_USER_PASSWORD` | Test user password for staging |
 | `JIRA_API_TOKEN` | Jira personal access token |
 | `JIRA_USER_EMAIL` | Email associated with Jira token |
-| `BUGASURA_API_KEY` | Bugasura MCP API key |
 
 ---
 
@@ -329,9 +349,9 @@ before the first pipeline run:
 | Condition | Dev | Staging |
 |-----------|-----|---------|
 | All tests pass | ✅ Allow merge | ℹ️ Post-merge only |
-| Some tests fail (consistent) | ❌ Block merge | ℹ️ Raise Bugasura ticket |
-| Some tests flaky | ⚠️ Allow merge + raise Bugasura | ℹ️ Raise Bugasura ticket |
-| All tests fail | ❌ Block merge | ℹ️ Raise Bugasura ticket |
+| Some tests fail (consistent) | ❌ Block merge | ℹ️ Raise Jira issue |
+| Some tests flaky | ⚠️ Allow merge + raise Jira | ℹ️ Raise Jira issue |
+| All tests fail | ❌ Block merge | ℹ️ Raise Jira issue |
 | Pipeline setup error | ❌ Block merge | ❌ Block next staging run |
 
 ---

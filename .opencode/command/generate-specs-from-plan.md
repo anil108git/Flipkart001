@@ -1,22 +1,20 @@
 ---
-name: generate-specs-from-plan
 description: >
   Generates Playwright spec files and page objects from an approved test
-  plan in specs/. Reads the plan, creates missing page objects in pages/,
-  and produces .spec.ts files following the coding-standards skill. Invoke
-  with /generate-specs-from-plan and provide the plan file path when prompted.
-mode: agent
-tools:
-  - filesystem
-  - playwright-mcp
+  plan in a release folder. Reads the plan, creates missing page objects
+  in pages/, and produces .spec.ts files following the coding-standards
+  skill. Invoke with /generate-specs-from-plan and provide the plan file
+  path when prompted.
+agent: generator
+model: opencode/north-mini-code-free
 ---
 
 # Generate Specs from Approved Test Plan
 
 You are acting as the **Generator agent**. Your job is to read an approved
-test plan from `specs/` and produce runnable Playwright spec files and
-page objects. You must follow the `coding-standards` skill for every line
-of code you write.
+test plan from a release folder (e.g. `artifacts/release-<version>-<NN>/stories/`)
+and produce runnable Playwright spec files and page objects. You must
+follow the `coding-standards` skill for every line of code you write.
 
 Follow every phase in order. Do not skip phases. Do not proceed to the next
 phase without completing the current one.
@@ -25,34 +23,36 @@ phase without completing the current one.
 
 ## Input
 
-**Plan file path:** {{PLAN_FILE}}
+**Plan file path:** $ARGUMENTS
 
-If PLAN_FILE was not provided, ask:
-> "Please provide the path to your approved test plan in specs/
-> (e.g. specs/flipkart-foryou-tab.md) to continue."
+If $ARGUMENTS was not provided, ask:
+> "Please provide the path to your approved test plan in the release folder
+> (e.g. artifacts/release-v1.2-01/stories/test-plan-KAN-101-v1.2.md)."
 
 ---
 
 ## Phase 1 — Read and Validate the Plan
 
-1. Read the file at **{{PLAN_FILE}}** from the filesystem.
+1. Read the file at **$ARGUMENTS** from the filesystem.
 2. If the file does not exist, stop and tell the user:
-   > "File not found at `{{PLAN_FILE}}`. Please check the path and try again."
+   > "File not found at `$ARGUMENTS`. Please check the path and try again."
 3. Parse the plan header and extract:
    - Feature name (from the H1 heading)
-   - Bugasura Requirement ID (e.g. `REQ-42`) if present
+   - Story key + Epic key (e.g. `KAN-101` / `KAN-45`) if present
    - Status — must be `READY` or approved by the user
    - Spec file target (from the header)
 4. Parse all scenarios from the plan body:
    - Extract scenario name, Given/When/Then steps, Source AC reference
+   - Extract Category (positive/negative/edge/non-functional/performance)
    - Count total scenarios
 5. Display what was parsed:
    ```
    Parsed: [Feature name]
-   REQ-ID: [REQ-ID or N/A]
+   Story:  [KAN-101 or N/A]
+   Epic:   [KAN-45 or N/A]
    Status: [DRAFT | READY | Approved]
    Scenarios found: [N]
-   Spec target: tests/[feature-name].spec.ts
+   Spec target: tests/kan-[storynum]-[feature].spec.ts
    ```
 6. If Status is `DRAFT`, warn the user:
    > "The plan status is DRAFT — it has not been verified against the live
@@ -91,7 +91,7 @@ For each missing page object, create the file following the `coding-standards` s
 ### File location
 `pages/[feature-name].page.ts`
 
-Follow the [coding-standards skill](../.claude/skills/coding-standards/SKILL.md#page-object-model-structure) for:
+Follow the [coding-standards skill](.opencode/skills/coding-standards/SKILL.md#page-object-model-structure) for:
 - Class structure (role-first locators, constructor pattern)
 - Method conventions (one action, no assertions, no test data)
 - Navigation method `async goto()`
@@ -115,7 +115,9 @@ For each scenario group in the plan (grouped by section/topic), generate
 a spec file following the `coding-standards` skill.
 
 ### File location
-`tests/[feature-name].spec.ts`
+`tests/kan-[storynum]-[feature].spec.ts`
+e.g. Story `KAN-101`, feature "user login" → `tests/kan-101-user-login.spec.ts`
+(No story key? Use `tests/[feature-name].spec.ts`.)
 
 One spec file per feature. If the plan is very large (50+ scenarios),
 split into multiple files by section:
@@ -129,11 +131,11 @@ tests/
 
 ### Spec file rules (from coding-standards skill)
 
-1. **`test.describe` block references the REQ-ID:**
+1. **`test.describe` block references the Story and Epic keys:**
    ```typescript
-   test.describe('Feature Name — REQ-42', () => { ... });
+   test.describe('[Feature Name] — KAN-101 (Epic: KAN-45)', () => { ... });
    ```
-   If no REQ-ID, use the feature name only:
+   If no Jira keys are present, use the feature name only:
    ```typescript
    test.describe('Flipkart For You Tab', () => { ... });
    ```
@@ -171,19 +173,20 @@ tests/
 
 ### Test Tags (Mandatory)
 
-Every test MUST have at least one tag. Tags are assigned based on the scenario's Type and Complexity from the plan.
-Apply tags per the [coding-standards skill](../.claude/skills/coding-standards/SKILL.md#test-tags).
+Every test MUST have at least one tag. Tags are assigned based on the scenario's Category and Complexity from the plan.
+Apply tags per the [coding-standards skill](.opencode/skills/coding-standards/SKILL.md#test-tags), including the 5-category tags
+`@negative`, `@edge-case`, `@a11y`, `@security`, `@compat`, `@usability`, `@reliability`, `@performance`.
 
 ### Spec template
 
 ```typescript
-// spec: specs/[plan-file].md
+// spec: artifacts/release-<version>-<NN>/stories/test-plan-<STORY>-<version>.md
 // seed: tests/seed.spec.ts
 
 import { test, expect } from '@playwright/test';
 import { [Feature]Page } from '../pages/[feature].page';
 
-test.describe('[Feature Name] — [REQ-ID]', () => {
+test.describe('[Feature Name] — [STORY] (Epic: [EPIC])', () => {
 
   let [feature]Page: [Feature]Page;
 
@@ -234,6 +237,7 @@ test.describe('[Feature Name] — [REQ-ID]', () => {
    Tags applied:
    @smoke: [N] | @regression: [N] | @e2e: [N]
    @ui: [N] | @negative: [N] | @edge-case: [N]
+   @a11y: [N] | @security: [N] | @performance: [N]
    ```
 
 ---
@@ -260,8 +264,9 @@ If there are type errors:
 Spec generation complete — [feature name]
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Plan:     [PLAN_FILE]
-REQ-ID:   [REQ-ID or N/A]
+Plan:     $ARGUMENTS
+Story:    [STORY or N/A]
+Epic:     [EPIC or N/A]
 Status:   [plan status]
 
 Page objects created:
@@ -280,7 +285,7 @@ Next steps:
 
 ---
 
-Follow the [What the Generator Must Never Do](../.claude/skills/coding-standards/SKILL.md#what-the-generator-must-never-do) rules from `coding-standards` skill.
+Follow the [What the Generator Must Never Do](.opencode/skills/coding-standards/SKILL.md#what-the-generator-must-never-do) rules from `coding-standards` skill.
 
 Additional rules:
 - Always run `npx tsc --noEmit` before reporting success.

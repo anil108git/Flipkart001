@@ -1,59 +1,72 @@
 # E2E Automation Framework Architecture
 
+Release-driven, Epic/Story-traceable Playwright E2E framework. AI assets
+live in `.opencode/` (agents, commands, skills). MCP servers (Jira +
+Playwright) are configured in `opencode.json`. Per-release artifacts land
+in `artifacts/release-<version>-<NN>/`.
+
 ## Orchestration Flow
 
 ```
 +=====================================================================================+
 |                           REQUIREMENTS INPUT                                         |
-|                       (Jira/Bugasura Ticket)                                         |
+|           (Jira Story / Epic / JQL filter)                                          |
 +===========================================+=========================================+
                                             |
                                             v
 +=====================================================================================+
-|  CLAUDE CODE SKILLS                                                                  |
+|  OPENCODE SKILLS                                                                     |
 |                                                                                      |
 |  +----------------------+  +------------------+  +------------------+                |
-|  | bugasura-to-test-plan|  | coding-standards |  | test-data-setup  |                |
+|  | jira-to-test-plan    |  | coding-standards |  | test-data-setup  |                |
 |  | Plan Phase           |  | Guardrails       |  | Data Phase       |                |
 |  +----------+-----------+  +--------+---------+  +--------+---------+                |
 |             |                       |                     |                           |
 |             v                       v                     v                           |
 |  +----------------------+  +------------------+  +------------------+                |
-|  | healing-policy       |  | bugasura-write-  |  | ci-reporting     |                |
-|  | Post-Failure         |  | back             |  | CI Phase         |                |
+|  | healing-policy       |  | jira-write-back  |  | ci-reporting     |                |
+|  | Post-Failure         |  | Results          |  | CI Phase         |                |
+|  +----------------------+  +------------------+  +------------------+                |
+|  +----------------------+  +------------------+  +------------------+                |
+|  | epic-story-          |  | release-artifacts|  | test-            |                |
+|  | traceability         |  | Per-release      |  | categorization   |                |
 |  +----------------------+  +------------------+  +------------------+                |
 +===========================================+=========================================+
                                             |
                                             v
 +=====================================================================================+
-|  GITHUB COPILOT AGENTS                                                               |
+|  OPENCODE AGENTS                                                                     |
 |                                                                                      |
-|  +-------------+       +-------------+       +-------------+                        |
-|  |   PLANNER   |------>|  GENERATOR  |------>|   HEALER   |                        |
-|  |             |       |             |       |             |                        |
-|  | - Analyze   |       | - Generate  |       | - Diagnose  |                        |
-|  |   ticket    |       |   test code |       |   failure   |                        |
-|  | - Create    |       | - Create    |       | - Fix tests |                        |
-|  |   plan      |       |   page obj  |       | - Re-run    |                        |
-|  +------+------+       +------+------+       +------+------+                        |
+|  +----------------+  +----------+  +----------+  +-----------+  +-----------------+  |
+|  | RELEASE-PLANNER|->| PLANNER  |->| GENERATOR|->| (REVIEWER)|->| COVERAGE-ANALYST|  |
+|  | scope/version  |  | 5-cat    |  | specs+PO |  | big-pickle|  | matrix          |  |
+|  | + scaffold     |  | plans    |  | code     |  | cross-    |  | reconcile       |  |
+|  +----------------+  +----------+  +----------+  | review    |  +-----------------+  |
+|                                                   +-----------+                      |
+|  +-------------+       +-------------+                                                |
+|  |   HEALER    |<------|  RUN FAILED |                                                |
+|  |  fix/escalate|      +-------------+                                                |
+|  +------+------+                                                                     |
 +===========================================+=========================================+
                                             |
                                             v
 +=====================================================================================+
 |  GENERATED ASSETS                                                                    |
 |                                                                                      |
-|  specs/                      tests/                     pages/                       |
-|  +--------------+           +--------------+           +--------------+              |
-|  | login-flow   |           | login-flow   |           | login.page   |              |
-|  | .md          |---------->| .spec.ts     |<----------| .ts          |              |
-|  | (Plan)       |           | (Tests)      |           | (Page Obj)   |              |
-|  +--------------+           +--------------+           +--------------+              |
+|  artifacts/release-<v>-<NN>/   tests/             pages/                             |
+|  +--------------+              +--------------+   +--------------+                   |
+|  | test-plan-*  |              | kan-101-*.    |   | login.page   |                   |
+|  | .md (stories)|------------->| spec.ts       |<--| .ts          |                   |
+|  | coverage-    |              | (Tests)       |   | (Page Obj)   |                   |
+|  | matrix.json  |              +--------------+   +--------------+                   |
+|  | agent-decision-log.json                        |                                |
+|  +--------------+                                                                     |
 |                                                                                      |
-|  fixtures/                     mcp.config.json                                      |
-|  +--------------+           +--------------+                                        |
-|  | auth.fixture |           | Playwright   |                                        |
-|  | .ts          |           | Bugasura     |                                        |
-|  +--------------+           +--------------+                                        |
+|  fixtures/                     opencode.json                                         |
+|  +--------------+              +--------------+                                     |
+|  | auth.fixture |              | Jira MCP     |                                     |
+|  | .ts          |              | Playwright   |                                     |
+|  +--------------+              +--------------+                                     |
 +===========================================+=========================================+
                                             |
                                             v
@@ -79,51 +92,45 @@
 |                                              |                                      |
 |                                              v                                      |
 |                                    +-----------------+                              |
-|                                    |  BUGASURA WRITE-BACK |                              |
-|                                    |  (Results)           |                              |
+|                                    | JIRA WRITE-BACK |                              |
+|                                    | (Story + Epic)  |                              |
 |                                    +-----------------+                              |
 +=====================================================================================+
 ```
 
 ## Phase Details
 
-### Phase 1: Planning
+### Phase 0: Scope Resolution
 
 ```
-  Jira Ticket
+  Jira Input (Story | Epic | JQL)
        |
        v
   +-----------------+
-  | bugasura-to-    |
-  | test-plan Skill |
+  | Release Planner |
+  | (deepseek-v4-   |
+  |  flash-free)    |
   +--------+--------+
            |
            v
   +-----------------+
-  | Planner Agent   |
+  | Resolve Epic -> |
+  | Stories, derive |
+  | fixVersion      |
   +--------+--------+
            |
            v
   +-----------------+
-  | specs/login-    |
-  | flow.md         |
+  | Scaffold:       |
+  | artifacts/      |
+  | release-<v>-<NN>|
   +--------+--------+
            |
            v
-     +-----------+
-     |  Quality  |
-     |   Gate    |
-     +-----+-----+
-           |
-     Pass  |  Fail
-     +-----+-----+
-     |           |
-     v           v
-  Phase 2    Revise Plan
-              (loop)
+  agent-decision-log.json  <- scope entry
 ```
 
-### Phase 2: Generation
+### Phase 1: Planning & Generation
 
 ```
   Test Spec          coding-standards     test-data-setup
@@ -157,7 +164,7 @@
                           (loop)
 ```
 
-### Phase 3: Execution
+### Phase 2: Execution
 
 ```
   +-------------------+
@@ -195,7 +202,7 @@
 +-------+     +---------+
 ```
 
-### Phase 4: Healing
+### Phase 3: Healing
 
 ```
   Failed Test          healing-policy
@@ -248,9 +255,10 @@ See [responsibility-map](responsibility-map.md) for the full component-to-purpos
 
 | Category | Location |
 |----------|----------|
-| Skills (7) | `.claude/skills/*/SKILL.md` |
-| Agents (3) | `.github/agents/*.agent.md` |
-| Prompts (4) | `.github/prompts/*.prompt.md` |
+| Skills (10) | `.opencode/skills/*/SKILL.md` |
+| Agents (5) | `.opencode/agent/*.md` |
+| Commands (6) | `.opencode/command/*.md` |
+| MCP config | `opencode.json` |
 
 ## Data Flow
 
@@ -259,7 +267,7 @@ See [responsibility-map](responsibility-map.md) for the full component-to-purpos
 |     EXTERNAL      |                  |    FRAMEWORK      |
 |                   |                  |                   |
 |  +-------+        |    Requirement   |  +-------+        |
-|  |Bugasura|--------+------------------>  | Specs |        |
+|  | Jira  |--------+------------------>  | Plan  |        |
 |  +-------+        |                  |  +---+---+        |
 |                   |                  |      |            |
 |  +-------+        |     Trigger      |      v            |
@@ -288,16 +296,16 @@ See [responsibility-map](responsibility-map.md) for the full component-to-purpos
                                       |  |Trace Files|  |
                                       |  +-----------+  |
                                       |                 |
-                                       |  +-----------+  |
-                                       |  |Bugasura   |  |
-                                       |  | Update    |  |
-                                       |  +-----------+  |
-                                       +--------+--------+
-                                                |
-                                                v
-                                       +-----------------+
-                                       | Bugasura (Back) |
-                                       +-----------------+
+                                      |  +-----------+  |
+                                      |  | Jira      |  |
+                                      |  | Update    |  |
+                                      |  +-----------+  |
+                                      +--------+--------+
+                                               |
+                                               v
+                                      +-----------------+
+                                      |  Jira (Back)   |
+                                      +-----------------+
 ```
 
 ## Environment Flow
@@ -335,30 +343,41 @@ See [responsibility-map](responsibility-map.md) for the full component-to-purpos
 ```
 project-root/
 |
-+-- .github/
-|   +-- agents/                    # GitHub Copilot agents
-|   |   +-- playwright-test-generator.agent.md
-|   |   +-- playwright-test-healer.agent.md
-|   |   +-- playwright-test-planner.agent.md
++-- .opencode/                  # AI assets (opencode canonical root)
+|   +-- agent/                  # Agents
+|   |   +-- release-planner.md  # (primary, deepseek-v4-flash-free)
+|   |   +-- planner.md          # (primary, nemotron-3-ultra-free)
+|   |   +-- generator.md        # (subagent, north-mini-code-free)
+|   |   +-- healer.md           # (subagent, mimo-v2.5-free)
+|   |   +-- coverage-analyst.md # (subagent, big-pickle)
 |   |
-|   +-- prompts/                   # Copilot prompts
-|   |   +-- create-testplan.prompt.md
-|   |   +-- generate-specs-from-plan.prompt.md
-|   |   +-- update-requirement.prompt.md
-|   |   +-- heal-failed-run.prompt.md
+|   +-- command/                # Commands
+|   |   +-- plan-release.md
+|   |   +-- create-testplan.md
+|   |   +-- generate-specs-from-plan.md
+|   |   +-- update-requirement.md
+|   |   +-- heal-failed-run.md
+|   |   +-- generate-coverage-matrix.md
 |   |
-|   +-- workflows/                 # CI/CD pipelines
-|       +-- e2e-tests.yml
-|
-+-- .claude/
-|   +-- skills/                    # Claude Code skills
-|       +-- bugasura-to-test-plan/SKILL.md
-|       +-- bugasura-write-back/SKILL.md
+|   +-- skills/                 # Skills
+|       +-- jira-to-test-plan/SKILL.md
+|       +-- jira-write-back/SKILL.md
 |       +-- ci-reporting/SKILL.md
 |       +-- coding-standards/SKILL.md
 |       +-- healing-policy/SKILL.md
 |       +-- requirements-only-planning/SKILL.md
 |       +-- test-data-setup/SKILL.md
+|       +-- epic-story-traceability/SKILL.md
+|       +-- release-artifacts/SKILL.md
+|       +-- test-categorization/SKILL.md
+|
++-- artifacts/                  # Per-release artifacts (gitignored)
+|   +-- release-<version>-<NN>/
+|       +-- test-plan-<EPIC>-<version>.md
+|       +-- stories/
+|       |   +-- test-plan-<STORY>-<version>.md
+|       +-- coverage-matrix.json
+|       +-- agent-decision-log.json
 |
 +-- docs/
 |   +-- architecture.md            # This file
@@ -378,10 +397,14 @@ project-root/
 +-- requirements/
 |   +-- flipkart-foryou-tab.md     # Requirements document
 |
-+-- specs/
-|   +-- login-flow.md              # Test specifications
++-- scripts/                       # Release pipeline scripts
+|   +-- init-release.mjs           # Scaffold release folder
+|   +-- append-decision.mjs        # Append decision-log entry
+|   +-- build-coverage-matrix.mjs  # Recompute coverage matrix
+|   +-- ci-heal.mjs                # CI healer
 |
 +-- tests/
+|   +-- kan-101-user-login.spec.ts # Story-traceable specs
 |   +-- example.spec.ts            # Example test (boilerplate)
 |   +-- seed.spec.ts               # Data seeding
 |
@@ -389,8 +412,8 @@ project-root/
 +-- .env.staging                   # Staging environment
 +-- .env.example                   # Environment template
 +-- .gitignore
-+-- CLAUDE.md                      # Claude Code project config
-+-- mcp.config.json                # MCP server config
++-- AGENTS.md                      # opencode project config
++-- opencode.json                  # opencode config + MCP servers
 +-- package.json                   # Dependencies
 +-- playwright.config.ts           # Playwright config
 +-- tsconfig.json                  # TypeScript config
