@@ -1,0 +1,1010 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e13]:
+    - generic [ref=e16]:
+      - generic [ref=e18]:
+        - generic [ref=e1356]:
+          - generic [ref=e1361]:
+            - img "Image" [ref=e1364]
+            - img "Image" [ref=e1367]
+          - link [ref=e1369] [cursor=pointer]:
+            - /url: /flipkart-minutes-store?marketplace=HYPERLOCAL&autoSwitchAddress=true
+            - generic [ref=e1372]:
+              - img "Image" [ref=e1375]
+              - img "Image" [ref=e1378]
+          - link [ref=e1380] [cursor=pointer]:
+            - /url: /flights-travel-uhp-at-store
+            - generic [ref=e1383]:
+              - img "Image" [ref=e1386]
+              - img "Image" [ref=e1389]
+          - link [ref=e1391] [cursor=pointer]:
+            - /url: /hypervalue-tab-at-store?marketplace=FLIPKART&experience=hv
+            - generic [ref=e1394]:
+              - img "Image" [ref=e1397]
+              - img "Image" [ref=e1400]
+        - generic [ref=e69]:
+          - generic [ref=e70]: "201301"
+          - generic [ref=e75]: Select delivery location
+      - banner [ref=e86]:
+        - generic [ref=e90]:
+          - button "Search for Products, Brands and More" [ref=e91] [cursor=pointer]:
+            - img "Search Icon" [ref=e92]
+          - textbox "Search for Products, Brands and More" [ref=e96]
+        - generic [ref=e97]:
+          - generic [ref=e102]:
+            - link "Login" [ref=e103] [cursor=pointer]:
+              - /url: /account/login?ret=/
+              - img "Login" [ref=e104]
+            - img "Chevron" [ref=e106]
+          - generic [ref=e111]:
+            - link "More" [ref=e112] [cursor=pointer]:
+              - /url: "#"
+            - img "Chevron" [ref=e114]
+          - link "Cart Cart" [ref=e117] [cursor=pointer]:
+            - /url: /viewcart?marketplace=FLIPKART
+            - img "Cart" [ref=e118]
+            - generic [ref=e119]: Cart
+      - generic [ref=e1402]:
+        - link "For You" [ref=e1407] [cursor=pointer]:
+          - /url: https://www.flipkart.com/
+        - link "Fashion" [ref=e1418] [cursor=pointer]:
+          - /url: /ss-26-base-inline-at-store
+        - link "Mobiles" [ref=e1429] [cursor=pointer]:
+          - /url: /mobile-phones-store
+        - link "Electronics" [ref=e1440] [cursor=pointer]:
+          - /url: /new-elec-clp-march-at-store
+        - link "Beauty" [ref=e1451] [cursor=pointer]:
+          - /url: /bpc-bau-new-inline-at-store
+        - link "Home" [ref=e1462] [cursor=pointer]:
+          - /url: /home-kitchen-25-at-store
+        - link "Appliances" [ref=e1473] [cursor=pointer]:
+          - /url: /tv-and-appliances-inline-ab-at-store
+        - link "Toys, baby.." [ref=e1484] [cursor=pointer]:
+          - /url: /toysbc-new26-inline-at-store
+        - link "Food & Health" [ref=e1495] [cursor=pointer]:
+          - /url: /fnhc-2025-new-at-store
+        - link "Auto Accessories" [ref=e1506] [cursor=pointer]:
+          - /url: /aa-2025-new-at-store
+        - link "Sports & Fitness" [ref=e1517] [cursor=pointer]:
+          - /url: /sf-inline-2025-at-store
+        - link "Furniture" [ref=e1528] [cursor=pointer]:
+          - /url: /india-ka-furniture-studio-inlines-at-store
+        - link "Books & Media" [ref=e1539] [cursor=pointer]:
+          - /url: /booksmedia-2025-at-store
+        - link "2 Wheelers" [ref=e1550] [cursor=pointer]:
+          - /url: /twowheelers-at-store
+    - generic [ref=e283]:
+      - generic [ref=e1576]:
+        - link [ref=e1582] [cursor=pointer]:
+          - /url: /offers-list/content?screen=dynamic&pk=themeViews%3DBBDH-NOV-BASE-HEADER-OMU%3ABBDH-NOV~widgetType%3DdealCard~contentType%3Dneo&wid=2.dealCard.OMU&param=32546&BU=LifeStyle
+          - img "Image" [ref=e1585]
+        - link [ref=e1591] [cursor=pointer]:
+          - /url: /clothing-and-accessories/~cs-tj1hs5ycq5/pr?sid=clo&collection-tab-name=Men%27s+clothing&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=211&offer=nb:mp:027182f627,nb:mp:02c5885027&BU=LifeStyle
+          - img "Image" [ref=e1594]
+        - link [ref=e1600] [cursor=pointer]:
+          - /url: /mens-footwear/~cs-01ody9dre4/pr?sid=osp%2Ccil&collection-tab-name=Men%27s+Footwear&sort=price_desc&param=456&BU=LifeStyle
+          - img "Image" [ref=e1603]
+        - link [ref=e1609] [cursor=pointer]:
+          - /url: /clothing-and-accessories/~cs-gyg1lvi3d7/pr?sid=clo&collection-tab-name=Dresses%2Ctops%2CJeans&pageCriteria=default&p%5B%5D=facets.brand%255B%255D%3DFABLE%2BSTREET&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&sort=recency_desc&param=8890&BU=LifeStyle
+          - img "Image" [ref=e1612]
+        - link [ref=e1618] [cursor=pointer]:
+          - /url: /mens-footwear/~cs-8lblwb61ol/pr?sid=osp%2Ccil&collection-tab-name=SFW+65&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DADIDAS&p%5B%5D=facets.brand%255B%255D%3DREEBOK&param=7654&BU=LifeStyle
+          - img "Image" [ref=e1621]
+        - link [ref=e1627] [cursor=pointer]:
+          - /url: /reh/plk/tvv/~cs-k9fu22ykzc/pr?sid=reh%2Cplk%2Ctvv&collection-tab-name=Trolley+Bags+M75&pageCriteria=default&param=11126&p%5B%5D=facets.brand%255B%255D%3DSAFARI&p%5B%5D=facets.brand%255B%255D%3DAMERICAN%2BTOURISTER&p%5B%5D=facets.brand%255B%255D%3DARISTOCRAT&p%5B%5D=facets.brand%255B%255D%3DHRX&p%5B%5D=facets.brand%255B%255D%3DKamiliant%2Bby%2BAmerican%2BTourister&p%5B%5D=facets.brand%255B%255D%3DNASHER%2BMILES&p%5B%5D=facets.brand%255B%255D%3DMagnum%2Bby%2BSafari&p%5B%5D=facets.brand%255B%255D%3DWildcraft&param=11126&BU=LifeStyle
+          - img "Image" [ref=e1630]
+        - link [ref=e1636] [cursor=pointer]:
+          - /url: /clothing-and-accessories/pr?sid=clo&p%5B%5D=facets.brand%255B%255D%3DTOONYPORT&p%5B%5D=facets.brand%255B%255D%3DMAX&p%5B%5D=facets.brand%255B%255D%3DPantaloons%2BJunior&p%5B%5D=facets.brand%255B%255D%3DJuniors%2Bby%2BLifestyle&p%5B%5D=facets.brand%255B%255D%3DV-MART&p%5B%5D=facets.brand%255B%255D%3DSmart%2BBaby&p%5B%5D=facets.brand%255B%255D%3DCUTIEKINS&p%5B%5D=facets.ideal_for%255B%255D%3DGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys%2B%2526%2BBaby%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BGirls&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D299&param=0283686&BU=LifeStyle
+          - img "Image" [ref=e1639]
+        - link [ref=e1645] [cursor=pointer]:
+          - /url: /monsoon-26-at-store?param=436567&BU=LifeStyle
+          - img "Image" [ref=e1648]
+        - link [ref=e1654] [cursor=pointer]:
+          - /url: /jewellery/pr?sid=mcr&p%5B%5D=facets.brand%255B%255D%3DGIVA&p%5B%5D=facets.brand%255B%255D%3DPALMONAS&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=56786&BU=LifeStyle
+          - img "Image" [ref=e1657]
+      - generic [ref=e1683]:
+        - generic [ref=e1684]:
+          - link "Monsoon" [ref=e1690] [cursor=pointer]:
+            - /url: /monsoon-26-at-store?param=66876&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIk1vbnNvb24iXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Shirts" [ref=e1701] [cursor=pointer]:
+            - /url: /topwear-at-store?param=63536363&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlNoaXJ0cyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+          - link "Jeans" [ref=e1712] [cursor=pointer]:
+            - /url: /mc-sale-bbd24-bw-at-store?param=6354543&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkplYW5zIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D
+          - link "Sports Shoes" [ref=e1723] [cursor=pointer]:
+            - /url: /spl-2025-sfw-at-store?param=564&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlNwb3J0cyBTaG9lcyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+          - link "Watches" [ref=e1734] [cursor=pointer]:
+            - /url: /july-24-sale-store?ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIldhdGNoZXMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Kids' clothing" [ref=e1745] [cursor=pointer]:
+            - /url: /kidseoss-at-store?param=02868686&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIktpZHMnIGNsb3RoaW5nIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D
+          - link "Backpacks" [ref=e1756] [cursor=pointer]:
+            - /url: /backpacks-2026-at-store?param=11737&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkJhY2twYWNrcyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+          - link "Jeans, Trousers" [ref=e1767] [cursor=pointer]:
+            - /url: /wne-sale-bottomwear-at-store?param=6856&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkplYW5zLCBUcm91c2VycyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+          - link "Kurtis" [ref=e1778] [cursor=pointer]:
+            - /url: /clothing-and-accessories/ethnic-wear/kurtas/women-kurtas-and-kurtis/pr?sid=clo%2Ccfv%2Ccib%2Crkt&Param=0112&p%5B%5D=facets.fulfilled_by%255B%255D%3DF-Assured&p%5B%5D=facets.rating%255B%255D%3D3%25E2%2598%2585%2B%2526%2Babove&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=9876&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkt1cnRpcyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+          - link "Women's Sports Shoes" [ref=e1789] [cursor=pointer]:
+            - /url: /sale-base-women-ft-at-store?param=624&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIldvbWVuJ3MgU3BvcnRzIFNob2VzIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D
+          - link "Bra, panty" [ref=e1800] [cursor=pointer]:
+            - /url: /women-innerwear-at-store?param=6569&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkJyYSwgcGFudHkiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Lehenga Cholis" [ref=e1811] [cursor=pointer]:
+            - /url: /womens-lehenga-cholis/~cs-0wo413wjh1/pr?sid=clo%2Chlg%2Cwrp&collection-tab-name=lehenga&param=765456&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkxlaGVuZ2EgQ2hvbGlzIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D
+          - link "Nightsuits" [ref=e1822] [cursor=pointer]:
+            - /url: /nightwear-clp-at-store?param=4612&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIk5pZ2h0c3VpdHMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Heels & Flats" [ref=e1833] [cursor=pointer]:
+            - /url: /womens-footwear/~womens-sandals/pr?sid=osp%2Ciko&p%5B%5D=facets.brand%255B%255D%3DMOCHI&param=7652&p%5B%5D=facets.brand%255B%255D%3DMETRO&p%5B%5D=facets.brand%255B%255D%3DCatwalk&p%5B%5D=facets.brand%255B%255D%3DCARLTON%2BLONDON&p%5B%5D=facets.brand%255B%255D%3DInc.5&p%5B%5D=facets.brand%255B%255D%3DGinger%2Bby%2BLifestyle&p%5B%5D=facets.brand%255B%255D%3DCODE%2Bby%2BLifestyle&p%5B%5D=facets.brand%255B%255D%3DAllen%2BSolly&p%5B%5D=facets.brand%255B%255D%3DParagon&p%5B%5D=facets.brand%255B%255D%3DFLITE&p%5B%5D=facets.brand%255B%255D%3DAqualite&p%5B%5D=facets.brand%255B%255D%3DANOUK&p%5B%5D=facets.brand%255B%255D%3DBata&p%5B%5D=facets.brand%255B%255D%3DLIBERTY&p%5B%5D=facets.brand%255B%255D%3DLongwalk&p%5B%5D=facets.brand%255B%255D%3DTWINSSHOE&p%5B%5D=facets.brand%255B%255D%3DVENDOZ&p%5B%5D=facets.brand%255B%255D%3DSHOETOPIA&p%5B%5D=facets.brand%255B%255D%3DHVNLY%2BBY%2BSHOETOPIA&p%5B%5D=facets.brand%255B%255D%3DShoestail&p%5B%5D=facets.brand%255B%255D%3DZoom%2BShoes&p%5B%5D=facets.brand%255B%255D%3DTOSHINA%2BSHOES%2BKING&p%5B%5D=facets.brand%255B%255D%3DTRASE&p%5B%5D=facets.brand%255B%255D%3DDoctor%2BUltra%2BComfort&p%5B%5D=facets.brand%255B%255D%3DDOCTOR%2BULTRA&p%5B%5D=facets.brand%255B%255D%3DDenill&p%5B%5D=facets.brand%255B%255D%3DStylestry&p%5B%5D=facets.brand%255B%255D%3DPaduki&p%5B%5D=facets.brand%255B%255D%3DKhadim%2527s&p%5B%5D=facets.brand%255B%255D%3DSHERRIF&p%5B%5D=facets.brand%255B%255D%3DShezone&p%5B%5D=facets.brand%255B%255D%3DDOCTOR%2BEXTRA%2BSOFT&p%5B%5D=facets.brand%255B%255D%3DEL%2BPASO&p%5B%5D=facets.brand%255B%255D%3DFabbmate&p%5B%5D=facets.brand%255B%255D%3DTWO%2BSOFT&p%5B%5D=facets.brand%255B%255D%3DLayasa&param=5464&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkhlZWxzICYgRmxhdHMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Dress Material" [ref=e1844] [cursor=pointer]:
+            - /url: /clothing-and-accessories/fabric/dress-material/women-dress-material/pr?sid=clo%2Cqfi%2Cxcx%2Cms4&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&Param=6437&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkRyZXNzIE1hdGVyaWFsIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D
+          - link "Clogs" [ref=e1855] [cursor=pointer]:
+            - /url: /open-footwear-branded-at-store?param=567&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkNsb2dzIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D
+          - link "Drips for her" [ref=e1866] [cursor=pointer]:
+            - /url: /spoyl-fashion-for-her-store?param=9876&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkRyaXBzIGZvciBoZXIiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Celeb looks" [ref=e1877] [cursor=pointer]:
+            - /url: /celeblookformen-at-store?ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkNlbGViIGxvb2tzIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D
+          - link "Tees" [ref=e1888] [cursor=pointer]:
+            - /url: /mens-tshirts/pr?sid=clo%2Cash%2Cank%2Cedy&otracker%5B%5D=categorytree&otracker%5B%5D=nmenu_sub_Men_0_T-Shirts&offer=nb%3Amp%3A027182f627&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlRlZXMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+        - generic [ref=e1894]:
+          - link "Trends" [ref=e1900] [cursor=pointer]:
+            - /url: /trendy-street-ond-base-new-at-store?param=25799987&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlRyZW5kcyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+          - link "Kurta sets" [ref=e1911] [cursor=pointer]:
+            - /url: /kurtasets25-at-store?param=67876&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkt1cnRhIHNldHMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Dresses, tops" [ref=e1922] [cursor=pointer]:
+            - /url: /wne-sale-dresses-at-store?param=649996&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkRyZXNzZXMsIHRvcHMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Casual shoes" [ref=e1933] [cursor=pointer]:
+            - /url: /footwear-base-mf-at-store?param=567&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkNhc3VhbCBzaG9lcyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+          - link "Luggage..." [ref=e1944] [cursor=pointer]:
+            - /url: /lta-new-clp-2026-at-store?param=11736&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkx1Z2dhZ2UuLi4iXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Jewellery" [ref=e1955] [cursor=pointer]:
+            - /url: /jewellery-store?ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkpld2VsbGVyeSJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+          - link "Sarees" [ref=e1966] [cursor=pointer]:
+            - /url: /sarees25-at-store?param=78987765234&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlNhcmVlcyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+          - link "Athleisure" [ref=e1977] [cursor=pointer]:
+            - /url: /clothing-and-accessories/~cs-tj1hs5ycq5/pr?sid=clo&collection-tab-name=Men%27s+clothing&p%5B%5D=facets.brand%255B%255D%3DArrow%2BSport&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DADIDAS&p%5B%5D=facets.brand%255B%255D%3DREEBOK&p%5B%5D=facets.brand%255B%255D%3DVAN%2BHEUSEN%2BSPORT&p%5B%5D=facets.brand%255B%255D%3DNIKE&p%5B%5D=facets.brand%255B%255D%3DREEBOK%2BCLASSICS&p%5B%5D=facets.brand%255B%255D%3DADIDAS%2BORIGINALS&p%5B%5D=facets.brand%255B%255D%3DFILA&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&p%5B%5D=facets.brand%255B%255D%3DNIVIA&p%5B%5D=facets.brand%255B%255D%3DNew%2BBalance&p%5B%5D=facets.brand%255B%255D%3DSHIV-NARESH&p%5B%5D=facets.brand%255B%255D%3DUNDER%2BARMOUR&p%5B%5D=facets.brand%255B%255D%3DAdrenex&p%5B%5D=facets.brand%255B%255D%3DM7%2BBy%2BMetronaut&p%5B%5D=facets.brand%255B%255D%3DWildcraft&p%5B%5D=facets.brand%255B%255D%3DAsics&p%5B%5D=facets.brand%255B%255D%3DHUMMEL&p%5B%5D=facets.brand%255B%255D%3DTECHNOSPORT&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkF0aGxlaXN1cmUiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Formals" [ref=e1988] [cursor=pointer]:
+            - /url: /clothing-and-accessories/~cs-tj1hs5ycq5/pr?sid=clo&collection-tab-name=Men%27s+clothing&p%5B%5D=facets.occasion%255B%255D%3DFormal&offer=nb%3Amp%3A027182f627%2Cnb%3Amp%3A02c5885027&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkZvcm1hbHMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Kurtas" [ref=e1999] [cursor=pointer]:
+            - /url: /clothing-and-accessories/ethnic-wear/pr?sid=clo%2Ccfv&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D899&p%5B%5D=facets.brand%255B%255D%3DJompers&p%5B%5D=facets.brand%255B%255D%3DMANYAVAR&p%5B%5D=facets.brand%255B%255D%3DDEYANN&p%5B%5D=facets.brand%255B%255D%3DANOUK&p%5B%5D=facets.brand%255B%255D%3DTHE%2BFAB%2BFACTORY&p%5B%5D=facets.brand%255B%255D%3DHangup&p%5B%5D=facets.brand%255B%255D%3DVASTRAMAY&p%5B%5D=facets.brand%255B%255D%3DSvatantra&p%5B%5D=facets.brand%255B%255D%3DHouse%2Bof%2BPataudi&p%5B%5D=facets.brand%255B%255D%3DVASTRAMAY%2BPLUS&p%5B%5D=facets.brand%255B%255D%3DPETER%2BENGLAND&p%5B%5D=facets.brand%255B%255D%3DRamraj%2BCotton&p%5B%5D=facets.brand%255B%255D%3DSanwara&p%5B%5D=facets.brand%255B%255D%3DIndo%2BEra&p%5B%5D=facets.brand%255B%255D%3DDEYANN%2BPLUS&p%5B%5D=facets.brand%255B%255D%3DMANQ&p%5B%5D=facets.brand%255B%255D%3DUrbano%2BFashion&p%5B%5D=facets.brand%255B%255D%3DPowerlook&p%5B%5D=facets.brand%255B%255D%3DMAX&p%5B%5D=facets.brand%255B%255D%3DHangup%2BPlus&p%5B%5D=facets.brand%255B%255D%3DFreehand&p%5B%5D=facets.brand%255B%255D%3DSG&param=211&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkt1cnRhcyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+          - link "Sneakers" [ref=e2010] [cursor=pointer]:
+            - /url: /mens-footwear/~cs-lsj8w6jqwd/pr?sid=osp%2Ccil&collection-tab-name=Men%27s+Footwear&p%5B%5D=facets.brand%255B%255D%3DWROGN&sort=price_desc&p%5B%5D=facets.brand%255B%255D%3DSparx&p%5B%5D=facets.brand%255B%255D%3DWOODLAND&p%5B%5D=facets.brand%255B%255D%3DRED%2BCHIEF&p%5B%5D=facets.brand%255B%255D%3DRED%2BTAPE&p%5B%5D=facets.brand%255B%255D%3DU.S.%2BPOLO%2BASSN.&p%5B%5D=facets.brand%255B%255D%3DLOUIS%2BPHILIPPE&p%5B%5D=facets.brand%255B%255D%3DLOUIS%2BSTITCH&p%5B%5D=facets.brand%255B%255D%3DRare%2BRabbit&p%5B%5D=facets.brand%255B%255D%3Dbacca%2Bbucci&p%5B%5D=facets.brand%255B%255D%3DJACK%2B%2526%2BJONES&p%5B%5D=facets.brand%255B%255D%3DPepe%2BJeans&p%5B%5D=facets.brand%255B%255D%3Daction&p%5B%5D=facets.brand%255B%255D%3DAbros&param=567&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlNuZWFrZXJzIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D
+          - link "Performance" [ref=e2021] [cursor=pointer]:
+            - /url: /footwear/~cs-kxs7yf8dvv/pr?sid=osp&collection-tab-name=Sports+Footwear&param=5678&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlBlcmZvcm1hbmNlIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D
+          - link "Casual Wear" [ref=e2032] [cursor=pointer]:
+            - /url: /clothing-and-accessories/~cs-tj1hs5ycq5/pr?sid=clo&collection-tab-name=Men%27s+clothing&p%5B%5D=facets.occasion%255B%255D%3DCasual&offer=nb%3Amp%3A027182f627%2Cnb%3Amp%3A02c5885027&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkNhc3VhbCBXZWFyIl0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D
+          - link "Briefs Vest" [ref=e2043] [cursor=pointer]:
+            - /url: /clothing-and-accessories/innerwear-and-swimwear/~cs-esg5270w9x/pr?sid=clo%2Cqfl&collection-tab-name=Briefs%2C+Vest&p%5B%5D=facets.brand%255B%255D%3DJOCKEY&p%5B%5D=facets.brand%255B%255D%3DXYXX&p%5B%5D=facets.brand%255B%255D%3DDollar%2BBigboss&p%5B%5D=facets.brand%255B%255D%3DDIXCY%2BSCOTT&p%5B%5D=facets.brand%255B%255D%3DDixcy%2BScott%2BMaximus&p%5B%5D=facets.brand%255B%255D%3DDixcy%2BScott%2BOriginals&p%5B%5D=facets.brand%255B%255D%3DLEVI%2527S&p%5B%5D=facets.brand%255B%255D%3DDamensch&p%5B%5D=facets.brand%255B%255D%3DLUX%2Bcozi&p%5B%5D=facets.brand%255B%255D%3DDollar&p%5B%5D=facets.brand%255B%255D%3DDollar%2BLehar&p%5B%5D=facets.brand%255B%255D%3DLux%2BVenus&p%5B%5D=facets.brand%255B%255D%3DMACHO&p%5B%5D=facets.brand%255B%255D%3DU.S.%2BPOLO%2BASSN.&p%5B%5D=facets.brand%255B%255D%3DVIP&p%5B%5D=facets.brand%255B%255D%3DVAN%2BHEUSEN&p%5B%5D=facets.brand%255B%255D%3DRUPA&p%5B%5D=facets.brand%255B%255D%3DRUPA%2BFRONTLINE&p%5B%5D=facets.brand%255B%255D%3DRUPA%2BJON&p%5B%5D=facets.brand%255B%255D%3DCOLORS%2Bby%2BRupa%2BFrontline&p%5B%5D=facets.brand%255B%255D%3DRupa%2BMacroman&p%5B%5D=facets.brand%255B%255D%3DRupa%2BHunk&p%5B%5D=facets.brand%255B%255D%3Done8%2Bby%2BVirat%2BKohli&p%5B%5D=facets.brand%255B%255D%3DAMUL%2BCOMFY&p%5B%5D=facets.brand%255B%255D%3DPepe%2BJeans&p%5B%5D=facets.brand%255B%255D%3DLUX&p%5B%5D=facets.brand%255B%255D%3DJACK%2B%2526%2BJONES&p%5B%5D=facets.brand%255B%255D%3DUnderJeans%2Bby%2BSpykar&p%5B%5D=facets.brand%255B%255D%3Done8&p%5B%5D=facets.brand%255B%255D%3DRamraj%2BCotton&p%5B%5D=facets.brand%255B%255D%3DDixcy&p%5B%5D=facets.brand%255B%255D%3DDIXCY%2BJOSH&p%5B%5D=facets.ideal_for%255B%255D%3DMen&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkJyaWVmcyBWZXN0Il0sInZhbHVlVHlwZSI6Ik1VTFRJX1ZBTFVFRCJ9fX19fQ%3D%3D
+          - link "Trackpants" [ref=e2054] [cursor=pointer]:
+            - /url: /clothing-and-accessories/bottomwear/track-pants/men-track-pants/pr?sid=clo%2Cvua%2Cjlk%2C6ql&offer=nb%3Amp%3A02c5885027&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlRyYWNrcGFudHMiXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Drips for him" [ref=e2065] [cursor=pointer]:
+            - /url: /spoyl-fashion-for-him-store?param=98765&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkRyaXBzIGZvciBoaW0iXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Focus Brands" [ref=e2076] [cursor=pointer]:
+            - /url: /offers-list/content?screen=dynamic&pk=themeViews%3DHOB-BASE-Page-NAV-OMU%3AOMU%7EwidgetType%3DdealCard%7EcontentType%3Dneo&wid=2.dealCard.OMU&param=39782762762&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIkZvY3VzIEJyYW5kcyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+          - link "Next Gen Fashion" [ref=e2087] [cursor=pointer]:
+            - /url: /fashion-spotlight-2026-clp-at-store?param=1321&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIk5leHQgR2VuIEZhc2hpb24iXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19fX19
+          - link "Raincoats" [ref=e2098] [cursor=pointer]:
+            - /url: /clothing-and-accessories/raincoats/~cs-w2mvterapu/pr?sid=clo%2Cmz5&collection-tab-name=Raincoat+for+mens&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D300&param=124&ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlJhaW5jb2F0cyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX19fX0%3D
+      - generic [ref=e2113]:
+        - generic [ref=e2114]: Shop for Loved Ones
+        - generic [ref=e2119]:
+          - link [ref=e2124] [cursor=pointer]:
+            - /url: /ls-inline-men-b-aug-at-store?param=029384&BU=LifeStyle
+            - img "Image" [ref=e2127]
+          - link [ref=e2132] [cursor=pointer]:
+            - /url: /ls-bbdh-july-inline-women-b-at-store?param=10928374&BU=LifeStyle
+            - img "Image" [ref=e2135]
+          - link [ref=e2140] [cursor=pointer]:
+            - /url: /spoyl-fashion-for-him-store?param=5887345&BU=LifeStyle
+            - img "Image" [ref=e2143]
+      - generic [ref=e2153]:
+        - generic [ref=e2154]: Clearance offer
+        - generic [ref=e2160]:
+          - generic [ref=e2161]:
+            - link [ref=e2166] [cursor=pointer]:
+              - /url: http://flipkart.com/bags-wallets-belts/bags-backpacks/wallets/pr?sid=reh%2C4d7%2Ctlx&p%5B%5D=facets.brand%255B%255D%3DTeakwood%2BLeathers&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=9741&BU=LifeStyle
+              - img "Image" [ref=e2169]
+            - link [ref=e2174] [cursor=pointer]:
+              - /url: /clothing-and-accessories/kurtas-ethnic-sets-and-bottoms/~cs-5jy4en9h04/pr?sid=clo%2Ccfv&collection-tab-name=Kurta%2C+ethnic+sets&p%5B%5D=facets.brand%255B%255D%3DJompers&p%5B%5D=facets.brand%255B%255D%3DMANYAVAR&p%5B%5D=facets.brand%255B%255D%3DANOUK&p%5B%5D=facets.brand%255B%255D%3DHangup&p%5B%5D=facets.brand%255B%255D%3DVASTRAMAY&p%5B%5D=facets.brand%255B%255D%3DSvatantra&p%5B%5D=facets.brand%255B%255D%3DHouse%2Bof%2BPataudi&p%5B%5D=facets.brand%255B%255D%3DVASTRAMAY%2BPLUS&p%5B%5D=facets.brand%255B%255D%3DPETER%2BENGLAND&p%5B%5D=facets.brand%255B%255D%3DRamraj%2BCotton&p%5B%5D=facets.brand%255B%255D%3DSanwara&p%5B%5D=facets.brand%255B%255D%3DIndo%2BEra&p%5B%5D=facets.brand%255B%255D%3DMAX&p%5B%5D=facets.brand%255B%255D%3DFreehand&p%5B%5D=facets.brand%255B%255D%3DSG&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&BU=LifeStyle
+              - img "Image" [ref=e2177]
+            - link [ref=e2182] [cursor=pointer]:
+              - /url: /womens-ethnic-sets/pr?sid=clo%2Ccfv%2Citg%2Ctys&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=39847&BU=LifeStyle
+              - img "Image" [ref=e2185]
+            - link [ref=e2190] [cursor=pointer]:
+              - /url: /backpacks/pr?sid=reh%2C4d7%2Cak9&p[]=facets.color%255B%255D%3DBlack&p[]=facets.price_range.from%3DMin&p[]=facets.price_range.to%3D279&param=56765&BU=LifeStyle
+              - img "Image" [ref=e2193]
+            - link [ref=e2198] [cursor=pointer]:
+              - /url: /clo/~cs-q4nk41afio/pr?sid=clo&collection-tab-name=Ethnic+sets%2C+kurtas...&p%5B%5D=facets.rating%255B%255D%3D3%25E2%2598%2585%2B%2526%2Babove&p%5B%5D=facets.brand%255B%255D%3DKALINI&p%5B%5D=facets.brand%255B%255D%3DANOUK&p%5B%5D=facets.brand%255B%255D%3DDivastri&param=2928797227&BU=LifeStyle
+              - img "Image" [ref=e2201]
+            - link [ref=e2206] [cursor=pointer]:
+              - /url: /bags-wallets-belts/handbags-clutches/~cs-j7ondzkjn6/pr?sid=reh%2Cihu&p%5B%5D=facets.brand%255B%255D%3DLAVIE&p%5B%5D=facets.brand%255B%255D%3DZOUK&p%5B%5D=facets.brand%255B%255D%3DFastrack&p%5B%5D=facets.brand%255B%255D%3DCaprese&p%5B%5D=facets.brand%255B%255D%3DMOCHI&p%5B%5D=facets.brand%255B%255D%3DAllen%2BSolly&p%5B%5D=facets.brand%255B%255D%3DLINO%2BPERROS&p%5B%5D=facets.brand%255B%255D%3DBaggit&p%5B%5D=facets.brand%255B%255D%3DGUESS&p%5B%5D=facets.brand%255B%255D%3DMICHAEL%2BKORS&p%5B%5D=facets.brand%255B%255D%3DALDO&p%5B%5D=facets.brand%255B%255D%3DVAN%2BHEUSEN&p%5B%5D=facets.brand%255B%255D%3DDressberry&p%5B%5D=facets.brand%255B%255D%3DMiraggio&p%5B%5D=facets.brand%255B%255D%3DMETRO&p%5B%5D=facets.brand%255B%255D%3DHIDESIGN&p%5B%5D=facets.brand%255B%255D%3DTOMMY%2BHILFIGER&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DLavie%2BSignature&p%5B%5D=facets.brand%255B%255D%3DANOUK&p%5B%5D=facets.brand%255B%255D%3DMast%2B%2526%2BHarbour&p%5B%5D=facets.brand%255B%255D%3DLavie%2BLuxe&p%5B%5D=facets.brand%255B%255D%3DACCESSORIZE%2BLONDON&p%5B%5D=facets.brand%255B%255D%3DCOACH&p%5B%5D=facets.brand%255B%255D%3D1991&p%5B%5D=facets.brand%255B%255D%3DQisa%2BBy%2BLavie&p%5B%5D=facets.brand%255B%255D%3DLavie%2BSport&p%5B%5D=facets.brand%255B%255D%3DDKNY&p%5B%5D=facets.brand%255B%255D%3DBerrylush&p%5B%5D=facets.brand%255B%255D%3DDressBerry%2BX%2BCAPRESE&p%5B%5D=facets.brand%255B%255D%3DUnited%2BColors%2Bof%2BBenetton&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=70989&BU=LifeStyle
+              - img "Image" [ref=e2209]
+            - link [ref=e2214] [cursor=pointer]:
+              - /url: /womens-sarees/~cs-niqpfdkccs/pr?sid=clo%2C8on%2Czpd%2C9og&collection-tab-name=sarees&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=98766&sort=recency_desc&param=8998&p%5B%5D=facets.brand%255B%255D%3DSareemall&p%5B%5D=facets.brand%255B%255D%3DLaxmipati%2Bsarees&p%5B%5D=facets.brand%255B%255D%3DLIBAS&p%5B%5D=facets.brand%255B%255D%3DKASEE&p%5B%5D=facets.brand%255B%255D%3DMeena%2BBazaar&p%5B%5D=facets.brand%255B%255D%3DKalista&p%5B%5D=facets.brand%255B%255D%3Dsoch&p%5B%5D=facets.brand%255B%255D%3DPeachmode&p%5B%5D=facets.brand%255B%255D%3DHERE%2526NOW&p%5B%5D=facets.brand%255B%255D%3DTikhi%2BImli&p%5B%5D=facets.brand%255B%255D%3DJanasya&p%5B%5D=facets.brand%255B%255D%3DGARDEN%2BVARELI&p%5B%5D=facets.brand%255B%255D%3DSuta&p%5B%5D=facets.brand%255B%255D%3DElora&p%5B%5D=facets.brand%255B%255D%3DJaipur%2BKurti&param=837&BU=LifeStyle
+              - img "Image" [ref=e2217]
+            - link [ref=e2222] [cursor=pointer]:
+              - /url: /bags-wallets-belts/wallets-clutches/wallets/pr?sid=reh%2Ccca%2Ch76&marketplace=FLIPKART&p%5B%5D=facets.material%255B%255D%3DGenuine%2BLeather&p%5B%5D=facets.material%255B%255D%3DArtificial%2BLeather&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.ideal_for%255B%255D%3DBoys&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D299&param=4565&BU=LifeStyle
+              - img "Image" [ref=e2225]
+            - link [ref=e2230] [cursor=pointer]:
+              - /url: /jewellery/artificial-jewellery/~cs-ikv0i387d2/pr?sid=mcr%2C96v&collection-tab-name=Kashmiri&pageCriteria=default&param=5417777&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D199&param=6677766666&BU=LifeStyle
+              - img "Image" [ref=e2233]
+            - link [ref=e2238] [cursor=pointer]:
+              - /url: /bags-wallets-belts/belts/~men/pr?sid=reh%2Cro3&p[]=facets.material%255B%255D%3DArtificial%2BLeather&p[]=facets.material%255B%255D%3DGenuine%2BLeather&p[]=facets.price_range.from%3DMin&p[]=facets.price_range.to%3D299&param=5676&BU=LifeStyle
+              - img "Image" [ref=e2241]
+            - link [ref=e2246] [cursor=pointer]:
+              - /url: /womens-footwear/womens-heels/~womens-sandals/pr?sid=osp%2Ciko%2C6q1&sort=popularity&p%5B%5D=facets.heel_type%255B%255D%3DBlock%2BHeel&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D399&param=6575&BU=LifeStyle
+              - img "Image" [ref=e2249]
+            - link [ref=e2254] [cursor=pointer]:
+              - /url: /watches/wrist-watches/pr?sid=r18%2Cf13&p%5B%5D=facets.brand%255B%255D%3DLEE%2BCOOPER&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=86500&BU=LifeStyle
+              - img "Image" [ref=e2257]
+          - button [ref=e2258]
+      - generic [ref=e2270]:
+        - generic [ref=e2274]:
+          - img "Image" [ref=e2277]
+          - generic [ref=e2278]: Best budget buys
+        - generic [ref=e2285]:
+          - generic [ref=e2286]:
+            - link [ref=e2291] [cursor=pointer]:
+              - /url: /clothing-and-accessories/bottomwear/jeans/men-jeans/pr?sid=clo%2Cvua%2Ck58%2Ci51&p%5B%5D=facets.brand%255B%255D%3DLEVI%2527S&offer=vl:05a8940617&BU=LifeStyle
+              - img "Image" [ref=e2294]
+            - link [ref=e2299] [cursor=pointer]:
+              - /url: /clothing-and-accessories/bottomwear/shorts/kids-shorts/~cs-lrwx4duu5c/pr?sid=clo%2Cvua%2Ce8g%2Cfkx&collection-tab-name=Kids%27+shorts&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D299&offer=vl:05a8940617&BU=LifeStyle
+              - img "Image" [ref=e2302]
+            - link [ref=e2307] [cursor=pointer]:
+              - /url: /mens-footwear/mens-sandals-floaters/pr?sid=osp%2Ccil%2Ce83&sort=price_desc&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D399&p%5B%5D=facets.brand%255B%255D%3DAMICO&p%5B%5D=facets.brand%255B%255D%3DBERSACHE&p%5B%5D=facets.brand%255B%255D%3DCALIBREL&p%5B%5D=facets.brand%255B%255D%3DKoburg&p%5B%5D=facets.brand%255B%255D%3DRivi9&p%5B%5D=facets.brand%255B%255D%3Daadi&p%5B%5D=facets.brand%255B%255D%3DBiggie&p%5B%5D=facets.brand%255B%255D%3DKLASSEN&p%5B%5D=facets.brand%255B%255D%3DDUCKINS&offer=vl:05a8940617&BU=LifeStyle
+              - img "Image" [ref=e2310]
+            - link [ref=e2315] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-roadna84cg/pr?sid=clo&collection-tab-name=Trousers&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D649&param=346343747&BU=LifeStyle
+              - img "Image" [ref=e2318]
+            - link [ref=e2323] [cursor=pointer]:
+              - /url: /watches/wrist-watches/pr?sid=r18%2Cf13&sort=popularity&param=3454&p%5B%5D=facets.strap_color%255B%255D%3DBlack&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D229&offer=vl:05a8940617&BU=LifeStyle
+              - img "Image" [ref=e2326]
+            - link [ref=e2331] [cursor=pointer]:
+              - /url: /mens-footwear/mens-sandals-floaters/pr?sid=osp%2Ccil%2Ce83&sort=price_desc&param=66777&p%5B%5D=facets.brand%255B%255D%3DAMICO&p%5B%5D=facets.brand%255B%255D%3DBERSACHE&p%5B%5D=facets.brand%255B%255D%3DCALIBREL&p%5B%5D=facets.brand%255B%255D%3DKoburg&p%5B%5D=facets.brand%255B%255D%3DRivi9&p%5B%5D=facets.brand%255B%255D%3Daadi&p%5B%5D=facets.brand%255B%255D%3DDUCKINS&p%5B%5D=facets.brand%255B%255D%3DKLASSEN&p%5B%5D=facets.brand%255B%255D%3DBiggie&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D429&offer=vl:05a8940617&BU=LifeStyle
+              - img "Image" [ref=e2334]
+            - link [ref=e2339] [cursor=pointer]:
+              - /url: /mens-footwear/mens-slippers-flip-flops/~cs-y6zrpyo1ja/pr?sid=osp,cil,e1r&offer=vl:05a8940617&BU=LifeStyle
+              - img "Image" [ref=e2342]
+            - link [ref=e2347] [cursor=pointer]:
+              - /url: /mens-footwear/mens-formal-shoes/pr?sid=osp%2Ccil%2Cssb&sort=popularity&param=64433&p%5B%5D=facets.brand%255B%255D%3DBTOM&p%5B%5D=facets.brand%255B%255D%3DTR&p%5B%5D=facets.brand%255B%255D%3Daadi&p%5B%5D=facets.brand%255B%255D%3DSR%2BUNIQUE&p%5B%5D=facets.brand%255B%255D%3DKzaara&offer=vl:05a8940617&BU=LifeStyle
+              - img "Image" [ref=e2350]
+            - link [ref=e2355] [cursor=pointer]:
+              - /url: /clothing-and-accessories/kids-combos-and-costumes/kids-apparel-combos/~cs-xum3d8ohtg/pr?sid=clo%2Ceof%2C1bp&collection-tab-name=Kids%27+combosets&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D299&offer=vl:05a8940617&BU=LifeStyle
+              - img "Image" [ref=e2358]
+            - link [ref=e2363] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-no8b1y7zei/pr?sid=clo&collection-tab-name=Dresses&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D349&param=3476473643&BU=LifeStyle
+              - img "Image" [ref=e2366]
+            - link [ref=e2371] [cursor=pointer]:
+              - /url: /osp/~cs-bfnmlgdjzx/pr?sid=osp&collection-tab-name=REDTAPE&param=1113&BU=LifeStyle
+              - img "Image" [ref=e2374]
+            - link [ref=e2379] [cursor=pointer]:
+              - /url: /mens-footwear/~cs-xar68vb5k1/pr?sid=osp%2Ccil&collection-tab-name=Men%27s+Footwear&sort=price_desc&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D1000&param=qkqa&BU=LifeStyle
+              - img "Image" [ref=e2382]
+            - link [ref=e2387] [cursor=pointer]:
+              - /url: /mens-footwear/~cs-xar68vb5k1/pr?sid=osp%2Ccil&collection-tab-name=Men%27s+Footwear&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=kkw&BU=LifeStyle
+              - img "Image" [ref=e2390]
+            - link [ref=e2395] [cursor=pointer]:
+              - /url: /mens-footwear/mens-casual-shoes/pr?sid=osp%2Ccil%2Ce1f&sort=popularity&p[]=facets.price_range.from%3DMin&p[]=facets.price_range.to%3D359&p[]=facets.brand%255B%255D%3DAMICO&p[]=facets.brand%255B%255D%3DBirde&p[]=facets.brand%255B%255D%3Daadi&p[]=facets.brand%255B%255D%3DLayasa&p[]=facets.brand%255B%255D%3DBRUTON&p[]=facets.brand%255B%255D%3DHOTSTYLE&p[]=facets.brand%255B%255D%3Dhouse%2Bof%2Bcommon&p[]=facets.brand%255B%255D%3DNOBELITE&p[]=facets.brand%255B%255D%3DROASTER&p[]=facets.brand%255B%255D%3DT-ROCK&p[]=facets.brand%255B%255D%3DTrend%2BZone&p[]=facets.brand%255B%255D%3Dcorsac&p[]=facets.brand%255B%255D%3DURBANBOX&p[]=facets.brand%255B%255D%3DSKYMORE&p[]=facets.brand%255B%255D%3DSPOTWALK&p[]=facets.brand%255B%255D%3DTROTUS&p[]=facets.brand%255B%255D%3DRIZTA&offer=vl:05a8940617&BU=LifeStyle
+              - img "Image" [ref=e2398]
+          - button "Next Slide" [ref=e2399]
+      - generic [ref=e2413]:
+        - generic [ref=e2417]:
+          - img "Image" [ref=e2420]
+          - generic [ref=e2421]: Most Loved Picks
+        - generic [ref=e2428]:
+          - generic [ref=e2429]:
+            - link [ref=e2434] [cursor=pointer]:
+              - /url: /mens-footwear/pr?sid=osp%2Ccil&p%5B%5D=facets.brand%255B%255D%3DFrido&sort=price_desc&p%5B%5D=facets.rating%255B%255D%3D4%25E2%2598%2585%2B%2526%2Babove&param=1231&BU=LifeStyle
+              - img "Image" [ref=e2437]
+            - link [ref=e2442] [cursor=pointer]:
+              - /url: /mens-footwear/~casual-and-sports-shoes/pr?sid=osp%2Ccil&p%5B%5D=facets.brand%255B%255D%3DAsics&p%5B%5D=facets.brand%255B%255D%3DSkechers&p%5B%5D=facets.brand%255B%255D%3DNew%2BBalance&p%5B%5D=facets.discount_range_v1%255B%255D%3D40%2525%2Bor%2Bmore&param=6734&BU=LifeStyle
+              - img "Image" [ref=e2445]
+            - link [ref=e2450] [cursor=pointer]:
+              - /url: /osp/cil/~cs-geaiy92dv9/pr?sid=osp,cil&collection-tab-name=Min+85+Off&param=345&BU=LifeStyle
+              - img "Image" [ref=e2453]
+            - link [ref=e2458] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-tj1hs5ycq5/pr?sid=clo&collection-tab-name=Men%27s+clothing&p%5B%5D=facets.brand%255B%255D%3DThe%2BSouled%2BStore&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D699&sort=recency_desc&BU=LifeStyle
+              - img "Image" [ref=e2461]
+            - link [ref=e2466] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-vw1bqselhw/pr?sid=clo&collection-tab-name=Tiranga&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D299&param=290876908&BU=LifeStyle
+              - img "Image" [ref=e2469]
+            - link [ref=e2474] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-tj1hs5ycq5/pr?sid=clo&collection-tab-name=Men%27s+clothing&p%5B%5D=facets.brand%255B%255D%3DTHE%2BBEAR%2BHOUSE&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=211&BU=LifeStyle
+              - img "Image" [ref=e2477]
+            - link [ref=e2482] [cursor=pointer]:
+              - /url: /clothing-and-accessories/kids-combos-and-costumes/kids-costume-wear/pr?sid=clo%2Ceof%2Cygv&p%5B%5D=facets.ideal_for%255B%255D%3DGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys%2B%2526%2BBaby%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BGirls&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D299&param=206087087&BU=LifeStyle
+              - img "Image" [ref=e2485]
+            - link [ref=e2490] [cursor=pointer]:
+              - /url: /mens-footwear/mens-sandals-floaters/pr?sid=osp%2Ccil%2Ce83&p%5B%5D=facets.type%255B%255D%3DClogs&p%5B%5D=facets.brand%255B%255D%3Daadi&p%5B%5D=facets.brand%255B%255D%3DBERSACHE&p%5B%5D=facets.brand%255B%255D%3DBirde&p%5B%5D=facets.brand%255B%255D%3DFAUSTO&p%5B%5D=facets.brand%255B%255D%3DVellinto&p%5B%5D=facets.brand%255B%255D%3DBRUTON&p%5B%5D=facets.brand%255B%255D%3DSvaar&p%5B%5D=facets.brand%255B%255D%3DKoburg&p%5B%5D=facets.brand%255B%255D%3DCHIPS&p%5B%5D=facets.brand%255B%255D%3DWave%2BWalker&p%5B%5D=facets.brand%255B%255D%3DATOM&p%5B%5D=facets.brand%255B%255D%3DCassiey&p%5B%5D=facets.brand%255B%255D%3DChupps&p%5B%5D=facets.brand%255B%255D%3DEVOK&p%5B%5D=facets.brand%255B%255D%3DFabbmate&p%5B%5D=facets.brand%255B%255D%3DFeather%2BLeather&p%5B%5D=facets.brand%255B%255D%3DFootox&p%5B%5D=facets.brand%255B%255D%3DK%2527%2BFootlance&p%5B%5D=facets.brand%255B%255D%3DKhadim%2527s&p%5B%5D=facets.brand%255B%255D%3DKolapuri&p%5B%5D=facets.brand%255B%255D%3DKraasa&p%5B%5D=facets.brand%255B%255D%3DLakhani%2BVardaan&p%5B%5D=facets.brand%255B%255D%3DLayasa&p%5B%5D=facets.brand%255B%255D%3DKzaara&p%5B%5D=facets.brand%255B%255D%3DOrtho%2B%252B%2BRest&p%5B%5D=facets.brand%255B%255D%3DPampy%2BAngel&p%5B%5D=facets.brand%255B%255D%3DShozie&p%5B%5D=facets.brand%255B%255D%3DVokline&p%5B%5D=facets.brand%255B%255D%3DWELCOME&p%5B%5D=facets.brand%255B%255D%3DYokai&p%5B%5D=facets.brand%255B%255D%3DDOCTOR%2BEXTRA%2BSOFT&p%5B%5D=facets.brand%255B%255D%3DCogs&p%5B%5D=facets.brand%255B%255D%3DDr%2BPlus&p%5B%5D=facets.brand%255B%255D%3DDRACKFOOT&p%5B%5D=facets.brand%255B%255D%3DKapani%2BFashion&p%5B%5D=facets.brand%255B%255D%3DNOBELITE&p%5B%5D=facets.brand%255B%255D%3Dsachin&p%5B%5D=facets.brand%255B%255D%3DRowlans&p%5B%5D=facets.brand%255B%255D%3DTWO%2BSOFT&p%5B%5D=facets.brand%255B%255D%3DBonkerz&p%5B%5D=facets.brand%255B%255D%3DTrendmode&p%5B%5D=facets.brand%255B%255D%3DNeoz&p%5B%5D=facets.brand%255B%255D%3DLOUIS%2BSTITCH&p%5B%5D=facets.brand%255B%255D%3DLehar&p%5B%5D=facets.brand%255B%255D%3DLakhani&p%5B%5D=facets.brand%255B%255D%3DKolhapuri&p%5B%5D=facets.brand%255B%255D%3DDENSU&p%5B%5D=facets.brand%255B%255D%3Ddensity&p%5B%5D=facets.brand%255B%255D%3DDelize&p%5B%5D=facets.brand%255B%255D%3DDELEFS&p%5B%5D=facets.brand%255B%255D%3DBolinzer&p%5B%5D=facets.brand%255B%255D%3DBOLLERO&p%5B%5D=facets.brand%255B%255D%3DBOLTAGO&p%5B%5D=facets.brand%255B%255D%3DBootco&p%5B%5D=facets.brand%255B%255D%3DBOTOWI&p%5B%5D=facets.brand%255B%255D%3DBrawo&p%5B%5D=facets.brand%255B%255D%3Dbrighto&p%5B%5D=facets.brand%255B%255D%3Dbroniq&p%5B%5D=facets.brand%255B%255D%3DAeonik&p%5B%5D=facets.brand%255B%255D%3DAeroFast&p%5B%5D=facets.brand%255B%255D%3DACCENTOR&p%5B%5D=facets.brand%255B%255D%3DEL%2BPASO&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D299&param=5678&BU=LifeStyle
+              - img "Image" [ref=e2493]
+            - link [ref=e2498] [cursor=pointer]:
+              - /url: /watches/pr?sid=r18&marketplace=FLIPKART&param=4321&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&p%5B%5D=facets.price_range.from%3D1000&p%5B%5D=facets.price_range.to%3DMax&p%5B%5D=facets.brand%255B%255D%3DMathey-Tissot&p%5B%5D=facets.brand%255B%255D%3DDANIEL%2BWELLINGTON&p%5B%5D=facets.brand%255B%255D%3DINVICTA&param=54321&BU=LifeStyle
+              - img "Image" [ref=e2501]
+            - link [ref=e2506] [cursor=pointer]:
+              - /url: /reh/plk/tvv/~cs-nkywyb1qxm/pr?sid=reh,plk,tvv&collection-tab-name=Nasher+Miles&pageCriteria=default&param=12203&BU=LifeStyle
+              - img "Image" [ref=e2509]
+            - link [ref=e2514] [cursor=pointer]:
+              - /url: /womens-footwear/pr?sid=osp,iko&p[]=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&p[]=facets.brand%255B%255D%3DADIDAS&p[]=facets.brand%255B%255D%3DPUMA&p[]=facets.brand%255B%255D%3DREEBOK&param=6923&BU=LifeStyle
+              - img "Image" [ref=e2517]
+            - link [ref=e2522] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-6mknk7u949/pr?sid=clo&collection-tab-name=Chikankari&pageCriteria=default&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=3984&BU=LifeStyle
+              - img "Image" [ref=e2525]
+            - link [ref=e2530] [cursor=pointer]:
+              - /url: /clo/vua/k58/i51/~cs-6tdiqasa84/pr?sid=clo%2Cvua%2Ck58%2Ci51&collection-tab-name=Trendy+Jeans&pageCriteria=default&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D499&param=3454090991&BU=LifeStyle
+              - img "Image" [ref=e2533]
+            - link [ref=e2538] [cursor=pointer]:
+              - /url: /mens-footwear/mens-sports-shoes/pr?sid=osp%2Ccil%2C1cu&p%5B%5D=facets.occasion%255B%255D%3DSports&param=787287272&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&p%5B%5D=facets.brand%255B%255D%3DKILLER&p%5B%5D=facets.brand%255B%255D%3DRoadster&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&p%5B%5D=facets.brand%255B%255D%3DMast%2B%2526%2BHarbour&p%5B%5D=facets.brand%255B%255D%3DAdrenex&p%5B%5D=facets.brand%255B%255D%3DSLAZENGER&p%5B%5D=facets.brand%255B%255D%3DLOTTO&p%5B%5D=facets.rating%255B%255D%3D4%25E2%2598%2585%2B%2526%2Babove&param=8787272&BU=LifeStyle
+              - img "Image" [ref=e2541]
+            - link [ref=e2546] [cursor=pointer]:
+              - /url: /clothing-and-accessories/bottomwear/jeans/~cs-tj1hs5ycq5/pr?sid=clo%2Cvua%2Ck58&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&offer=nb:mp:02c5885027&BU=LifeStyle
+              - img "Image" [ref=e2549]
+          - button "Next Slide" [ref=e2550]
+      - link [ref=e2565] [cursor=pointer]:
+        - /url: /offers-list/content?screen=dynamic&pk=themeViews%3DAW-BASE-OMU%3AOMU~widgetType%3DdealCard~contentType%3Dneo&wid=2.dealCard.OMU&param=435467&BU=LifeStyle
+        - img "Image" [ref=e2571]
+      - generic [ref=e2584]:
+        - generic [ref=e2585]:
+          - link [ref=e2590] [cursor=pointer]:
+            - /url: /mens-sweatshirts/pr?sid=clo%2Cqvw%2C64a%2Cvui&p%5B%5D=facets.brand%255B%255D%3DMISCHIEF%2BMonkey&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=6778666&sort=recency_desc&BU=LifeStyle
+            - img "Image" [ref=e2593]
+          - link [ref=e2598] [cursor=pointer]:
+            - /url: /clothing-and-accessories/~cs-pnzcqet4ri/pr?sid=clo&collection-tab-name=Kushal+K&sort=recency_desc&param=6778666&BU=LifeStyle
+            - img "Image" [ref=e2601]
+          - link [ref=e2606] [cursor=pointer]:
+            - /url: /bags-wallets-belts/luggage-travel/suitcases/~cs-j7ondzkjn6/pr?sid=reh%2Cplk%2Ctvv&p%5B%5D=facets.brand%255B%255D%3DSnitch&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&sort=recency_desc&param=14026&BU=LifeStyle
+            - img "Image" [ref=e2609]
+          - link [ref=e2614] [cursor=pointer]:
+            - /url: /clothing-and-accessories/~cs-4v2y26vdx7/pr?sid=clo&collection-tab-name=The+Label+Life&p%5B%5D=facets.discount_range_v1%255B%255D%3D40%2525%2Bor%2Bmore&param=37463746&BU=LifeStyle
+            - img "Image" [ref=e2617]
+          - link [ref=e2622] [cursor=pointer]:
+            - /url: /watches/~cs-s3ck556dv9/pr?sid=r18&collection-tab-name=Swiss%20Eagle&param=764&BU=LifeStyle
+            - img "Image" [ref=e2625]
+          - link [ref=e2630] [cursor=pointer]:
+            - /url: /clothing-and-accessories/pr?sid=clo&p%5B%5D=facets.brand%255B%255D%3DGINI%2B%2526%2BJONY&p%5B%5D=facets.ideal_for%255B%255D%3DGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys%2B%2526%2BBaby%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BGirls&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=6801&BU=LifeStyle
+            - img "Image" [ref=e2633]
+          - link [ref=e2638] [cursor=pointer]:
+            - /url: /womens-footwear/pr?sid=osp%2Ciko&p%5B%5D=facets.brand%255B%255D%3DCai&param=1314&BU=LifeStyle
+            - img "Image" [ref=e2641]
+          - link [ref=e2646] [cursor=pointer]:
+            - /url: /jewellery/artificial-jewellery/jewellery-sets/pr?sid=mcr%2C96v%2Cyx2&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=654323456&BU=LifeStyle
+            - img "Image" [ref=e2649]
+          - link [ref=e2654] [cursor=pointer]:
+            - /url: /mens-sweatshirts/pr?sid=clo%2Cqvw%2C64a%2Cvui&p%5B%5D=facets.brand%255B%255D%3DAllen%2BCooper&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&sort=recency_desc&BU=LifeStyle
+            - img "Image" [ref=e2657]
+          - link [ref=e2662] [cursor=pointer]:
+            - /url: /clothing-and-accessories/~cs-5au45jtevh/pr?sid=clo&collection-tab-name=KOSKII&sort=recency_desc&param=78899&BU=LifeStyle
+            - img "Image" [ref=e2665]
+          - link [ref=e2670] [cursor=pointer]:
+            - /url: /mens-jeans/~cs-6tdiqasa84/pr?sid=clo%2Cvua%2Ck58%2Ci51&collection-tab-name=Trendy+Jeans&pageCriteria=default&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=886534555&BU=LifeStyle
+            - img "Image" [ref=e2673]
+        - button [ref=e2674]
+      - generic [ref=e2689]:
+        - generic [ref=e2690]:
+          - link [ref=e2695] [cursor=pointer]:
+            - /url: /beauty-and-grooming/hair-care-and-accessory/hair-accessory/~cs-h0z9i6zjwq/pr?sid=g9b%2Clcf%2Cbjl&collection-tab-name=Fluffy&pageCriteria=default&sort=popularity&p%5B%5D=facets.discount_range_v1%255B%255D%3D30%2525%2Bor%2Bmore&param=6411111&BU=LifeStyle
+            - img "Image" [ref=e2698]
+          - link [ref=e2703] [cursor=pointer]:
+            - /url: /mens-footwear/~cs-lh3mj95d4l/pr?sid=osp%2Ccil&collection-tab-name=Suede+Mules&sort=popularity&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=2800000&BU=LifeStyle
+            - img "Image" [ref=e2706]
+          - link [ref=e2711] [cursor=pointer]:
+            - /url: /watches/wrist-watches/~cs-yte83p19ge/pr?sid=r18%2Cf13&sort=popularity&param=52460000&BU=LifeStyle
+            - img "Image" [ref=e2714]
+          - link [ref=e2719] [cursor=pointer]:
+            - /url: /womens-jeans/~cs-p6yhg9kyqh/pr?sid=clo%2Cvua%2Ck58%2C4hp&collection-tab-name=Clone+of+Printed+Denim&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=88610000&BU=LifeStyle
+            - img "Image" [ref=e2722]
+          - link [ref=e2727] [cursor=pointer]:
+            - /url: /jewellery/artificial-jewellery/~cs-n3dls49kiw/pr?sid=mcr%2C96v&collection-tab-name=Metal+Mix&sort=popularity&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&param=552111111&BU=LifeStyle
+            - img "Image" [ref=e2730]
+          - link [ref=e2735] [cursor=pointer]:
+            - /url: /osp/iko/974/~cs-bdqy405yzx/pr?sid=osp,iko,974&collection-tab-name=Pointed+Ballet&param=7211333&BU=LifeStyle
+            - img "Image" [ref=e2738]
+          - link [ref=e2743] [cursor=pointer]:
+            - /url: /clothing-and-accessories/~cs-13pbb7sg5u/pr?sid=clo&collection-tab-name=Aari+Work&pageCriteria=default&sort=popularity&p%5B%5D=facets.discount_range_v1%255B%255D%3D30%2525%2Bor%2Bmore&param=887690000&BU=LifeStyle
+            - img "Image" [ref=e2746]
+          - link [ref=e2751] [cursor=pointer]:
+            - /url: /mens-tshirts/~cs-gkj7n8mdlf/pr?sid=clo%2Cash%2Cank%2Cedy&collection-tab-name=FarmLife&sort=popularity&param=68888888&BU=LifeStyle
+            - img "Image" [ref=e2754]
+          - link [ref=e2759] [cursor=pointer]:
+            - /url: /clothing-and-accessories/coords/~cs-bmdjt9wscg/pr?sid=clo%2Cl1l&collection-tab-name=Denim+On+Denim&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=41122111&BU=LifeStyle
+            - img "Image" [ref=e2762]
+          - link [ref=e2767] [cursor=pointer]:
+            - /url: /clothing-and-accessories/dresses-and-gowns/dresses/kids-dresses/~cs-buizs1ppwc/pr?sid=clo%2Codx%2Cmaj%2Czc1&collection-tab-name=Tiered+Dress&sort=popularity&param=4444444444&BU=LifeStyle
+            - img "Image" [ref=e2770]
+          - link [ref=e2775] [cursor=pointer]:
+            - /url: /mens-trousers/~cs-p0n283oqv1/pr?sid=clo%2Cvua%2Cmle%2Clhk&collection-tab-name=Wide+Parachute+Pants&sort=popularity&param=555555555&BU=LifeStyle
+            - img "Image" [ref=e2778]
+          - link [ref=e2783] [cursor=pointer]:
+            - /url: /womens-dresses/~cs-kd3cnew88h/pr?sid=clo%2Codx%2Cmaj%2Cjhy&collection-tab-name=Panel+A-Line&p%5B%5D=facets.discount_range_v1%255B%255D%3D30%2525%2Bor%2Bmore&param=12211111&BU=LifeStyle
+            - img "Image" [ref=e2786]
+        - button [ref=e2787]
+      - img "Image" [ref=e2806]
+      - generic [ref=e2819]:
+        - generic [ref=e2820]:
+          - link [ref=e2825] [cursor=pointer]:
+            - /url: /watches/wrist-watches/~cs-649ei2z4em/pr?sid=r18%2Cf13&collection-tab-name=Dual+Tone&sort=popularity&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=3567777777&BU=LifeStyle
+            - img "Image" [ref=e2828]
+          - link [ref=e2833] [cursor=pointer]:
+            - /url: /clothing-and-accessories/~cs-xgfvlnk96x/pr?sid=clo&collection-tab-name=twinning%20ethnic%20sets&param=34359999&BU=LifeStyle
+            - img "Image" [ref=e2836]
+          - link [ref=e2841] [cursor=pointer]:
+            - /url: /womens-sarees/~cs-jpwvpucj07/pr?sid=clo%2C8on%2Czpd%2C9og&collection-tab-name=Ornate+Ombre&pageCriteria=default&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=43344455&BU=LifeStyle
+            - img "Image" [ref=e2844]
+          - link [ref=e2849] [cursor=pointer]:
+            - /url: /mcr/96v/~cs-sgo8b4ub9j/pr?sid=mcr,96v&collection-tab-name=Evil+Eye&param=42700000&BU=LifeStyle
+            - img "Image" [ref=e2852]
+          - link [ref=e2857] [cursor=pointer]:
+            - /url: /earrings/~cs-lhgye2tpte/pr?sid=mcr%2C96v%2Ck9d&collection-tab-name=Kundan%20Studs%20&param=636777772&BU=LifeStyle
+            - img "Image" [ref=e2860]
+          - link [ref=e2865] [cursor=pointer]:
+            - /url: /clothing-and-accessories/kurtas-ethnic-sets-and-bottoms/ethnic-sets/kids-ethnic-sets/~cs-m59s3guq03/pr?sid=clo,cfv,itg,sym&p[]=facets.ideal_for%255B%255D%3DGirls&p[]=facets.ideal_for%255B%255D%3DBaby%2BGirls&param=13444509999&BU=LifeStyle
+            - img "Image" [ref=e2868]
+          - link [ref=e2873] [cursor=pointer]:
+            - /url: /womens-ethnic-sets/~cs-01i8idkz74/pr?sid=clo%2Ccfv%2Citg%2Ctys&collection-tab-name=Y2K+Shararas&sort=popularity&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=21123476777&BU=LifeStyle
+            - img "Image" [ref=e2876]
+          - link [ref=e2881] [cursor=pointer]:
+            - /url: /womens-ethnic-sets/~cs-92j3ljo8t1/pr?sid=clo%2Ccfv%2Citg%2Ctys&p[]=facets.pattern%255B%255D%3DPrinted&p[]=facets.pattern%255B%255D%3DFloral%2BPrint&p[]=facets.pattern%255B%255D%3DGeometric%2BPrint&p[]=facets.pattern%255B%255D%3DCheckered&param=2345700999&BU=LifeStyle
+            - img "Image" [ref=e2884]
+          - link [ref=e2889] [cursor=pointer]:
+            - /url: /womens-footwear/~cs-vtbzn6hxnc/pr?sid=osp%2Ciko&collection-tab-name=Ethnic+Mules&pageCriteria=default&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=86999999&BU=LifeStyle
+            - img "Image" [ref=e2892]
+          - link [ref=e2897] [cursor=pointer]:
+            - /url: /earrings/~cs-6sqiiqayt5/pr?sid=mcr%2C96v%2Ck9d&collection-tab-name=Chandbaalis&param=55555555&BU=LifeStyle
+            - img "Image" [ref=e2900]
+          - link [ref=e2905] [cursor=pointer]:
+            - /url: /clo/ash/axc/mmk/~cs-thziuyvuxo/pr?sid=clo,ash,axc,mmk&collection-tab-name=IkatShirt&param=933265891111&BU=LifeStyle
+            - img "Image" [ref=e2908]
+          - link [ref=e2913] [cursor=pointer]:
+            - /url: /reh/~cs-imr8aiyw5o/pr?sid=reh&collection-tab-name=Mini+Metallics&param=9968888&BU=LifeStyle
+            - img "Image" [ref=e2916]
+        - button [ref=e2917]
+      - img "Image" [ref=e2936]
+      - generic [ref=e2949]:
+        - generic [ref=e2950]:
+          - link [ref=e2955] [cursor=pointer]:
+            - /url: /mens-footwear/~cs-bb1w2rkl5z/pr?sid=osp%2Ccil&collection-tab-name=LeatherLuxe&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=456&BU=LifeStyle
+            - img "Image" [ref=e2958]
+          - link [ref=e2963] [cursor=pointer]:
+            - /url: /mens-footwear/mens-sandals-floaters/pr?sid=osp%2Ccil%2Ce83&p%5B%5D=facets.discount_range_v1%255B%255D%3D40%2525%2Bor%2Bmore&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DADIDAS&p%5B%5D=facets.brand%255B%255D%3DREEBOK&p%5B%5D=facets.brand%255B%255D%3Dasian&p%5B%5D=facets.brand%255B%255D%3DCAMPUS&p%5B%5D=facets.brand%255B%255D%3DNIKE&param=1358&BU=LifeStyle
+            - img "Image" [ref=e2966]
+          - link [ref=e2971] [cursor=pointer]:
+            - /url: /womens-ethnic-sets/~cs-01i8idkz74/pr?sid=clo%2Ccfv%2Citg%2Ctys&collection-tab-name=Y2K+Shararas&sort=popularity&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=243723&BU=LifeStyle
+            - img "Image" [ref=e2974]
+          - link [ref=e2979] [cursor=pointer]:
+            - /url: /clothing-and-accessories/kurtas-ethnic-sets-and-bottoms/pr?sid=clo,cfv&p[]=facets.brand%255B%255D%3DBT%2BDEZINES&p[]=facets.brand%255B%255D%3DParyag&p[]=facets.brand%255B%255D%3DMitansh&p[]=facets.brand%255B%255D%3DVastraMilap&p[]=facets.brand%255B%255D%3DMars%2BInfiniti&p[]=facets.brand%255B%255D%3DSheetal%2BAssociates&p[]=facets.ideal_for%255B%255D%3DGirls&p[]=facets.ideal_for%255B%255D%3DBoys&p[]=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&p[]=facets.ideal_for%255B%255D%3DBaby%2BBoys%2B%2526%2BBaby%2BGirls&p[]=facets.ideal_for%255B%255D%3DBaby%2BBoys&p[]=facets.ideal_for%255B%255D%3DBaby%2BGirls&param=03868784785&BU=LifeStyle
+            - img "Image" [ref=e2982]
+          - link [ref=e2987] [cursor=pointer]:
+            - /url: /womens-footwear/womens-flats/~womens-sandals/pr?sid=osp%2Ciko%2C9d5&p%5B%5D=facets.occasion%255B%255D%3DEthnic&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D300&sort=popularity&param=6575&BU=LifeStyle
+            - img "Image" [ref=e2990]
+          - link [ref=e2995] [cursor=pointer]:
+            - /url: /womens-dresses/pr?sid=clo%2Codx%2Cmaj%2Cjhy&p%5B%5D=facets.type%255B%255D%3DFit%2Band%2BFlare&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D400&param=787666676&BU=LifeStyle
+            - img "Image" [ref=e2998]
+          - link [ref=e3003] [cursor=pointer]:
+            - /url: /mens-shirts/~cs-thziuyvuxo/pr?sid=clo%2Cash%2Caxc%2Cmmk&collection-tab-name=IkatShirt&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=244325&BU=LifeStyle
+            - img "Image" [ref=e3006]
+          - link [ref=e3011] [cursor=pointer]:
+            - /url: /womens-footwear/~cs-zsp6i398nj/pr?sid=osp%2Ciko&collection-tab-name=Womens+Footwear&p%5B%5D=facets.brand%255B%255D%3DMETRO&p%5B%5D=facets.brand%255B%255D%3DMOCHI&p%5B%5D=facets.brand%255B%255D%3DInc.5&p%5B%5D=facets.brand%255B%255D%3DLIBERTY&p%5B%5D=facets.brand%255B%255D%3DCARLTON%2BLONDON&p%5B%5D=facets.brand%255B%255D%3DAllen%2BSolly&param=1359&BU=LifeStyle
+            - img "Image" [ref=e3014]
+          - link [ref=e3019] [cursor=pointer]:
+            - /url: /clothing-and-accessories/ethnic-wear/ethnic-sets/men-ethnic-sets/pr?sid=clo%2Ccfv%2Citg%2Cpme&p%5B%5D=facets.brand%255B%255D%3Dtrybuy.in&p%5B%5D=facets.brand%255B%255D%3DMAG&sort=price_desc&page=6&param=1251&BU=LifeStyle
+            - img "Image" [ref=e3022]
+          - link [ref=e3027] [cursor=pointer]:
+            - /url: /clothing-and-accessories/kurtas-ethnic-sets-and-bottoms/kurtas/mens-kurtas/pr?sid=clo%2Ccfv%2Ccib%2Cjks&otracker%5B%5D=categorytree&otracker%5B%5D=nmenu_sub_Men_0_Kurta&p%5B%5D=facets.pattern%255B%255D%3DEmbroidered&p%5B%5D=facets.price_range.from%3D399&p%5B%5D=facets.price_range.to%3D699&sort=recency_desc&BU=LifeStyle
+            - img "Image" [ref=e3030]
+          - link [ref=e3035] [cursor=pointer]:
+            - /url: /footwear/kids-infant-footwear/boys-footwear/ethnic-shoes/pr?sid=osp,mba,o3t,w34&param=567&BU=LifeStyle
+            - img "Image" [ref=e3038]
+          - link [ref=e3043] [cursor=pointer]:
+            - /url: /jewellery-sets/pr?sid=mcr%2C96v%2Cyx2&p%5B%5D=facets.brand%255B%255D%3DELCETRATD%2BJEWELLERY&p%5B%5D=facets.brand%255B%255D%3DNagneshi%2BArt&p%5B%5D=facets.brand%255B%255D%3DBhumi09&p%5B%5D=facets.brand%255B%255D%3DVIGHNAHARTA&p%5B%5D=facets.brand%255B%255D%3DPadmavati%2BBangles&p%5B%5D=facets.brand%255B%255D%3DR%2BA%2BEnterprises&p%5B%5D=facets.brand%255B%255D%3DSyfer&p%5B%5D=facets.brand%255B%255D%3DDIKSHA%2BCOLLECTION&p%5B%5D=facets.brand%255B%255D%3DMakezak&p%5B%5D=facets.brand%255B%255D%3DSamridhi%2BDC&p%5B%5D=facets.brand%255B%255D%3Dgvsc&p%5B%5D=facets.brand%255B%255D%3DJewel%2BWORLD&p%5B%5D=facets.brand%255B%255D%3DKEYMAX&p%5B%5D=facets.brand%255B%255D%3DChigold&p%5B%5D=facets.brand%255B%255D%3DROFARWORD&p%5B%5D=facets.brand%255B%255D%3DYELLOW%2BCHIMES&p%5B%5D=facets.brand%255B%255D%3DLYRISS&p%5B%5D=facets.brand%255B%255D%3DShining%2BDiva&p%5B%5D=facets.brand%255B%255D%3DManikya&p%5B%5D=facets.brand%255B%255D%3DJANAVI&p%5B%5D=facets.brand%255B%255D%3DASMITTA%2BJewellery&p%5B%5D=facets.brand%255B%255D%3DLucentarts%2BJewellery&p%5B%5D=facets.brand%255B%255D%3DSukkhi&p%5B%5D=facets.brand%255B%255D%3DMEENAZ&p%5B%5D=facets.brand%255B%255D%3DTONOLIKA%2BJEWELLERY&p%5B%5D=facets.brand%255B%255D%3Dbrado%2Bjewellery&p%5B%5D=facets.brand%255B%255D%3DYouBella&p%5B%5D=facets.brand%255B%255D%3DMYKI&p%5B%5D=facets.brand%255B%255D%3DEstele&p%5B%5D=facets.brand%255B%255D%3DPriyaasi&p%5B%5D=facets.brand%255B%255D%3DSAIYONI&p%5B%5D=facets.brand%255B%255D%3DPBM%2BCREATIONS&p%5B%5D=facets.brand%255B%255D%3DVoylla&p%5B%5D=facets.brand%255B%255D%3DFashion%2BFrill&p%5B%5D=facets.brand%255B%255D%3DVATSALYA%2Bcreation&p%5B%5D=facets.brand%255B%255D%3DAtasi%2BInternational&p%5B%5D=facets.brand%255B%255D%3DRAMDEV%2BART%2BFASHION%2BJEWELLERY&p%5B%5D=facets.brand%255B%255D%3DSOHI&p%5B%5D=facets.brand%255B%255D%3DSalty&p%5B%5D=facets.brand%255B%255D%3DSARAF%2BRS%2BJEWELLERY&p%5B%5D=facets.brand%255B%255D%3DStudio%2BSukkhi&p%5B%5D=facets.brand%255B%255D%3DRUBANS&p%5B%5D=facets.brand%255B%255D%3DZENEME&p%5B%5D=facets.brand%255B%255D%3DDC&p%5B%5D=facets.brand%255B%255D%3DZAVERI%2BPEARLS&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D199&param=6543456&BU=LifeStyle
+            - img "Image" [ref=e3046]
+          - link [ref=e3051] [cursor=pointer]:
+            - /url: /mens-ethnic-sets/pr?sid=clo%2Ccfv%2Citg%2Cpme&otracker%5B%5D=categorytree&otracker%5B%5D=nmenu_sub_Men_0_Ethnic+Sets&p%5B%5D=facets.pattern%255B%255D%3DFloral%2BPrint&p%5B%5D=facets.price_range.from%3D399&p%5B%5D=facets.price_range.to%3DMax&sort=popularity&BU=LifeStyle
+            - img "Image" [ref=e3054]
+          - link [ref=e3059] [cursor=pointer]:
+            - /url: /womens-sarees/~cs-niqpfdkccs/pr?sid=clo%2C8on%2Czpd%2C9og&collection-tab-name=sarees&p%5B%5D=facets.occasion%255B%255D%3DFestive&p%5B%5D=facets.type%255B%255D%3DBanarasi&p%5B%5D=facets.price_range.from%3D249&p%5B%5D=facets.price_range.to%3DMax&param=6667883&BU=LifeStyle
+            - img "Image" [ref=e3062]
+        - button [ref=e3063]
+      - generic [ref=e3075]:
+        - generic [ref=e3076]: Lowest price deals
+        - generic [ref=e3082]:
+          - generic [ref=e3083]:
+            - link [ref=e3088] [cursor=pointer]:
+              - /url: /reh/4d7/~cs-zc4azbkxls/pr?sid=reh%2C4d7&collection-tab-name=Backpacks&pageCriteria=default&p%5B%5D=facets.brand%255B%255D%3DTOMMY%2BHILFIGER&p%5B%5D=facets.brand%255B%255D%3DARISTOCRAT&p%5B%5D=facets.brand%255B%255D%3DAMERICAN%2BTOURISTER&p%5B%5D=facets.brand%255B%255D%3DKILLER&p%5B%5D=facets.brand%255B%255D%3DSKYBAGS&p%5B%5D=facets.brand%255B%255D%3DWROGN&p%5B%5D=facets.brand%255B%255D%3DGear&p%5B%5D=facets.brand%255B%255D%3DF%2BGear&p%5B%5D=facets.brand%255B%255D%3DNIKE&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&p%5B%5D=facets.brand%255B%255D%3DUppercase&p%5B%5D=facets.brand%255B%255D%3DMETRONAUT&p%5B%5D=facets.brand%255B%255D%3DMokobara&p%5B%5D=facets.brand%255B%255D%3DSAFARI&p%5B%5D=facets.brand%255B%255D%3DNASHER%2BMILES&p%5B%5D=facets.brand%255B%255D%3DStony%2BBrook%2Bby%2BNasher%2BMiles&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DPROVOGUE&p%5B%5D=facets.brand%255B%255D%3DWildcraft&p%5B%5D=facets.brand%255B%255D%3DArctic%2BFox&p%5B%5D=facets.brand%255B%255D%3DUnited%2BColors%2Bof%2BBenetton&p%5B%5D=facets.brand%255B%255D%3DRoadster&p%5B%5D=facets.brand%255B%255D%3DREEBOK&p%5B%5D=facets.brand%255B%255D%3DADIDAS&p%5B%5D=facets.brand%255B%255D%3DUNDER%2BARMOUR&p%5B%5D=facets.brand%255B%255D%3DHP&p%5B%5D=facets.brand%255B%255D%3DLenovo&p%5B%5D=facets.brand%255B%255D%3DZOUK&p%5B%5D=facets.brand%255B%255D%3DSWISS%2BMILITARY&p%5B%5D=facets.brand%255B%255D%3DRED%2BTAPE&p%5B%5D=facets.brand%255B%255D%3DThe%2BCLOWNFISH&p%5B%5D=facets.brand%255B%255D%3DCaprese&p%5B%5D=facets.brand%255B%255D%3DMi&p%5B%5D=facets.brand%255B%255D%3DGenie&p%5B%5D=facets.brand%255B%255D%3DLavie%2BSport&p%5B%5D=facets.brand%255B%255D%3DCARLTON%2BLONDON&p%5B%5D=facets.brand%255B%255D%3DASUS&p%5B%5D=facets.brand%255B%255D%3DSAMSONITE&p%5B%5D=facets.brand%255B%255D%3DTeakwood%2BLeathers&p%5B%5D=facets.brand%255B%255D%3DLAVIE&p%5B%5D=facets.brand%255B%255D%3DFastrack&p%5B%5D=facets.brand%255B%255D%3DVIP&p%5B%5D=facets.brand%255B%255D%3DHidesign&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&param=12826&BU=LifeStyle
+              - img "Image" [ref=e3091]
+            - link [ref=e3096] [cursor=pointer]:
+              - /url: /womens-footwear/womens-slippers-flip-flops/pr?sid=osp%2Ciko%2Ciz7&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&p%5B%5D=facets.brand%255B%255D%3DWALKAROO&p%5B%5D=facets.brand%255B%255D%3DBata&p%5B%5D=facets.brand%255B%255D%3DSparx&p%5B%5D=facets.brand%255B%255D%3Daction&p%5B%5D=facets.brand%255B%255D%3DLIBERTY&p%5B%5D=facets.brand%255B%255D%3DParagon&p%5B%5D=facets.brand%255B%255D%3DAqualite&param=8243&BU=LifeStyle
+              - img "Image" [ref=e3099]
+            - link [ref=e3104] [cursor=pointer]:
+              - /url: /mens-tshirts/~cs-ine6q6vyns/pr?sid=clo%2Cash%2Cank%2Cedy&collection-tab-name=Oversized+Tshirts&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&p%5B%5D=facets.brand%255B%255D%3DRoadster&p%5B%5D=facets.brand%255B%255D%3DWROGN&p%5B%5D=facets.brand%255B%255D%3DGlitchez&p%5B%5D=facets.brand%255B%255D%3DMAX&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&p%5B%5D=facets.brand%255B%255D%3DThe%2BSouled%2BStore&p%5B%5D=facets.brand%255B%255D%3DBEWAKOOF&p%5B%5D=facets.brand%255B%255D%3DMETRONAUT&param=55555&BU=LifeStyle
+              - img "Image" [ref=e3107]
+            - link [ref=e3112] [cursor=pointer]:
+              - /url: /jewellery/artificial-jewellery/jewellery-sets/pr?sid=mcr%2C96v%2Cyx2&p%5B%5D=facets.brand%255B%255D%3DMYKI&p%5B%5D=facets.brand%255B%255D%3DBhumi09&p%5B%5D=facets.brand%255B%255D%3DJewels%2BGalaxy&p%5B%5D=facets.brand%255B%255D%3DDC&p%5B%5D=facets.brand%255B%255D%3DMakezak&p%5B%5D=facets.brand%255B%255D%3DSyfer&p%5B%5D=facets.brand%255B%255D%3DTONOLIKA%2BJEWELLERY&p%5B%5D=facets.brand%255B%255D%3DR%2BA%2BEnterprises&p%5B%5D=facets.brand%255B%255D%3DVIGHNAHARTA&p%5B%5D=facets.brand%255B%255D%3DMEENAZ&p%5B%5D=facets.brand%255B%255D%3DJANAVI&p%5B%5D=facets.brand%255B%255D%3DELCETRATD%2BJEWELLERY&p%5B%5D=facets.brand%255B%255D%3DDIKSHA%2BCOLLECTION&p%5B%5D=facets.brand%255B%255D%3DSARAF%2BRS%2BJEWELLERY&p%5B%5D=facets.brand%255B%255D%3DKEYMAX&p%5B%5D=facets.brand%255B%255D%3Dbrado%2Bjewellery&p%5B%5D=facets.brand%255B%255D%3DSukkhi&p%5B%5D=facets.brand%255B%255D%3DStudio%2BSukkhi&p%5B%5D=facets.brand%255B%255D%3DShostopper%2Bby%2BSukkhi&p%5B%5D=facets.brand%255B%255D%3DROFARWORD&p%5B%5D=facets.brand%255B%255D%3DVATSALYA%2Bcreation&p%5B%5D=facets.brand%255B%255D%3DAtasi%2BInternational&p%5B%5D=facets.brand%255B%255D%3DSAIYONI&p%5B%5D=facets.brand%255B%255D%3DChigold&p%5B%5D=facets.brand%255B%255D%3DSamridhi%2BDC&p%5B%5D=facets.brand%255B%255D%3DRUBANS&p%5B%5D=facets.brand%255B%255D%3DNagneshi%2BArt&p%5B%5D=facets.brand%255B%255D%3DYELLOW%2BCHIMES&p%5B%5D=facets.brand%255B%255D%3DSHUBHAM%2BJEWELLERS&p%5B%5D=facets.brand%255B%255D%3DShining%2BDiva&p%5B%5D=facets.brand%255B%255D%3DPBM%2BCREATIONS&p%5B%5D=facets.brand%255B%255D%3DZENEME&p%5B%5D=facets.brand%255B%255D%3DBRANDSOON&p%5B%5D=facets.brand%255B%255D%3DLYRISS&p%5B%5D=facets.brand%255B%255D%3DYouBella&p%5B%5D=facets.brand%255B%255D%3DJewel%2BWORLD&p%5B%5D=facets.brand%255B%255D%3DSalty&p%5B%5D=facets.brand%255B%255D%3DLucentarts%2BJewellery&p%5B%5D=facets.brand%255B%255D%3DVoylla&p%5B%5D=facets.brand%255B%255D%3DRAMDEV%2BART%2BFASHION%2BJEWELLERY&p%5B%5D=facets.brand%255B%255D%3DManikya&p%5B%5D=facets.brand%255B%255D%3DASMITTA%2BJewellery&p%5B%5D=facets.brand%255B%255D%3DSOHI&p%5B%5D=facets.brand%255B%255D%3DEstele&p%5B%5D=facets.brand%255B%255D%3DPriyaasi&p%5B%5D=facets.brand%255B%255D%3DFashion%2BFrill&p%5B%5D=facets.brand%255B%255D%3DAlisha%2Boxocraft&p%5B%5D=facets.brand%255B%255D%3DPadmavati%2BBangles&p%5B%5D=facets.brand%255B%255D%3DZAVERI%2BPEARLS&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&param=98765434567&BU=LifeStyle
+              - img "Image" [ref=e3115]
+            - link [ref=e3120] [cursor=pointer]:
+              - /url: /clothing-and-accessories/topwear/tshirt/men-tshirt/pr?sid=clo%2Cash%2Cank%2Cedy&p%5B%5D=facets.type%255B%255D%3DPolo%2BNeck&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DAllen%2BSolly&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&BU=LifeStyle
+              - img "Image" [ref=e3123]
+            - link [ref=e3128] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-hoyqie1uum/pr?sid=clo&collection-tab-name=kurta+sets%2C+sarees&p%5B%5D=facets.brand%255B%255D%3DIndo%2BEra&p%5B%5D=facets.brand%255B%255D%3DLIBAS&p%5B%5D=facets.brand%255B%255D%3DTasrika&p%5B%5D=facets.brand%255B%255D%3Dberrylicious&p%5B%5D=facets.brand%255B%255D%3DSangria&p%5B%5D=facets.brand%255B%255D%3DANOUK&p%5B%5D=facets.brand%255B%255D%3DJanasya&p%5B%5D=facets.brand%255B%255D%3DBIBA&p%5B%5D=facets.brand%255B%255D%3DStylum&p%5B%5D=facets.brand%255B%255D%3DVishudh&p%5B%5D=facets.brand%255B%255D%3DEXTRA%2BLOVE%2BBY%2BLIBAS&p%5B%5D=facets.brand%255B%255D%3DVBUYZ&p%5B%5D=facets.brand%255B%255D%3DVaranga&p%5B%5D=facets.brand%255B%255D%3DAurelia&p%5B%5D=facets.brand%255B%255D%3DSareemall&p%5B%5D=facets.brand%255B%255D%3DKASEE&p%5B%5D=facets.brand%255B%255D%3DMeena%2BBazaar&p%5B%5D=facets.brand%255B%255D%3DHouse%2Bof%2BPataudi&p%5B%5D=facets.brand%255B%255D%3Dsoch&p%5B%5D=facets.brand%255B%255D%3DAnmi&p%5B%5D=facets.brand%255B%255D%3DKALINI&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&param=39787565&BU=LifeStyle
+              - img "Image" [ref=e3131]
+            - link [ref=e3136] [cursor=pointer]:
+              - /url: /watches/wrist-watches/pr?sid=r18%2Cf13&p%5B%5D=facets.price_range.from%3D400&p%5B%5D=facets.price_range.to%3D599&p%5B%5D=facets.brand%255B%255D%3DMAXIMA&p%5B%5D=facets.brand%255B%255D%3DSONATA&p%5B%5D=facets.brand%255B%255D%3DFastrack&p%5B%5D=facets.brand%255B%255D%3DHaute%2BSauce&param=78564&BU=LifeStyle
+              - img "Image" [ref=e3139]
+            - link [ref=e3144] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-tj1hs5ycq5/pr?sid=clo&collection-tab-name=Men%27s+clothing&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&offer=nb:mp:027182f627&BU=LifeStyle
+              - img "Image" [ref=e3147]
+            - link [ref=e3152] [cursor=pointer]:
+              - /url: /womens-footwear/womens-heels/~womens-sandals/pr?sid=osp%2Ciko%2C6q1&p%5B%5D=facets.brand%255B%255D%3DKhadim%2527s&sort=popularity&p%5B%5D=facets.brand%255B%255D%3DSHOETOPIA&p%5B%5D=facets.brand%255B%255D%3DTRASE&p%5B%5D=facets.brand%255B%255D%3DMarc%2BLoire&p%5B%5D=facets.brand%255B%255D%3DLayasa&p%5B%5D=facets.brand%255B%255D%3DLongwalk&p%5B%5D=facets.brand%255B%255D%3DMoonwalk&p%5B%5D=facets.brand%255B%255D%3DZapatoz&p%5B%5D=facets.brand%255B%255D%3DDeals4you&p%5B%5D=facets.brand%255B%255D%3DDenill&p%5B%5D=facets.brand%255B%255D%3DShezone&p%5B%5D=facets.brand%255B%255D%3DVENDOZ&p%5B%5D=facets.brand%255B%255D%3DWELCOME&p%5B%5D=facets.brand%255B%255D%3DPaduki&p%5B%5D=facets.brand%255B%255D%3DShoestail&p%5B%5D=facets.brand%255B%255D%3DTOSHINA%2BSHOES%2BKING&p%5B%5D=facets.brand%255B%255D%3DTWINSSHOE&p%5B%5D=facets.brand%255B%255D%3DKoburg&p%5B%5D=facets.brand%255B%255D%3DFAUSTO&p%5B%5D=facets.brand%255B%255D%3DK%2527%2BFootlance&p%5B%5D=facets.brand%255B%255D%3DPicktoes&p%5B%5D=facets.brand%255B%255D%3DPinkToes&p%5B%5D=facets.brand%255B%255D%3DSK%2BFashion&p%5B%5D=facets.brand%255B%255D%3DXE%2BLooks&p%5B%5D=facets.brand%255B%255D%3DBambam&p%5B%5D=facets.brand%255B%255D%3DBERSACHE&p%5B%5D=facets.brand%255B%255D%3DFabbmate&p%5B%5D=facets.brand%255B%255D%3DEL%2BPASO&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&param=5678&BU=LifeStyle
+              - img "Image" [ref=e3155]
+            - link [ref=e3160] [cursor=pointer]:
+              - /url: /womens-sarees/~cs-niqpfdkccs/pr?sid=clo%2C8on%2Czpd%2C9og&collection-tab-name=sarees&p%5B%5D=facets.brand%255B%255D%3DSareemall&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&param=93874&BU=LifeStyle
+              - img "Image" [ref=e3163]
+            - link [ref=e3168] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-6t54t1s40p/pr?sid=clo&collection-tab-name=Dresses%2Ctops&pageCriteria=default&p%5B%5D=facets.brand%255B%255D%3DJanasya&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&param=62999&BU=LifeStyle
+              - img "Image" [ref=e3171]
+            - link [ref=e3176] [cursor=pointer]:
+              - /url: /osp/cil/~cs-wp0lhkbrsk/pr?sid=osp%2Ccil&collection-tab-name=Sandals%2C+Slippers...&pageCriteria=default&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&p%5B%5D=facets.brand%255B%255D%3DCAMPUS&p%5B%5D=facets.brand%255B%255D%3DJQR&p%5B%5D=facets.brand%255B%255D%3Dasian&param=87542&BU=LifeStyle
+              - img "Image" [ref=e3179]
+            - link [ref=e3184] [cursor=pointer]:
+              - /url: /mens-footwear/pr?sid=osp%2Ccil&sort=price_desc&param=678&p%5B%5D=facets.brand%255B%255D%3DAJANTA&p%5B%5D=facets.brand%255B%255D%3DFLITE&p%5B%5D=facets.brand%255B%255D%3DParagon&p%5B%5D=facets.brand%255B%255D%3DBUCKAROO&p%5B%5D=facets.brand%255B%255D%3DWALKAROO&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&param=456&BU=LifeStyle
+              - img "Image" [ref=e3187]
+            - link [ref=e3192] [cursor=pointer]:
+              - /url: /mens-footwear/mens-casual-shoes/pr?sid=osp%2Ccil%2Ce1f&p%5B%5D=facets.brand%255B%255D%3Daadi&sort=popularity&param=987&p%5B%5D=facets.brand%255B%255D%3DBRUTON&p%5B%5D=facets.brand%255B%255D%3DBERSACHE&p%5B%5D=facets.brand%255B%255D%3DBirde&p%5B%5D=facets.brand%255B%255D%3DCLYMB&p%5B%5D=facets.brand%255B%255D%3DHOTSTYLE&p%5B%5D=facets.brand%255B%255D%3Dlejano&p%5B%5D=facets.brand%255B%255D%3DWorld%2BWear%2BFootwear&p%5B%5D=facets.brand%255B%255D%3DZixer&p%5B%5D=facets.brand%255B%255D%3DLayasa&p%5B%5D=facets.brand%255B%255D%3DXtoon&p%5B%5D=facets.brand%255B%255D%3Dcorsac&p%5B%5D=facets.brand%255B%255D%3DLakhani%2BVardaan&p%5B%5D=facets.brand%255B%255D%3DAMICO&p%5B%5D=facets.brand%255B%255D%3DURBANBOX&p%5B%5D=facets.brand%255B%255D%3DNOBELITE&p%5B%5D=facets.brand%255B%255D%3DSvaar&p%5B%5D=facets.brand%255B%255D%3DVellinto&p%5B%5D=facets.brand%255B%255D%3DLabbin&p%5B%5D=facets.brand%255B%255D%3DTR&p%5B%5D=facets.brand%255B%255D%3DFootox&p%5B%5D=facets.brand%255B%255D%3DAeonik&p%5B%5D=facets.brand%255B%255D%3DDOCTOR%2BEXTRA%2BSOFT&p%5B%5D=facets.brand%255B%255D%3DK%2527%2BFootlance&p%5B%5D=facets.brand%255B%255D%3DField%2BCare&p%5B%5D=facets.brand%255B%255D%3Dtigonis&p%5B%5D=facets.brand%255B%255D%3DROCKFIELD&p%5B%5D=facets.brand%255B%255D%3DSUKUN&p%5B%5D=facets.brand%255B%255D%3DGO%2BRIDE&p%5B%5D=facets.brand%255B%255D%3DNEW%2BLIMITS&p%5B%5D=facets.brand%255B%255D%3DKnoos&p%5B%5D=facets.brand%255B%255D%3DROASTER&p%5B%5D=facets.brand%255B%255D%3DRUN%2BSEVEN&p%5B%5D=facets.brand%255B%255D%3DMACTREE&p%5B%5D=facets.brand%255B%255D%3DKzaara&p%5B%5D=facets.brand%255B%255D%3DBucik&p%5B%5D=facets.brand%255B%255D%3DEL%2BPASO&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&param=5678&BU=LifeStyle
+              - img "Image" [ref=e3195]
+            - link [ref=e3200] [cursor=pointer]:
+              - /url: /mens-shirts/~cs-u3fixqtinw/pr?sid=clo%2Cash%2Caxc%2Cmmk&collection-tab-name=Summer+Stripe&sort=popularity&param%5B%5D=7221123&param%5B%5D=77765429999&param%5B%5D=443323477&param=8423344&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&param=54455555&BU=LifeStyle
+              - img "Image" [ref=e3203]
+          - button [ref=e3204]
+      - link [ref=e3217] [cursor=pointer]:
+        - /url: /monsoon-26-at-store?param=3456&BU=LifeStyle
+        - img "Image" [ref=e3223]
+      - generic [ref=e3236]:
+        - generic [ref=e3237]:
+          - link [ref=e3242] [cursor=pointer]:
+            - /url: /clo/mz5/~cs-cwowincvnw/pr?sid=clo%2Cmz5&collection-tab-name=Raincourt&Param=89878777&p%5B%5D=facets.brand%255B%255D%3DCITIZEN&Param=89876776&BU=LifeStyle
+            - img "Image" [ref=e3245]
+          - link [ref=e3250] [cursor=pointer]:
+            - /url: /clothing-and-accessories/pr?sid=clo&marketplace=FLIPKART&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&p%5B%5D=facets.brand%255B%255D%3DSTREET9&p%5B%5D=facets.brand%255B%255D%3DZUMMER&p%5B%5D=facets.brand%255B%255D%3DClaura&p%5B%5D=facets.brand%255B%255D%3DZolo%2BLabel&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&sort=recency_desc&param=1213&BU=LifeStyle
+            - img "Image" [ref=e3253]
+          - link [ref=e3258] [cursor=pointer]:
+            - /url: /clo/mz5/~cs-cwowincvnw/pr?sid=clo%2Cmz5&collection-tab-name=Raincourt&p%5B%5D=facets.brand%255B%255D%3DZEEL&Param=89878777&p%5B%5D=facets.brand%255B%255D%3DWildcraft&p%5B%5D=facets.brand%255B%255D%3DKILLER&BU=LifeStyle
+            - img "Image" [ref=e3261]
+          - link [ref=e3266] [cursor=pointer]:
+            - /url: /clo/mz5/jbj/~cs-txdrt8km9d/pr?sid=clo%2Cmz5%2Cjbj&collection-tab-name=Women+Raincoats&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D299&param=23723&BU=LifeStyle
+            - img "Image" [ref=e3269]
+          - link [ref=e3274] [cursor=pointer]:
+            - /url: /clo/vua/k58/i51/~cs-6tdiqasa84/pr?sid=clo%2Cvua%2Ck58%2Ci51&collection-tab-name=Trendy+Jeans&pageCriteria=default&param=3454090991&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=3333333&BU=LifeStyle
+            - img "Image" [ref=e3277]
+          - link [ref=e3282] [cursor=pointer]:
+            - /url: /clothing-and-accessories/raincoats/kids-raincoats/pr?sid=clo,mz5,hjc&p[]=facets.brand%255B%255D%3DPOWERAPPARELS&p[]=facets.brand%255B%255D%3DDollar&p[]=facets.brand%255B%255D%3DMars%2BInfiniti&p[]=facets.brand%255B%255D%3DShaktiFashion&p[]=facets.brand%255B%255D%3DD8211K&p[]=facets.ideal_for%255B%255D%3DGirls&p[]=facets.ideal_for%255B%255D%3DBoys&p[]=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&p[]=facets.ideal_for%255B%255D%3DBaby%2BBoys%2B%2526%2BBaby%2BGirls&param=9385&BU=LifeStyle
+            - img "Image" [ref=e3285]
+          - link [ref=e3290] [cursor=pointer]:
+            - /url: /mens-footwear/mens-slippers-flip-flops/pr?sid=osp%2Ccil%2Ce1r&p%5B%5D=facets.brand%255B%255D%3DCAMPUS&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DFILA&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&p%5B%5D=facets.brand%255B%255D%3DSLAZENGER&p%5B%5D=facets.brand%255B%255D%3DWROGN%2BACTIVE&p%5B%5D=facets.brand%255B%255D%3DLOTTO&p%5B%5D=facets.brand%255B%255D%3DLANCER&p%5B%5D=facets.brand%255B%255D%3DJQR&p%5B%5D=facets.brand%255B%255D%3DREEBOK&p%5B%5D=facets.brand%255B%255D%3DADIDAS&p%5B%5D=facets.brand%255B%255D%3DPOWER&p%5B%5D=facets.brand%255B%255D%3Dasian&p%5B%5D=facets.brand%255B%255D%3DM7%2BBy%2BMetronaut&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D599&param=612&BU=LifeStyle
+            - img "Image" [ref=e3293]
+          - link [ref=e3298] [cursor=pointer]:
+            - /url: /mens-footwear/slippers-flip-flops/pr?sid=osp%2Ccil%2Ce1r&fm=neo%2Fmerchandising&iid=M_8620794b-87fa-4e66-9eff-534828a75346_2_X1NCR146KC29_MC.DGNKX2JVJU8J&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_5_L2_view-all&cid=DGNKX2JVJU8J&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D199&p%5B%5D=facets.type%255B%255D%3DSlides&p%5B%5D=facets.brand%255B%255D%3Daadi&p%5B%5D=facets.brand%255B%255D%3DBERSACHE&p%5B%5D=facets.brand%255B%255D%3DBirde&p%5B%5D=facets.brand%255B%255D%3DFAUSTO&p%5B%5D=facets.brand%255B%255D%3DVellinto&p%5B%5D=facets.brand%255B%255D%3DBRUTON&p%5B%5D=facets.brand%255B%255D%3DSvaar&p%5B%5D=facets.brand%255B%255D%3DKoburg&p%5B%5D=facets.brand%255B%255D%3DCHIPS&p%5B%5D=facets.brand%255B%255D%3DBONKERZ&p%5B%5D=facets.brand%255B%255D%3DWave%2BWalker&p%5B%5D=facets.brand%255B%255D%3DCassiey&p%5B%5D=facets.brand%255B%255D%3DChupps&p%5B%5D=facets.brand%255B%255D%3DDenill&p%5B%5D=facets.brand%255B%255D%3DDr.%2BOrtho&p%5B%5D=facets.brand%255B%255D%3DEVOK&p%5B%5D=facets.brand%255B%255D%3DFabbmate&p%5B%5D=facets.brand%255B%255D%3DFeather%2BLeather&p%5B%5D=facets.brand%255B%255D%3DFOOTSOFT&p%5B%5D=facets.brand%255B%255D%3DFootox&p%5B%5D=facets.brand%255B%255D%3DFootup&p%5B%5D=facets.brand%255B%255D%3DK%2527%2BFootlance&p%5B%5D=facets.brand%255B%255D%3DKhadim%2527s&p%5B%5D=facets.brand%255B%255D%3DKraasa&p%5B%5D=facets.brand%255B%255D%3DLakhani%2BVardaan&p%5B%5D=facets.brand%255B%255D%3DLayasa&p%5B%5D=facets.brand%255B%255D%3DKzaara&p%5B%5D=facets.brand%255B%255D%3DOrtho%2B%252B%2BRest&p%5B%5D=facets.brand%255B%255D%3DPampy%2BAngel&p%5B%5D=facets.brand%255B%255D%3DShozie&p%5B%5D=facets.brand%255B%255D%3DVokline&p%5B%5D=facets.brand%255B%255D%3DWELCOME&p%5B%5D=facets.brand%255B%255D%3DYUKI&p%5B%5D=facets.brand%255B%255D%3DYokai&p%5B%5D=facets.brand%255B%255D%3DDOCTOR%2BEXTRA%2BSOFT&p%5B%5D=facets.brand%255B%255D%3DBrauch&p%5B%5D=facets.brand%255B%255D%3DCogs&p%5B%5D=facets.brand%255B%255D%3DDr%2BPlus&p%5B%5D=facets.brand%255B%255D%3DDRACKFOOT&p%5B%5D=facets.brand%255B%255D%3DKapani%2BFashion&p%5B%5D=facets.brand%255B%255D%3DJUMPLITE&p%5B%5D=facets.brand%255B%255D%3DKubu&p%5B%5D=facets.brand%255B%255D%3DLavavs&p%5B%5D=facets.brand%255B%255D%3DLYVI&p%5B%5D=facets.brand%255B%255D%3DLooksFootwear&p%5B%5D=facets.brand%255B%255D%3DMARVEL&p%5B%5D=facets.brand%255B%255D%3DNy&p%5B%5D=facets.brand%255B%255D%3DNOBELITE&p%5B%5D=facets.brand%255B%255D%3DORTHO%2BJOY&p%5B%5D=facets.brand%255B%255D%3DPoonam%2BFashion&p%5B%5D=facets.brand%255B%255D%3Dsachin&p%5B%5D=facets.brand%255B%255D%3DRowlans&p%5B%5D=facets.brand%255B%255D%3DThe%2BSouled%2BStore&p%5B%5D=facets.brand%255B%255D%3DTWO%2BSOFT&p%5B%5D=facets.brand%255B%255D%3DVEMZONE&p%5B%5D=facets.brand%255B%255D%3DZugatti&p%5B%5D=facets.brand%255B%255D%3DZURU%2BBUNCH&p%5B%5D=facets.brand%255B%255D%3DEL%2BPASO&p%5B%5D=facets.brand%255B%255D%3Dhouse%2Bof%2Bcommon&param=5678&BU=LifeStyle
+            - img "Image" [ref=e3301]
+          - link [ref=e3306] [cursor=pointer]:
+            - /url: /clothing-and-accessories/~cs-4pn15o39rq/pr?sid=clo&collection-tab-name=Basics&param=211&BU=LifeStyle
+            - img "Image" [ref=e3309]
+          - link [ref=e3314] [cursor=pointer]:
+            - /url: /clothing-and-accessories/winter-wear/pr?sid=clo%2Cqvw&p%5B%5D=facets.brand%255B%255D%3DSTREET9&p%5B%5D=facets.brand%255B%255D%3DZUMMER&p%5B%5D=facets.brand%255B%255D%3DClaura&p%5B%5D=facets.brand%255B%255D%3DRAREISM&p%5B%5D=facets.brand%255B%255D%3DZolo%2BLabel&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&sort=recency_desc&param=1213&BU=LifeStyle
+            - img "Image" [ref=e3317]
+          - link [ref=e3322] [cursor=pointer]:
+            - /url: /mens-footwear/mens-casual-shoes/pr?sid=osp%2Ccil%2Ce1f&p%5B%5D=facets.discount_range_v1%255B%255D%3D40%2525%2Bor%2Bmore&sort=popularity&p%5B%5D=facets.type%255B%255D%3DBoat%2BShoes&p%5B%5D=facets.type%255B%255D%3DBoots&p%5B%5D=facets.type%255B%255D%3DCasuals&p%5B%5D=facets.brand%255B%255D%3DWOODLAND&p%5B%5D=facets.brand%255B%255D%3DMOCHI&p%5B%5D=facets.brand%255B%255D%3DWildcraft&p%5B%5D=facets.brand%255B%255D%3DRED%2BCHIEF&p%5B%5D=facets.brand%255B%255D%3DHUSH%2BPUPPIES&p%5B%5D=facets.brand%255B%255D%3Dbacca%2Bbucci&p%5B%5D=facets.brand%255B%255D%3DLIBERTY&p%5B%5D=facets.brand%255B%255D%3DHouse%2Bof%2BPataudi&p%5B%5D=facets.brand%255B%255D%3DMETRO&p%5B%5D=facets.brand%255B%255D%3DLOUIS%2BSTITCH&p%5B%5D=facets.brand%255B%255D%3DMONTE%2BCARLO&param=dsax&BU=LifeStyle
+            - img "Image" [ref=e3325]
+          - link [ref=e3330] [cursor=pointer]:
+            - /url: /mens-jackets/pr?sid=clo%2Cqvw%2Cz0g%2Cjbm&p%5B%5D=facets.brand%255B%255D%3DNIKE&p%5B%5D=facets.brand%255B%255D%3DWildcraft&Param=787676767&BU=LifeStyle
+            - img "Image" [ref=e3333]
+          - link [ref=e3338] [cursor=pointer]:
+            - /url: /womens-kurtas-kurtis/~cs-vziv5b6g5t/pr?sid=clo%2Ccfv%2Ccib%2Crkt&collection-tab-name=kurtas&p%5B%5D=facets.kurta_length%255B%255D%3DShort&p%5B%5D=facets.price_range.from%3D129&p%5B%5D=facets.price_range.to%3DMax&param=64774&BU=LifeStyle
+            - img "Image" [ref=e3341]
+          - link [ref=e3346] [cursor=pointer]:
+            - /url: /bags-wallets-belts/luggage-travel/suitcases/~cs-j7ondzkjn6/pr?sid=reh%2Cplk%2Ctvv&p%5B%5D=facets.brand%255B%255D%3DSAFARI&sort=popularity&p%5B%5D=facets.brand%255B%255D%3DAMERICAN%2BTOURISTER&p%5B%5D=facets.brand%255B%255D%3DARISTOCRAT&p%5B%5D=facets.brand%255B%255D%3DSKYBAGS&p%5B%5D=facets.brand%255B%255D%3DVIP&p%5B%5D=facets.brand%255B%255D%3DHRX&p%5B%5D=facets.brand%255B%255D%3DKamiliant%2Bby%2BAmerican%2BTourister&p%5B%5D=facets.brand%255B%255D%3DWildcraft&p%5B%5D=facets.brand%255B%255D%3DNASHER%2BMILES&p%5B%5D=facets.brand%255B%255D%3DMagnum%2Bby%2BSafari&p%5B%5D=facets.brand%255B%255D%3DTOMMY%2BHILFIGER&p%5B%5D=facets.brand%255B%255D%3DMokobara&p%5B%5D=facets.brand%255B%255D%3DKILLER&p%5B%5D=facets.brand%255B%255D%3DSWISS%2BMILITARY&p%5B%5D=facets.brand%255B%255D%3DALFA&p%5B%5D=facets.brand%255B%255D%3DSAMSONITE&p%5B%5D=facets.brand%255B%255D%3DMETRONAUT&p%5B%5D=facets.brand%255B%255D%3DPROVOGUE&p%5B%5D=facets.brand%255B%255D%3DWROGN&p%5B%5D=facets.brand%255B%255D%3DDELSEY&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DUppercase&p%5B%5D=facets.brand%255B%255D%3DUnited%2BColors%2Bof%2BBenetton&p%5B%5D=facets.brand%255B%255D%3DUrban%2BJungle&p%5B%5D=facets.brand%255B%255D%3DAssembly&p%5B%5D=facets.brand%255B%255D%3DPolice&p%5B%5D=facets.brand%255B%255D%3DZouk&p%5B%5D=facets.brand%255B%255D%3DSKYSCAPE%2BBY%2BSWISS%2BMILITARY&p%5B%5D=facets.brand%255B%255D%3DDELSEY%2BPARIS&p%5B%5D=facets.brand%255B%255D%3DSECURITECH%2Bby%2BDELSEY%2BPARIS&p%5B%5D=facets.brand%255B%255D%3DGENIUS%2Bby%2BSAFARI&p%5B%5D=facets.brand%255B%255D%3DACEPACK&p%5B%5D=facets.brand%255B%255D%3DSWISSBRAND&p%5B%5D=facets.brand%255B%255D%3DCalvin%2BKlein&p%5B%5D=facets.brand%255B%255D%3DGenie&p%5B%5D=facets.brand%255B%255D%3DRed%2BTape&p%5B%5D=facets.brand%255B%255D%3DStony%2BBrook%2Bby%2BNasher%2BMiles&p%5B%5D=facets.brand%255B%255D%3DCARLTON%2BLONDON&p%5B%5D=facets.brand%255B%255D%3DMagnum&p%5B%5D=facets.brand%255B%255D%3DKAMILIANT&p%5B%5D=facets.brand%255B%255D%3DDKNY&p%5B%5D=facets.brand%255B%255D%3DTeakwood%2BLeathers&p%5B%5D=facets.price_range.from%3D1299&p%5B%5D=facets.price_range.to%3DMax&param=612989&BU=LifeStyle
+            - img "Image" [ref=e3349]
+        - button [ref=e3350]
+      - generic [ref=e3362]:
+        - generic [ref=e3363]: Offers on men's fashion
+        - generic [ref=e3369]:
+          - generic [ref=e3370]:
+            - link [ref=e3375] [cursor=pointer]:
+              - /url: /offers-list/content?screen=dynamic&pk=themeViews%3DBDS-1-BASE-MEN-CLOTHING-OMU%3AOMU~widgetType%3DdealCard~contentType%3Dneo&wid=2.dealCard.OMU&PARAM=765&BU=LifeStyle
+              - img "Image" [ref=e3378]
+            - link [ref=e3383] [cursor=pointer]:
+              - /url: /clothing-and-accessories/topwear/shirts/pr?sid=clo%2Cash%2Caxc&p%5B%5D=facets.brand%255B%255D%3DSnitch&sort=recency_desc&p%5B%5D=facets.brand%255B%255D%3DRARE%2BRABBIT&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&BU=LifeStyle
+              - img "Image" [ref=e3386]
+            - link [ref=e3391] [cursor=pointer]:
+              - /url: /clothing-and-accessories/bottomwear/jeans/~cs-fiy4v9g2fb/pr?sid=clo,vua,k58&param=987&offer=nb:mp:02c5885027&BU=LifeStyle
+              - img "Image" [ref=e3394]
+            - link [ref=e3399] [cursor=pointer]:
+              - /url: /clothing-and-accessories/topwear/pr?sid=clo%2Cash&p%5B%5D=facets.type%255B%255D%3DPolo%2BNeck&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D700&param=564&offer=nb:mp:027182f627&BU=LifeStyle
+              - img "Image" [ref=e3402]
+            - link [ref=e3407] [cursor=pointer]:
+              - /url: /clothing-and-accessories/pr?sid=clo&p%5B%5D=facets.brand%255B%255D%3DAllen%2BSolly&p%5B%5D=facets.brand%255B%255D%3DU.S.%2BPOLO%2BASSN.&p%5B%5D=facets.brand%255B%255D%3DUnited%2BColors%2Bof%2BBenetton&p%5B%5D=facets.brand%255B%255D%3DPepe%2BJeans&p%5B%5D=facets.brand%255B%255D%3DHopscotch&p%5B%5D=facets.ideal_for%255B%255D%3DGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys%2B%2526%2BBaby%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BGirls&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=938686&BU=LifeStyle
+              - img "Image" [ref=e3410]
+            - link [ref=e3415] [cursor=pointer]:
+              - /url: /clothing-and-accessories/topwear/tshirt/men-tshirt/pr?sid=clo%2Cash%2Cank%2Cedy&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=211&offer=nb:mp:027182f627&BU=LifeStyle
+              - img "Image" [ref=e3418]
+            - link [ref=e3423] [cursor=pointer]:
+              - /url: /clo/qfl/~cs-k7fu1p38dt/pr?sid=clo,qfl&collection-tab-name=Briefs%2C+Vests&pageCriteria=default&offer=nb:mp:074e791b18&BU=LifeStyle
+              - img "Image" [ref=e3426]
+            - link [ref=e3431] [cursor=pointer]:
+              - /url: /clothing-and-accessories/kurtas-ethnic-sets-and-bottoms/~cs-5jy4en9h04/pr?sid=clo%2Ccfv&collection-tab-name=Kurta%2C%20ethnic%20sets&p%5B%5D=facets.brand%255B%255D%3DJompers&p%5B%5D=facets.brand%255B%255D%3DMANYAVAR&p%5B%5D=facets.brand%255B%255D%3DDEYANN&p%5B%5D=facets.brand%255B%255D%3DANOUK&p%5B%5D=facets.brand%255B%255D%3DTHE%2BFAB%2BFACTORY&p%5B%5D=facets.brand%255B%255D%3DHangup&p%5B%5D=facets.brand%255B%255D%3DVASTRAMAY&p%5B%5D=facets.brand%255B%255D%3DSvatantra&p%5B%5D=facets.brand%255B%255D%3DHouse%2Bof%2BPataudi&p%5B%5D=facets.brand%255B%255D%3DVASTRAMAY%2BPLUS&p%5B%5D=facets.brand%255B%255D%3DPETER%2BENGLAND&p%5B%5D=facets.brand%255B%255D%3DRamraj%2BCotton&p%5B%5D=facets.brand%255B%255D%3DSanwara&p%5B%5D=facets.brand%255B%255D%3DIndo%2BEra&p%5B%5D=facets.brand%255B%255D%3DDEYANN%2BPLUS&p%5B%5D=facets.brand%255B%255D%3DMANQ&p%5B%5D=facets.brand%255B%255D%3DUrbano%2BFashion&p%5B%5D=facets.brand%255B%255D%3DPowerlook&p%5B%5D=facets.brand%255B%255D%3DMAX&p%5B%5D=facets.brand%255B%255D%3DHangup%2BPlus&p%5B%5D=facets.brand%255B%255D%3DFreehand&p%5B%5D=facets.brand%255B%255D%3DSG&BU=LifeStyle
+              - img "Image" [ref=e3434]
+            - link [ref=e3439] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-e92abuhgwv/pr?sid=clo&collection-tab-name=Allen%20Solly&param=028787&BU=LifeStyle
+              - img "Image" [ref=e3442]
+            - link [ref=e3447] [cursor=pointer]:
+              - /url: /mens-tshirts/~cs-1kql6zoogu/pr?sid=clo%2Cash%2Cank%2Cedy&collection-tab-name=AnimePrint&pageCriteria=default&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D299&param=78612&BU=LifeStyle
+              - img "Image" [ref=e3450]
+            - link [ref=e3455] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-tj1hs5ycq5/pr?sid=clo&collection-tab-name=Men%27s%20clothing&p%5B%5D=facets.brand%255B%255D%3DArrow%2BSport&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DADIDAS&p%5B%5D=facets.brand%255B%255D%3DREEBOK&p%5B%5D=facets.brand%255B%255D%3DVAN%2BHEUSEN%2BSPORT&p%5B%5D=facets.brand%255B%255D%3DNIKE&p%5B%5D=facets.brand%255B%255D%3DREEBOK%2BCLASSICS&p%5B%5D=facets.brand%255B%255D%3DADIDAS%2BORIGINALS&p%5B%5D=facets.brand%255B%255D%3DFILA&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&p%5B%5D=facets.brand%255B%255D%3DNIVIA&p%5B%5D=facets.brand%255B%255D%3DNew%2BBalance&p%5B%5D=facets.brand%255B%255D%3DSHIV-NARESH&p%5B%5D=facets.brand%255B%255D%3DUNDER%2BARMOUR&p%5B%5D=facets.brand%255B%255D%3DAdrenex&p%5B%5D=facets.brand%255B%255D%3DM7%2BBy%2BMetronaut&p%5B%5D=facets.brand%255B%255D%3DWildcraft&p%5B%5D=facets.brand%255B%255D%3DAsics&p%5B%5D=facets.brand%255B%255D%3DHUMMEL&p%5B%5D=facets.brand%255B%255D%3DTECHNOSPORT&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&param=2121&BU=LifeStyle
+              - img "Image" [ref=e3458]
+            - link [ref=e3463] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-p6off9r7pm/pr?sid=clo&collection-tab-name=Formal+Shirts%2C+trousers&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=232&offer=nb:mp:027182f627,nb:mp:02c5885027&BU=LifeStyle
+              - img "Image" [ref=e3466]
+            - link [ref=e3471] [cursor=pointer]:
+              - /url: /clothing-and-accessories/pr?sid=clo&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&sort=recency_desc&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.brand%255B%255D%3DMR%2BBUTTON&param=1213&BU=LifeStyle
+              - img "Image" [ref=e3474]
+            - link [ref=e3479] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-oxcwngpefa/pr?sid=clo&collection-tab-name=T-shirts%2C+shirts...&p%5B%5D=facets.brand%255B%255D%3DR.Code%2Bby%2BThe%2BRoadster%2BLife%2BCo.&p%5B%5D=facets.brand%255B%255D%3DRoadster&p%5B%5D=facets.brand%255B%255D%3DMast%2B%2526%2BHarbour&p%5B%5D=facets.brand%255B%255D%3DHERE%2526NOW&p%5B%5D=facets.brand%255B%255D%3DGlitchez&p%5B%5D=facets.brand%255B%255D%3DSztori&param=2772727&BU=LifeStyle
+              - img "Image" [ref=e3482]
+            - link [ref=e3487] [cursor=pointer]:
+              - /url: /mens-shirts/~cs-u3fixqtinw/pr?sid=clo%2Cash%2Caxc%2Cmmk&collection-tab-name=Summer+Stripe&sort=popularity&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=311221111&BU=LifeStyle
+              - img "Image" [ref=e3490]
+          - button [ref=e3491]
+      - generic [ref=e3503]:
+        - generic [ref=e3504]: Offers on women's fits
+        - generic [ref=e3510]:
+          - generic [ref=e3511]:
+            - link [ref=e3516] [cursor=pointer]:
+              - /url: /offers-list/content?screen=dynamic&pk=themeViews%3DBDS-1-BASE-WOMEN-CLOTHING-OMU%3AOMU~widgetType%3DdealCard~contentType%3Dneo&wid=2.dealCard.OMU&PARAM=876&BU=LifeStyle
+              - img "Image" [ref=e3519]
+            - link [ref=e3524] [cursor=pointer]:
+              - /url: /clothing-and-accessories/dresses-and-gown/dress/women-dress/pr?sid=clo%2Codx%2Cmaj%2Cjhy&p%5B%5D=facets.brand%255B%255D%3DSTYLESTONE&param=9321&BU=LifeStyle
+              - img "Image" [ref=e3527]
+            - link [ref=e3532] [cursor=pointer]:
+              - /url: /womens-sarees/~cs-niqpfdkccs/pr?sid=clo%2C8on%2Czpd%2C9og&collection-tab-name=sarees&p%5B%5D=facets.fabric%255B%255D%3DSilk%2BBlend&p%5B%5D=facets.fabric%255B%255D%3DCotton%2BSilk&p%5B%5D=facets.fabric%255B%255D%3DArt%2BSilk&p%5B%5D=facets.fabric%255B%255D%3DPure%2BSilk&p%5B%5D=facets.fabric%255B%255D%3DTussar%2BSilk&p%5B%5D=facets.fabric%255B%255D%3DDupion%2BSilk&p%5B%5D=facets.fabric%255B%255D%3DRaw%2BSilk&p%5B%5D=facets.fabric%255B%255D%3DJute%2BSilk&p%5B%5D=facets.price_range.from%3D249&p%5B%5D=facets.price_range.to%3DMax&param=3874&BU=LifeStyle
+              - img "Image" [ref=e3535]
+            - link [ref=e3540] [cursor=pointer]:
+              - /url: /clothing-and-accessories/bottomwear/jeans/womens-jeans/pr?sid=clo%2Cvua%2Ck58%2C4hp&p%5B%5D=facets.brand%255B%255D%3DLEVI%2527S&p%5B%5D=facets.brand%255B%255D%3DPepe%2BJeans&p%5B%5D=facets.brand%255B%255D%3DFLYING%2BMACHINE&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=5611&BU=LifeStyle
+              - img "Image" [ref=e3543]
+            - link [ref=e3548] [cursor=pointer]:
+              - /url: /clothing-and-accessories/pr?sid=clo&p%5B%5D=facets.brand%255B%255D%3DVASTRAMAY&p%5B%5D=facets.brand%255B%255D%3DPspeaches&p%5B%5D=facets.brand%255B%255D%3DCUTIEKINS&p%5B%5D=facets.ideal_for%255B%255D%3DGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys%2B%2526%2BBaby%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BGirls&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=2089696&BU=LifeStyle
+              - img "Image" [ref=e3551]
+            - link [ref=e3556] [cursor=pointer]:
+              - /url: /clo/cfv/itg/tys/~cs-leusi43kmf/pr?sid=clo%2Ccfv%2Citg%2Ctys&collection-tab-name=Anarkali+suits&pageCriteria=default&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=546354&BU=LifeStyle
+              - img "Image" [ref=e3559]
+            - link [ref=e3564] [cursor=pointer]:
+              - /url: /clothing-and-accessories/innerwear-and-swimwear/bras/womens-bras/pr?sid=clo%2Cqfl%2Cv5v%2Ckzg&p%5B%5D=facets.brand%255B%255D%3DClovia&p%5B%5D=facets.brand%255B%255D%3DZIVAME&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=6388&BU=LifeStyle
+              - img "Image" [ref=e3567]
+            - link [ref=e3572] [cursor=pointer]:
+              - /url: /clothing-and-accessories/pr?sid=clo&p%5B%5D=facets.brand%255B%255D%3DTOONYPORT&p%5B%5D=facets.brand%255B%255D%3DMAX&p%5B%5D=facets.brand%255B%255D%3DPantaloons%2BJunior&p%5B%5D=facets.brand%255B%255D%3DJuniors%2Bby%2BLifestyle&p%5B%5D=facets.brand%255B%255D%3DV-MART&p%5B%5D=facets.brand%255B%255D%3DSmart%2BBaby&p%5B%5D=facets.brand%255B%255D%3DCUTIEKINS&p%5B%5D=facets.brand%255B%255D%3DMINI%2BKLUB&p%5B%5D=facets.ideal_for%255B%255D%3DGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys%2B%2526%2BBaby%2BGirls&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBaby%2BGirls&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=028586&BU=LifeStyle
+              - img "Image" [ref=e3575]
+            - link [ref=e3580] [cursor=pointer]:
+              - /url: /clothing-and-accessories/topwear/pr?sid=clo%2Cash&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&p%5B%5D=facets.brand%255B%255D%3DZolo%2BLabel&sort=recency_desc&param=1213&BU=LifeStyle
+              - img "Image" [ref=e3583]
+            - link [ref=e3588] [cursor=pointer]:
+              - /url: /womens-sarees/~cs-niqpfdkccs/pr?sid=clo%2C8on%2Czpd%2C9og&collection-tab-name=sarees&p%5B%5D=facets.fabric%255B%255D%3DChiffon&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D499&param=6787766&BU=LifeStyle
+              - img "Image" [ref=e3591]
+            - link [ref=e3596] [cursor=pointer]:
+              - /url: /womens-dresses/~cs-i8wvtdmb67/pr?sid=clo%2Codx%2Cmaj%2Cjhy&collection-tab-name=SoftTie&pageCriteria=default&p%5B%5D=facets.price_range.from%3D240&param=9876447&BU=LifeStyle
+              - img "Image" [ref=e3599]
+            - link [ref=e3604] [cursor=pointer]:
+              - /url: /clo/ash/~cs-8t2adhj8ji/pr?sid=clo%2Cash&collection-tab-name=T-Shirts%2C+Tops%2C+Shirts&pageCriteria=default&p%5B%5D=facets.price_range.from%3DMin&param=8941&p%5B%5D=facets.price_range.to%3D399&p%5B%5D=facets.brand%255B%255D%3DV-MART&p%5B%5D=facets.brand%255B%255D%3DMAX&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DGlitchez&p%5B%5D=facets.brand%255B%255D%3DBEWAKOOF&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&param=8941&BU=LifeStyle
+              - img "Image" [ref=e3607]
+            - link [ref=e3612] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-x0248ssufo/pr?sid=clo&collection-tab-name=Tops%2C+dresses...&p%5B%5D=facets.brand%255B%255D%3DHERE%2526NOW&p%5B%5D=facets.brand%255B%255D%3DMast%2B%2526%2BHarbour&p%5B%5D=facets.brand%255B%255D%3Dfusion%2Bby%2Bglitchez&p%5B%5D=facets.brand%255B%255D%3DGlitchez&p%5B%5D=facets.brand%255B%255D%3DCORSICA&p%5B%5D=facets.brand%255B%255D%3DRoadster&p%5B%5D=facets.brand%255B%255D%3DR.Code%2Bby%2BThe%2BRoadster%2BLife%2BCo.&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&param=82828727&BU=LifeStyle
+              - img "Image" [ref=e3615]
+            - link [ref=e3620] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-0zz741b9z8/pr?sid=clo&collection-tab-name=Trendy+Indie+Co-ords&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=8888800999&BU=LifeStyle
+              - img "Image" [ref=e3623]
+            - link [ref=e3628] [cursor=pointer]:
+              - /url: /clothing-and-accessories/kurtas-ethnic-sets-and-bottoms/~cs-i67h7a4sy5/pr?sid=clo%2Ccfv&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=99911111112345&BU=LifeStyle
+              - img "Image" [ref=e3631]
+          - button [ref=e3632]
+      - generic [ref=e3644]:
+        - generic [ref=e3645]: Offers on footwear
+        - generic [ref=e3651]:
+          - generic [ref=e3652]:
+            - link [ref=e3657] [cursor=pointer]:
+              - /url: /offers-list/content?screen=dynamic&pk=themeViews%3DBDS-1-BASE-FOOTWEAR-OMU%3AOMU~widgetType%3DdealCard~contentType%3Dneo&wid=2.dealCard.OMU&PARAM=765&BU=LifeStyle
+              - img "Image" [ref=e3660]
+            - link [ref=e3665] [cursor=pointer]:
+              - /url: /osp/cil/~cs-8lblwb61ol/pr?sid=osp%2Ccil&collection-tab-name=SFW+65&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DADIDAS&p%5B%5D=facets.brand%255B%255D%3DREEBOK&param=9142&BU=LifeStyle
+              - img "Image" [ref=e3668]
+            - link [ref=e3673] [cursor=pointer]:
+              - /url: /mens-footwear/pr?sid=osp%2Ccil&sort=popularity&param=567&param=567&p%5B%5D=facets.brand%255B%255D%3DU.S.%2BPOLO%2BASSN.&param=678&p%5B%5D=facets.brand%255B%255D%3DPepe%2BJeans&p%5B%5D=facets.brand%255B%255D%3DRare%2BRabbit&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=562&BU=LifeStyle
+              - img "Image" [ref=e3676]
+            - link [ref=e3681] [cursor=pointer]:
+              - /url: /footwear/womens-footwear/pr?sid=osp%2Ciko&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=8342&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DADIDAS&p%5B%5D=facets.brand%255B%255D%3DREEBOK&p%5B%5D=facets.brand%255B%255D%3DSkechers&param=8342&BU=LifeStyle
+              - img "Image" [ref=e3684]
+            - link [ref=e3689] [cursor=pointer]:
+              - /url: /footwear/mens-footwear/pr?sid=osp%2Ccil&p%5B%5D=facets.brand%255B%255D%3DLOTTO&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=456&BU=LifeStyle
+              - img "Image" [ref=e3692]
+            - link [ref=e3697] [cursor=pointer]:
+              - /url: /footwear/kids-infant-footwear/boys-footwear/clogs/pr?sid=osp%2Cmba%2Co3t%2Crid&p%5B%5D=facets.brand%255B%255D%3DCROCS&p%5B%5D=facets.brand%255B%255D%3DLIBERTY&p%5B%5D=facets.brand%255B%255D%3DRED%2BTAPE&p%5B%5D=facets.brand%255B%255D%3Daction&p%5B%5D=facets.brand%255B%255D%3DAJANTA&p%5B%5D=facets.brand%255B%255D%3DAbros&p%5B%5D=facets.brand%255B%255D%3DMiss%2B%2526%2BChief&param=456&BU=LifeStyle
+              - img "Image" [ref=e3700]
+            - link [ref=e3705] [cursor=pointer]:
+              - /url: /mens-footwear/pr?sid=osp%2Ccil&p%5B%5D=facets.brand%255B%255D%3DRED%2BCHIEF&p%5B%5D=facets.brand%255B%255D%3DWOODLAND&p%5B%5D=facets.brand%255B%255D%3DWildcraft&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=567&BU=LifeStyle
+              - img "Image" [ref=e3708]
+            - link [ref=e3713] [cursor=pointer]:
+              - /url: /mens-footwear/mens-casual-shoes/pr?sid=osp%2Ccil%2Ce1f&p%5B%5D=facets.brand%255B%255D%3Daadi&sort=popularity&param=987&p%5B%5D=facets.brand%255B%255D%3DBRUTON&p%5B%5D=facets.brand%255B%255D%3DBERSACHE&p%5B%5D=facets.brand%255B%255D%3DBirde&p%5B%5D=facets.brand%255B%255D%3DCLYMB&p%5B%5D=facets.brand%255B%255D%3DHOTSTYLE&p%5B%5D=facets.brand%255B%255D%3Dlejano&p%5B%5D=facets.brand%255B%255D%3DWorld%2BWear%2BFootwear&p%5B%5D=facets.brand%255B%255D%3DZixer&p%5B%5D=facets.brand%255B%255D%3DLayasa&p%5B%5D=facets.brand%255B%255D%3DXtoon&p%5B%5D=facets.brand%255B%255D%3Dcorsac&p%5B%5D=facets.brand%255B%255D%3DLakhani%2BVardaan&p%5B%5D=facets.brand%255B%255D%3DAMICO&p%5B%5D=facets.brand%255B%255D%3DURBANBOX&p%5B%5D=facets.brand%255B%255D%3DNOBELITE&p%5B%5D=facets.brand%255B%255D%3DSvaar&p%5B%5D=facets.brand%255B%255D%3DVellinto&p%5B%5D=facets.brand%255B%255D%3DLabbin&p%5B%5D=facets.brand%255B%255D%3DTR&p%5B%5D=facets.brand%255B%255D%3DFootox&p%5B%5D=facets.brand%255B%255D%3DAeonik&p%5B%5D=facets.brand%255B%255D%3DDOCTOR%2BEXTRA%2BSOFT&p%5B%5D=facets.brand%255B%255D%3DK%2527%2BFootlance&p%5B%5D=facets.brand%255B%255D%3DField%2BCare&p%5B%5D=facets.brand%255B%255D%3Dtigonis&p%5B%5D=facets.brand%255B%255D%3DROCKFIELD&p%5B%5D=facets.brand%255B%255D%3DGO%2BRIDE&p%5B%5D=facets.brand%255B%255D%3DNEW%2BLIMITS&p%5B%5D=facets.brand%255B%255D%3DKnoos&p%5B%5D=facets.brand%255B%255D%3DROASTER&p%5B%5D=facets.brand%255B%255D%3DRUN%2BSEVEN&p%5B%5D=facets.brand%255B%255D%3DMACTREE&p%5B%5D=facets.brand%255B%255D%3DKzaara&p%5B%5D=facets.brand%255B%255D%3DBucik&p%5B%5D=facets.brand%255B%255D%3DEL%2BPASO&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D399&param=5678&BU=LifeStyle
+              - img "Image" [ref=e3716]
+            - link [ref=e3721] [cursor=pointer]:
+              - /url: /womens-footwear/womens-heels/pr?sid=osp%2Ciko%2C6q1&param=9876&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=00555&BU=LifeStyle
+              - img "Image" [ref=e3724]
+            - link [ref=e3729] [cursor=pointer]:
+              - /url: /womens-footwear/~womens-sandals/pr?sid=osp%2Ciko&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&p%5B%5D=facets.brand%255B%255D%3DMOCHI&p%5B%5D=facets.brand%255B%255D%3DMETRO&p%5B%5D=facets.brand%255B%255D%3DCARLTON%2BLONDON&param=3265&BU=LifeStyle
+              - img "Image" [ref=e3732]
+            - link [ref=e3737] [cursor=pointer]:
+              - /url: /womens-footwear/womens-heels/~womens-sandals/pr?sid=osp%2Ciko%2C6q1&p%5B%5D=facets.brand%255B%255D%3DKhadim%2527s&p%5B%5D=facets.brand%255B%255D%3DSHOETOPIA&p%5B%5D=facets.brand%255B%255D%3DTRASE&p%5B%5D=facets.brand%255B%255D%3DMarc%2BLoire&p%5B%5D=facets.brand%255B%255D%3DLayasa&p%5B%5D=facets.brand%255B%255D%3DLongwalk&p%5B%5D=facets.brand%255B%255D%3DMoonwalk&p%5B%5D=facets.brand%255B%255D%3DZapatoz&p%5B%5D=facets.brand%255B%255D%3DDeals4you&p%5B%5D=facets.brand%255B%255D%3DDenill&p%5B%5D=facets.brand%255B%255D%3DShezone&p%5B%5D=facets.brand%255B%255D%3DVENDOZ&p%5B%5D=facets.brand%255B%255D%3DWELCOME&p%5B%5D=facets.brand%255B%255D%3DPaduki&p%5B%5D=facets.brand%255B%255D%3DShoestail&p%5B%5D=facets.brand%255B%255D%3DTOSHINA%2BSHOES%2BKING&p%5B%5D=facets.brand%255B%255D%3DTWINSSHOE&p%5B%5D=facets.brand%255B%255D%3DKoburg&p%5B%5D=facets.brand%255B%255D%3DFAUSTO&p%5B%5D=facets.brand%255B%255D%3DPicktoes&p%5B%5D=facets.brand%255B%255D%3DPinkToes&p%5B%5D=facets.brand%255B%255D%3DSK%2BFashion&p%5B%5D=facets.brand%255B%255D%3DXE%2BLooks&p%5B%5D=facets.brand%255B%255D%3DBambam&p%5B%5D=facets.brand%255B%255D%3DBERSACHE&p%5B%5D=facets.brand%255B%255D%3DFabbmate&p%5B%5D=facets.brand%255B%255D%3DEL%2BPASO&p%5B%5D=facets.brand%255B%255D%3DStylestry&p%5B%5D=facets.brand%255B%255D%3DTRYME&p%5B%5D=facets.brand%255B%255D%3DSole%2BSaga&p%5B%5D=facets.brand%255B%255D%3DThe%2BWhite%2BPole&p%5B%5D=facets.brand%255B%255D%3DDROP%2BBOLD&p%5B%5D=facets.brand%255B%255D%3DZUERY&p%5B%5D=facets.brand%255B%255D%3DZoom%2BShoes&p%5B%5D=facets.brand%255B%255D%3DViviblu&p%5B%5D=facets.brand%255B%255D%3DShozie&p%5B%5D=facets.brand%255B%255D%3DSHERRIF%2BSHOES&p%5B%5D=facets.brand%255B%255D%3DSHERRIF&p%5B%5D=facets.brand%255B%255D%3DMONROW&p%5B%5D=facets.brand%255B%255D%3DLondon%2BSteps&p%5B%5D=facets.brand%255B%255D%3DLondon%2BRag&p%5B%5D=facets.brand%255B%255D%3Djm%2Blooks&p%5B%5D=facets.brand%255B%255D%3DDelize&p%5B%5D=facets.brand%255B%255D%3DAfrojack&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D399&param=5678&BU=LifeStyle
+              - img "Image" [ref=e3740]
+            - link [ref=e3745] [cursor=pointer]:
+              - /url: /mens-footwear/pr?sid=osp%2Ccil&p%5B%5D=facets.occasion%255B%255D%3DCasual&p%5B%5D=facets.occasion%255B%255D%3DSports&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&p%5B%5D=facets.brand%255B%255D%3DKILLER&p%5B%5D=facets.brand%255B%255D%3DRoadster&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&p%5B%5D=facets.brand%255B%255D%3DMast%2B%2526%2BHarbour&p%5B%5D=facets.brand%255B%255D%3DAdrenex&BU=LifeStyle
+              - img "Image" [ref=e3748]
+            - link [ref=e3753] [cursor=pointer]:
+              - /url: /mens-footwear/~cs-08td0i3xd0/pr?sid=osp%2Ccil&collection-tab-name=Trendy+Sneaker&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=436887&BU=LifeStyle
+              - img "Image" [ref=e3756]
+            - link [ref=e3761] [cursor=pointer]:
+              - /url: /mens-footwear/pr?sid=osp%2Ccil&p%5B%5D=facets.brand%255B%255D%3DNoStrain&sort=recency_desc&param=1213&BU=LifeStyle
+              - img "Image" [ref=e3764]
+            - link [ref=e3769] [cursor=pointer]:
+              - /url: /footwear/kids-infant-footwear/pr?sid=osp%2Cmba&p%5B%5D=facets.brand%255B%255D%3DSvaar&p%5B%5D=facets.brand%255B%255D%3Daadi&p%5B%5D=facets.brand%255B%255D%3DCrazyly&p%5B%5D=facets.brand%255B%255D%3DSanthanakid&p%5B%5D=facets.brand%255B%255D%3DFabbmate&p%5B%5D=facets.brand%255B%255D%3DBirde&p%5B%5D=facets.brand%255B%255D%3DPASSION%2BPETALS&p%5B%5D=facets.brand%255B%255D%3DNeska%2BModa&p%5B%5D=facets.brand%255B%255D%3DKraasa&p%5B%5D=facets.brand%255B%255D%3DDeals4you&p%5B%5D=facets.brand%255B%255D%3DBERSACHE&p%5B%5D=facets.brand%255B%255D%3DShozie&p%5B%5D=facets.brand%255B%255D%3DTRASE&p%5B%5D=facets.brand%255B%255D%3DWELCOME&p%5B%5D=facets.brand%255B%255D%3Dkats&p%5B%5D=facets.brand%255B%255D%3DDISNEY&p%5B%5D=facets.brand%255B%255D%3DDOCTOR%2BEXTRA%2BSOFT&p%5B%5D=facets.brand%255B%255D%3DDisney%2BBy%2BYellow%2BBee&p%5B%5D=facets.brand%255B%255D%3DDoraemon&p%5B%5D=facets.brand%255B%255D%3DFloatz&p%5B%5D=facets.brand%255B%255D%3DGENIAL&p%5B%5D=facets.brand%255B%255D%3DHooh&p%5B%5D=facets.brand%255B%255D%3DHOOH%2B-%2BNow%2Bcomfort%2Bin%2Bfashion&p%5B%5D=facets.brand%255B%255D%3Dkullegs&p%5B%5D=facets.brand%255B%255D%3DNeoz&p%5B%5D=facets.brand%255B%255D%3DSHOEFLY&p%5B%5D=facets.brand%255B%255D%3DSHOELAMB&p%5B%5D=facets.brand%255B%255D%3Dsonshine&p%5B%5D=facets.brand%255B%255D%3Dtotoland&p%5B%5D=facets.brand%255B%255D%3DTopiBaaz&p%5B%5D=facets.brand%255B%255D%3DTIAH&p%5B%5D=facets.brand%255B%255D%3DYk&p%5B%5D=facets.brand%255B%255D%3DFuel&p%5B%5D=facets.ideal_for%255B%255D%3DBoys&p%5B%5D=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D399&param=56789&BU=LifeStyle
+              - img "Image" [ref=e3772]
+          - button [ref=e3773]
+      - generic [ref=e3785]:
+        - generic [ref=e3786]: Offers on accessories
+        - generic [ref=e3792]:
+          - generic [ref=e3793]:
+            - link [ref=e3798] [cursor=pointer]:
+              - /url: /offers-list/content?screen=dynamic&pk=themeViews%3DBDS-1-BASE-ACCESSORIES-OMU%3AOMU~widgetType%3DdealCard~contentType%3Dneo&wid=2.dealCard.OMU&PARAM=765&BU=LifeStyle
+              - img "Image" [ref=e3801]
+            - link [ref=e3806] [cursor=pointer]:
+              - /url: /reh/plk/tvv/~cs-k9fu22ykzc/pr?sid=reh%2Cplk%2Ctvv&collection-tab-name=Trolley+Bags+M75&pageCriteria=default&p%5B%5D=facets.brand%255B%255D%3DSAFARI&p%5B%5D=facets.brand%255B%255D%3DAMERICAN%2BTOURISTER&p%5B%5D=facets.brand%255B%255D%3DARISTOCRAT&p%5B%5D=facets.brand%255B%255D%3DVIP&p%5B%5D=facets.brand%255B%255D%3DSKYBAGS&p%5B%5D=facets.brand%255B%255D%3DHRX&p%5B%5D=facets.brand%255B%255D%3DKamiliant%2Bby%2BAmerican%2BTourister&p%5B%5D=facets.brand%255B%255D%3DWildcraft&p%5B%5D=facets.brand%255B%255D%3DNASHER%2BMILES&p%5B%5D=facets.brand%255B%255D%3DMagnum%2Bby%2BSafari&p%5B%5D=facets.brand%255B%255D%3DKILLER&p%5B%5D=facets.brand%255B%255D%3DSWISS%2BMILITARY&p%5B%5D=facets.brand%255B%255D%3DALFA&p%5B%5D=facets.brand%255B%255D%3DMETRONAUT&p%5B%5D=facets.brand%255B%255D%3DPROVOGUE&p%5B%5D=facets.brand%255B%255D%3DWROGN&p%5B%5D=facets.brand%255B%255D%3DDELSEY&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DUnited%2BColors%2Bof%2BBenetton&p%5B%5D=facets.brand%255B%255D%3DPolice&p%5B%5D=facets.brand%255B%255D%3DACEPACK&p%5B%5D=facets.brand%255B%255D%3DCARLTON%2BLONDON&p%5B%5D=facets.brand%255B%255D%3DDKNY&p%5B%5D=facets.brand%255B%255D%3DDUCATI&p%5B%5D=facets.brand%255B%255D%3DF%2BGear&p%5B%5D=facets.brand%255B%255D%3DGenie&p%5B%5D=facets.brand%255B%255D%3DGear&p%5B%5D=facets.brand%255B%255D%3DGENIUS%2Bby%2BSAFARI&p%5B%5D=facets.brand%255B%255D%3DMagnum&p%5B%5D=facets.brand%255B%255D%3DTeakwood%2BLeathers&p%5B%5D=facets.brand%255B%255D%3DStony%2BBrook%2Bby%2BNasher%2BMiles&p%5B%5D=facets.brand%255B%255D%3DZouk&param=11113&BU=LifeStyle
+              - img "Image" [ref=e3809]
+            - link [ref=e3814] [cursor=pointer]:
+              - /url: /watches/wrist-watches/pr?sid=r18%2Cf13&p%5B%5D=facets.discount_range_v1%255B%255D%3D20%2525%2Bor%2Bmore&p%5B%5D=facets.brand%255B%255D%3DTitan&p%5B%5D=facets.brand%255B%255D%3DTOMMY%2BHILFIGER&p%5B%5D=facets.brand%255B%255D%3DFOSSIL&p%5B%5D=facets.brand%255B%255D%3DA%252FX%2BARMANI%2BEXCHANGE&p%5B%5D=facets.price_range.from%3D2000&p%5B%5D=facets.price_range.to%3DMax&param=5464&BU=LifeStyle
+              - img "Image" [ref=e3817]
+            - link [ref=e3822] [cursor=pointer]:
+              - /url: /jewellery/artificial-jewellery/jewellery-sets/pr?sid=mcr%2C96v%2Cyx2&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&sort=recency_desc&param=67890876&p%5B%5D=facets.collection%255B%255D%3DEthnic&p%5B%5D=facets.brand%255B%255D%3DNagneshi%2BArt&p%5B%5D=facets.brand%255B%255D%3DRaaji%2527s&p%5B%5D=facets.brand%255B%255D%3DRAAJIS&p%5B%5D=facets.brand%255B%255D%3DSwarajshop&p%5B%5D=facets.brand%255B%255D%3Dambdded&p%5B%5D=facets.brand%255B%255D%3DAdiva&p%5B%5D=facets.ideal_for%255B%255D%3DWomen&param=09876543234567&BU=LifeStyle
+              - img "Image" [ref=e3825]
+            - link [ref=e3830] [cursor=pointer]:
+              - /url: /bags-wallets-belts/bags-backpacks/~cs-j7ondzkjn6/pr?sid=reh%2C4d7&p%5B%5D=facets.brand%255B%255D%3DSAFARI&p%5B%5D=facets.brand%255B%255D%3DPROVOGUE&p%5B%5D=facets.brand%255B%255D%3DSKYBAGS&p%5B%5D=facets.brand%255B%255D%3DWROGN&p%5B%5D=facets.brand%255B%255D%3DGear&p%5B%5D=facets.brand%255B%255D%3DWildcraft&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&p%5B%5D=facets.brand%255B%255D%3DTOMMY%2BHILFIGER&p%5B%5D=facets.brand%255B%255D%3DMokobara&p%5B%5D=facets.brand%255B%255D%3DNIKE&p%5B%5D=facets.brand%255B%255D%3DAMERICAN%2BTOURISTER&p%5B%5D=facets.brand%255B%255D%3DARISTOCRAT&p%5B%5D=facets.brand%255B%255D%3DArctic%2BFox&p%5B%5D=facets.brand%255B%255D%3DUppercase&p%5B%5D=facets.brand%255B%255D%3DF%2BGear&p%5B%5D=facets.brand%255B%255D%3DNASHER%2BMILES&p%5B%5D=facets.brand%255B%255D%3DUnited%2BColors%2Bof%2BBenetton&p%5B%5D=facets.brand%255B%255D%3DRoadster&p%5B%5D=facets.brand%255B%255D%3DMETRONAUT&p%5B%5D=facets.brand%255B%255D%3DKILLER&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=11755&BU=LifeStyle
+              - img "Image" [ref=e3833]
+            - link [ref=e3838] [cursor=pointer]:
+              - /url: /watches/wrist-watches/pr?sid=r18%2Cf13&p%5B%5D=facets.price_range.from%3D2000&sort=popularity&p%5B%5D=facets.price_range.to%3DMax&p%5B%5D=facets.brand%255B%255D%3DMaserati&p%5B%5D=facets.brand%255B%255D%3DZeppelin&p%5B%5D=facets.brand%255B%255D%3DPIERRE%2BCARDIN&p%5B%5D=facets.brand%255B%255D%3DCIGA%2BDESIGN&p%5B%5D=facets.brand%255B%255D%3DLuminox&p%5B%5D=facets.discount_range_v1%255B%255D%3D10%2525%2Bor%2Bmore&param=78363&BU=LifeStyle
+              - img "Image" [ref=e3841]
+            - link [ref=e3846] [cursor=pointer]:
+              - /url: /sunglasses/pr?sid=26x&marketplace=FLIPKART&sort=popularity&param=5421234567&PARAM=23746&p%5B%5D=facets.price_range.from%3D300&p%5B%5D=facets.price_range.to%3DMax&p%5B%5D=facets.brand%255B%255D%3DEspee&p%5B%5D=facets.brand%255B%255D%3DFastrack&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=9876&BU=LifeStyle
+              - img "Image" [ref=e3849]
+            - link [ref=e3854] [cursor=pointer]:
+              - /url: /bags-wallets-belts/luggage-travel/suitcases/~cs-j7ondzkjn6/pr?sid=reh%2Cplk%2Ctvv&p%5B%5D=facets.pack_of%255B%255D%3DPack%2Bof%2B2&p%5B%5D=facets.pack_of%255B%255D%3DPack%2Bof%2B3&p%5B%5D=facets.pack_of%255B%255D%3DPack%2Bof%2B4&p%5B%5D=facets.pack_of%255B%255D%3DPack%2Bof%2B5&p%5B%5D=facets.brand%255B%255D%3DSAFARI&p%5B%5D=facets.brand%255B%255D%3DAMERICAN%2BTOURISTER&p%5B%5D=facets.brand%255B%255D%3DARISTOCRAT&p%5B%5D=facets.brand%255B%255D%3DSKYBAGS&p%5B%5D=facets.brand%255B%255D%3DVIP&p%5B%5D=facets.brand%255B%255D%3DHRX&p%5B%5D=facets.brand%255B%255D%3DKamiliant%2Bby%2BAmerican%2BTourister&p%5B%5D=facets.brand%255B%255D%3DWildcraft&p%5B%5D=facets.brand%255B%255D%3DNASHER%2BMILES&p%5B%5D=facets.brand%255B%255D%3DMagnum%2Bby%2BSafari&p%5B%5D=facets.brand%255B%255D%3DTOMMY%2BHILFIGER&p%5B%5D=facets.brand%255B%255D%3DMokobara&p%5B%5D=facets.brand%255B%255D%3DKILLER&p%5B%5D=facets.brand%255B%255D%3DSWISS%2BMILITARY&p%5B%5D=facets.brand%255B%255D%3DALFA&p%5B%5D=facets.brand%255B%255D%3DSAMSONITE&p%5B%5D=facets.brand%255B%255D%3DMETRONAUT&p%5B%5D=facets.brand%255B%255D%3DPROVOGUE&p%5B%5D=facets.brand%255B%255D%3DWROGN&p%5B%5D=facets.brand%255B%255D%3DDELSEY&p%5B%5D=facets.brand%255B%255D%3DPUMA&p%5B%5D=facets.brand%255B%255D%3DUppercase&p%5B%5D=facets.brand%255B%255D%3DUnited%2BColors%2Bof%2BBenetton&p%5B%5D=facets.brand%255B%255D%3DUrban%2BJungle&p%5B%5D=facets.brand%255B%255D%3DAssembly&p%5B%5D=facets.brand%255B%255D%3DPolice&p%5B%5D=facets.brand%255B%255D%3DZouk&p%5B%5D=facets.brand%255B%255D%3DSKYSCAPE%2BBY%2BSWISS%2BMILITARY&p%5B%5D=facets.brand%255B%255D%3DDELSEY%2BPARIS&p%5B%5D=facets.brand%255B%255D%3DSECURITECH%2Bby%2BDELSEY%2BPARIS&p%5B%5D=facets.brand%255B%255D%3DGENIUS%2Bby%2BSAFARI&p%5B%5D=facets.brand%255B%255D%3DACEPACK&p%5B%5D=facets.brand%255B%255D%3DSWISSBRAND&p%5B%5D=facets.brand%255B%255D%3DCalvin%2BKlein&p%5B%5D=facets.brand%255B%255D%3DGenie&p%5B%5D=facets.brand%255B%255D%3DRed%2BTape&p%5B%5D=facets.brand%255B%255D%3DStony%2BBrook%2Bby%2BNasher%2BMiles&p%5B%5D=facets.brand%255B%255D%3DCARLTON%2BLONDON&p%5B%5D=facets.brand%255B%255D%3DMagnum&p%5B%5D=facets.brand%255B%255D%3DKAMILIANT&p%5B%5D=facets.brand%255B%255D%3DDKNY&p%5B%5D=facets.brand%255B%255D%3DTeakwood%2BLeathers&sort=popularity&param=11756&BU=LifeStyle
+              - img "Image" [ref=e3857]
+            - link [ref=e3862] [cursor=pointer]:
+              - /url: /sunglasses/pr?sid=26x&marketplace=FLIPKART&p%5B%5D=facets.brand%255B%255D%3DRay-Ban&p%5B%5D=facets.brand%255B%255D%3DPolice&p%5B%5D=facets.brand%255B%255D%3DGUESS&param=342355&BU=LifeStyle
+              - img "Image" [ref=e3865]
+            - link [ref=e3870] [cursor=pointer]:
+              - /url: /jewellery/artificial-jewellery/necklaces-chains/pr?sid=mcr%2C96v%2C0vq&p%5B%5D=facets.brand%255B%255D%3DMYKI&p%5B%5D=facets.brand%255B%255D%3DBhumi09&p%5B%5D=facets.brand%255B%255D%3DJewels%2BGalaxy&p%5B%5D=facets.brand%255B%255D%3DRoyatto&p%5B%5D=facets.brand%255B%255D%3DMakezak&p%5B%5D=facets.brand%255B%255D%3DSyfer&p%5B%5D=facets.brand%255B%255D%3DTONOLIKA%2BJEWELLERY&p%5B%5D=facets.brand%255B%255D%3DMinprice&p%5B%5D=facets.brand%255B%255D%3DR%2BA%2BEnterprises&p%5B%5D=facets.brand%255B%255D%3DVIGHNAHARTA&p%5B%5D=facets.brand%255B%255D%3DMEENAZ&p%5B%5D=facets.brand%255B%255D%3DELCETRATD%2BJEWELLERY&p%5B%5D=facets.brand%255B%255D%3DAKISON%2BJEWELS&p%5B%5D=facets.brand%255B%255D%3DSHASHI%2BORNAMENTS&p%5B%5D=facets.brand%255B%255D%3DFashion%2BFrill&p%5B%5D=facets.brand%255B%255D%3Dbrado%2Bjewellery&p%5B%5D=facets.brand%255B%255D%3DBOGHRA%2BSALES&p%5B%5D=facets.brand%255B%255D%3DRAMDEV%2BART%2BFASHION%2BJEWELLERY&p%5B%5D=facets.brand%255B%255D%3DVembley&p%5B%5D=facets.brand%255B%255D%3DBRANDSOON&p%5B%5D=facets.brand%255B%255D%3DJewel%2BWORLD&p%5B%5D=facets.brand%255B%255D%3DKarishma%2BKreations&p%5B%5D=facets.brand%255B%255D%3DArzonai&p%5B%5D=facets.brand%255B%255D%3DSOHI&p%5B%5D=facets.brand%255B%255D%3DYELLOW%2BCHIMES&p%5B%5D=facets.brand%255B%255D%3DUnwind%2Bby%2BYellow%2BChimes&p%5B%5D=facets.brand%255B%255D%3DShining%2BDiva&p%5B%5D=facets.brand%255B%255D%3DPBM%2BCREATIONS&p%5B%5D=facets.brand%255B%255D%3DSalty&p%5B%5D=facets.brand%255B%255D%3DROFARWORD&p%5B%5D=facets.brand%255B%255D%3DDESTINY%2BJEWEL%2527S&p%5B%5D=facets.brand%255B%255D%3DNIMZ&p%5B%5D=facets.brand%255B%255D%3DRoadster&p%5B%5D=facets.brand%255B%255D%3DBright%2BSTYLE&p%5B%5D=facets.brand%255B%255D%3DVoylla&p%5B%5D=facets.brand%255B%255D%3DRUBANS&p%5B%5D=facets.brand%255B%255D%3DRubans%2BVoguish&p%5B%5D=facets.brand%255B%255D%3DTOKYO%2BTALKIES%2BX%2BRUBANS&p%5B%5D=facets.brand%255B%255D%3D3SIX5&p%5B%5D=facets.brand%255B%255D%3DANORI&p%5B%5D=facets.brand%255B%255D%3DKairangi&p%5B%5D=facets.brand%255B%255D%3DDEGHLAM&p%5B%5D=facets.brand%255B%255D%3DSATJEWEL&p%5B%5D=facets.brand%255B%255D%3DSHUBHAM%2BJEWELLERS&p%5B%5D=facets.brand%255B%255D%3DScintillare%2Bby%2BSukkhi&p%5B%5D=facets.brand%255B%255D%3DYouBella&p%5B%5D=facets.brand%255B%255D%3DSamridhi%2BDC&p%5B%5D=facets.brand%255B%255D%3DDressberry&p%5B%5D=facets.brand%255B%255D%3DSukkhi&p%5B%5D=facets.brand%255B%255D%3DACHYUTAM%2BENTERPRISE&p%5B%5D=facets.brand%255B%255D%3DFoxy%2BTrend&p%5B%5D=facets.brand%255B%255D%3DDesiny%2BJewels&p%5B%5D=facets.brand%255B%255D%3Dshivay&p%5B%5D=facets.brand%255B%255D%3DTESSERACT&p%5B%5D=facets.brand%255B%255D%3DDivastri&p%5B%5D=facets.brand%255B%255D%3Dsalvusappsolutions&p%5B%5D=facets.price_range.from%3DMin&p%5B%5D=facets.price_range.to%3D399&param=5433&BU=LifeStyle
+              - img "Image" [ref=e3873]
+            - link [ref=e3878] [cursor=pointer]:
+              - /url: /reh/4d7/ak9/~cs-83i1p1qic8/pr?sid=reh%2C4d7%2Cak9&collection-tab-name=Backpacks&p%5B%5D=facets.brand%255B%255D%3DHRX%2Bby%2BHrithik%2BRoshan&p%5B%5D=facets.brand%255B%255D%3DWROGN&p%5B%5D=facets.brand%255B%255D%3DKILLER&p%5B%5D=facets.brand%255B%255D%3DRoadster&p%5B%5D=facets.brand%255B%255D%3DMETRONAUT&p%5B%5D=facets.brand%255B%255D%3DPROVOGUE&p%5B%5D=facets.brand%255B%255D%3DCARLTON%2BLONDON&p%5B%5D=facets.brand%255B%255D%3DMiss%2B%2526%2BChief&param=998765&BU=LifeStyle
+              - img "Image" [ref=e3881]
+            - link [ref=e3886] [cursor=pointer]:
+              - /url: /jewellery/artificial-jewellery/~cs-8p7mclwoar/pr?sid=mcr%2C96v&collection-tab-name=Trendy+Jewellery&param=888722222&param=17908888&p%5B%5D=facets.discount_range_v1%255B%255D%3D30%2525%2Bor%2Bmore&param=12345666767&BU=LifeStyle
+              - img "Image" [ref=e3889]
+            - link [ref=e3894] [cursor=pointer]:
+              - /url: /earrings/~cs-ka7arwif47/pr?sid=mcr%2C96v%2Ck9d&p%5B%5D=facets.price_range.from%3D99&param=887889&BU=LifeStyle
+              - img "Image" [ref=e3897]
+            - link [ref=e3902] [cursor=pointer]:
+              - /url: /bags-wallets-belts/luggage-travel/pr?count=40&p%5B%5D=facets.ideal_for%255B%255D%3DBoys%2B%2526%2BGirls&sid=reh%2Fplk&p%5B%5D=facets.ideal_for%255B%255D%3DMen%2B%2526%2BWomen&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.ideal_for%255B%255D%3DBoys&p%5B%5D=facets.brand%255B%255D%3DTRAWOC&sort=recency_desc&param=1213&BU=LifeStyle
+              - img "Image" [ref=e3905]
+            - link [ref=e3910] [cursor=pointer]:
+              - /url: /jewellery/pr?sid=mcr&p%5B%5D=facets.brand%255B%255D%3DRUBANS&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=34543&BU=LifeStyle
+              - img "Image" [ref=e3913]
+          - button [ref=e3914]
+      - generic [ref=e3926]:
+        - generic [ref=e3927]: Deals on top trends
+        - generic [ref=e3934]:
+          - generic [ref=e3935]:
+            - link [ref=e3940] [cursor=pointer]:
+              - /url: /beauty-and-grooming/hair-care-and-accessory/hair-accessory/~cs-7faiq33msv/pr?sid=g9b%2Clcf%2Cbjl&collection-tab-name=Butterfly+Clips&sort=popularity&param=8410000&BU=LifeStyle
+              - img "Image" [ref=e3943]
+            - link [ref=e3948] [cursor=pointer]:
+              - /url: /clothing-and-accessories/topwear/~cs-vopqgnu2va/pr?sid=clo%2Cash&collection-tab-name=Dinosaur+Print&sort=popularity&p%5B%5D=facets.discount_range_v1%255B%255D%3D30%2525%2Bor%2Bmore&param=7590000&BU=LifeStyle
+              - img "Image" [ref=e3951]
+            - link [ref=e3956] [cursor=pointer]:
+              - /url: /jewellery/artificial-jewellery/~cs-ikv0i387d2/pr?sid=mcr%2C96v&collection-tab-name=Kashmiri&pageCriteria=default&p%5B%5D=facets.discount_range_v1%255B%255D%3D30%2525%2Bor%2Bmore&param=5417777&BU=LifeStyle
+              - img "Image" [ref=e3959]
+            - link [ref=e3964] [cursor=pointer]:
+              - /url: /womens-ethnic-sets/~cs-aajkvh5egv/pr?sid=clo%2Ccfv%2Citg%2Ctys&collection-tab-name=Farshi+Sets&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=331678888&BU=LifeStyle
+              - img "Image" [ref=e3967]
+            - link [ref=e3972] [cursor=pointer]:
+              - /url: /bags-wallets-belts/luggage-travel/suitcases/~cs-ayq1io54k1/pr?sid=reh%2Cplk%2Ctvv&collection-tab-name=Abstract+Print&p%5B%5D=facets.discount_range_v1%255B%255D%3D30%2525%2Bor%2Bmore&param=2580000&BU=LifeStyle
+              - img "Image" [ref=e3975]
+            - link [ref=e3980] [cursor=pointer]:
+              - /url: /mens-shirts/~cs-9umx0f5dnm/pr?sid=clo%2Cash%2Caxc%2Cmmk&collection-tab-name=Summerchecks&pageCriteria=default&param=33111111&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=23455555&BU=LifeStyle
+              - img "Image" [ref=e3983]
+            - link [ref=e3988] [cursor=pointer]:
+              - /url: /womens-dresses/~cs-mpiprhfbwo/pr?sid=clo%2Codx%2Cmaj%2Cjhy&collection-tab-name=Gingham&sort=popularity&param=1609999&BU=LifeStyle
+              - img "Image" [ref=e3991]
+            - link [ref=e3996] [cursor=pointer]:
+              - /url: /womens-footwear/~cs-3j2njiaa73/pr?sid=osp%2Ciko&collection-tab-name=Double+Buckle&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=99789999&BU=LifeStyle
+              - img "Image" [ref=e3999]
+            - link [ref=e4004] [cursor=pointer]:
+              - /url: /womens-footwear/womens-heels/~cs-tg9hxxl12h/pr?sid=osp%2Ciko%2C6q1&collection-tab-name=Block+Heels&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=33657680000&BU=LifeStyle
+              - img "Image" [ref=e4007]
+            - link [ref=e4012] [cursor=pointer]:
+              - /url: /watches/wrist-watches/~cs-4dvsh9455g/pr?sid=r18%2Cf13&collection-tab-name=SquareDial&p%5B%5D=facets.ideal_for%255B%255D%3DMen&p%5B%5D=facets.ideal_for%255B%255D%3DMen%2B%2526%2BWomen&sort=popularity&param=563289999000&BU=LifeStyle
+              - img "Image" [ref=e4015]
+            - link [ref=e4020] [cursor=pointer]:
+              - /url: /womens-jeans/~cs-p9jdi789uc/pr?sid=clo%2Cvua%2Ck58%2C4hp&collection-tab-name=Faded+Jeans&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=66666666&BU=LifeStyle
+              - img "Image" [ref=e4023]
+            - link [ref=e4028] [cursor=pointer]:
+              - /url: /womens-sarees/~cs-ir4wtmndpi/pr?sid=clo%2C8on%2Czpd%2C9og&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=22222222&BU=LifeStyle
+              - img "Image" [ref=e4031]
+          - button [ref=e4032]
+      - link [ref=e4045] [cursor=pointer]:
+        - /url: https://www.flipkart.com/fpg/cbc/store-page?productType=CC&utm_source=Non_Mobiles_OTA&utm_source_context=Non_mobiles_clp&BU=LifeStyle
+        - img "Image" [ref=e4051]
+      - generic [ref=e4061]:
+        - generic [ref=e4062]: Gen Z fashion
+        - generic [ref=e4068]:
+          - generic [ref=e4069]:
+            - link [ref=e4074] [cursor=pointer]:
+              - /url: /womens-footwear/womens-slippers-flip-flops/~cs-dm64zt67ha/pr?sid=osp%2Ciko%2Ciz7&collection-tab-name=Chunky+Slipper&sort=recency_desc&p%5B%5D=facets.discount_range_v1%255B%255D%3D60%2525%2Bor%2Bmore&param=222233&BU=LifeStyle
+              - img "Image" [ref=e4077]
+            - link [ref=e4082] [cursor=pointer]:
+              - /url: /bags-wallets-belts/handbags-clutches/~cs-uz9a52rvyx/pr?sid=reh%2Cihu&collection-tab-name=Animal+Print&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=77777&BU=LifeStyle
+              - img "Image" [ref=e4085]
+            - link [ref=e4090] [cursor=pointer]:
+              - /url: /mens-shirts/~cs-o3c2e5wihb/pr?sid=clo%2Cash%2Caxc%2Cmmk&collection-tab-name=Boxy+Cropped+Shirts&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=128731&BU=LifeStyle
+              - img "Image" [ref=e4093]
+            - link [ref=e4098] [cursor=pointer]:
+              - /url: /clothing-and-accessories/~cs-antnceaigx/pr?sid=clo&collection-tab-name=Strappy%20Tie%20Ups&param=64367&BU=LifeStyle
+              - img "Image" [ref=e4101]
+            - link [ref=e4106] [cursor=pointer]:
+              - /url: /osp/cil/e1f/~cs-tkyzffckcu/pr?sid=osp,cil,e1f&collection-tab-name=Denim+Shoes&param=21759&BU=LifeStyle
+              - img "Image" [ref=e4109]
+            - link [ref=e4114] [cursor=pointer]:
+              - /url: /mens-tshirts/~cs-0t0o174jfg/pr?sid=clo%2Cash%2Cank%2Cedy&collection-tab-name=BirdPrint&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=27581&BU=LifeStyle
+              - img "Image" [ref=e4117]
+            - link [ref=e4122] [cursor=pointer]:
+              - /url: /mens-jeans/~cs-sbo165guh0/pr?sid=clo%2Cvua%2Ck58%2Ci51&collection-tab-name=Ribbed+Baggy&pageCriteria=default&p%5B%5D=facets.discount_range_v1%255B%255D%3D50%2525%2Bor%2Bmore&param=732854&BU=LifeStyle
+              - img "Image" [ref=e4125]
+            - link [ref=e4130] [cursor=pointer]:
+              - /url: /clo/ash/ank/loi/~cs-fwutgej1iz/pr?sid=clo,ash,ank,loi&collection-tab-name=See+Life&param=34578&BU=LifeStyle
+              - img "Image" [ref=e4133]
+            - link [ref=e4138] [cursor=pointer]:
+              - /url: /bags-wallets-belts/bags-backpacks/cross-body-bags/~cs-emmg3r7u4h/pr?sid=reh%2C4d7%2Cj66&collection-tab-name=Chest+Bag&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&param=23792&BU=LifeStyle
+              - img "Image" [ref=e4141]
+            - link [ref=e4146] [cursor=pointer]:
+              - /url: /clo/odx/maj/jhy/~cs-mpy61ptlcv/pr?sid=clo,odx,maj,jhy&collection-tab-name=Drop+Waist+&pageCriteria=default&param=54367&BU=LifeStyle
+              - img "Image" [ref=e4149]
+            - link [ref=e4154] [cursor=pointer]:
+              - /url: /clo/vua/mle/8ie/~cs-6vzqibg1xu/pr?sid=clo,vua,mle,8ie&collection-tab-name=Balloon+Pant&param=5367333&BU=LifeStyle
+              - img "Image" [ref=e4157]
+            - link [ref=e4162] [cursor=pointer]:
+              - /url: /clo/vua/mle/lhk/~cs-cvm88wcom5/pr?sid=clo,vua,mle,lhk&collection-tab-name=AnkleCropped&param=75238&BU=LifeStyle
+              - img "Image" [ref=e4165]
+            - link [ref=e4170] [cursor=pointer]:
+              - /url: /osp/cil/e1r/~cs-jnl2hg3czf/pr?sid=osp,cil,e1r&collection-tab-name=Chunky+Slides&pageCriteria=default&param=67352&BU=LifeStyle
+              - img "Image" [ref=e4173]
+            - link [ref=e4178] [cursor=pointer]:
+              - /url: /clothing-and-accessories/topwear/~cs-gv6u56r3qr/pr?sid=clo%2Cash&collection-tab-name=Checks&p%5B%5D=facets.discount_range_v1%255B%255D%3D70%2525%2Bor%2Bmore&sort=recency_desc&param=53268&BU=LifeStyle
+              - img "Image" [ref=e4181]
+            - link [ref=e4186] [cursor=pointer]:
+              - /url: /jewellery/artificial-jewellery/~cs-0lkmnskxm4/pr?sid=mcr%2C96v&collection-tab-name=Multi+Chains&p%5B%5D=facets.ideal_for%255B%255D%3DMen&param=000999&BU=LifeStyle
+              - img "Image" [ref=e4189]
+          - button [ref=e4190]
+      - img "Image" [ref=e4209]
+      - generic [ref=e1228]: Hang on, loading content
+      - generic [ref=e1242]:
+        - generic [ref=e1243]: More about Ss 26 Base Inline At
+        - generic [ref=e1244]: +
+      - contentinfo [ref=e1245]:
+        - generic [ref=e1247]:
+          - generic [ref=e1248]:
+            - generic [ref=e1249]:
+              - generic [ref=e1250]: ABOUT
+              - link "Contact Us" [ref=e1251] [cursor=pointer]:
+                - /url: /helpcentre?otracker=footer_navlinks
+              - link "About Us" [ref=e1252] [cursor=pointer]:
+                - /url: https://corporate.flipkart.net/corporate-home
+              - link "Careers" [ref=e1253] [cursor=pointer]:
+                - /url: https://www.flipkartcareers.com/?otracker=footer_navlinks
+              - link "Flipkart Stories" [ref=e1254] [cursor=pointer]:
+                - /url: http://stories.flipkart.com/?otracker=footer_navlinks
+              - link "Press" [ref=e1255] [cursor=pointer]:
+                - /url: http://stories.flipkart.com/category/top-stories/news/
+              - link "Corporate Information" [ref=e1256] [cursor=pointer]:
+                - /url: /corporate-information
+            - generic [ref=e1257]:
+              - generic [ref=e1258]: GROUP COMPANIES
+              - link "Myntra" [ref=e1259] [cursor=pointer]:
+                - /url: https://www.myntra.com/
+              - link "Cleartrip" [ref=e1260] [cursor=pointer]:
+                - /url: https://www.cleartrip.com/
+              - link "Shopsy" [ref=e1261] [cursor=pointer]:
+                - /url: https://www.shopsy.in
+            - generic [ref=e1262]:
+              - generic [ref=e1263]: HELP
+              - link "Payments" [ref=e1264] [cursor=pointer]:
+                - /url: /pages/payments
+              - link "Shipping" [ref=e1265] [cursor=pointer]:
+                - /url: /pages/shipping
+              - link "Cancellation & Returns" [ref=e1266] [cursor=pointer]:
+                - /url: /helpcentre?catalog=55c9c6edb000002e002c1701&view=CATALOG
+              - link "FAQ" [ref=e1267] [cursor=pointer]:
+                - /url: /helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG
+            - generic [ref=e1268]:
+              - generic [ref=e1269]: CONSUMER POLICY
+              - link "Cancellation & Returns" [ref=e1270] [cursor=pointer]:
+                - /url: /pages/returnpolicy?otracker=footer_navlinks
+              - link "Terms Of Use" [ref=e1271] [cursor=pointer]:
+                - /url: /pages/terms?otracker=footer_navlinks
+              - link "Security" [ref=e1272] [cursor=pointer]:
+                - /url: /pages/paymentsecurity?otracker=footer_navlinks
+              - link "Privacy" [ref=e1273] [cursor=pointer]:
+                - /url: /pages/privacypolicy?otracker=footer_navlinks
+              - link "Sitemap" [ref=e1274] [cursor=pointer]:
+                - /url: /sitemap?otracker=footer_navlinks
+              - link "Grievance Redressal" [ref=e1275] [cursor=pointer]:
+                - /url: /pages/grievance-redressal-mechanism?otracker=footer_navlinks
+              - link "EPR Compliance" [ref=e1276] [cursor=pointer]:
+                - /url: /pages/ewaste-compliance-tnc?otracker=footer_navlinks
+              - link "FSSAI Food Safety Connect App" [ref=e1277] [cursor=pointer]:
+                - /url: https://fssai.gov.in/cms/food-safety-connect.php
+            - generic [ref=e1278]:
+              - generic [ref=e1279]: "Mail Us:"
+              - generic [ref=e1280]:
+                - paragraph [ref=e1281]: Flipkart Internet Private Limited,
+                - paragraph [ref=e1282]: Buildings Alyssa, Begonia &
+                - paragraph [ref=e1283]: Clove Embassy Tech Village,
+                - paragraph [ref=e1284]: Outer Ring Road, Devarabeesanahalli Village,
+                - paragraph [ref=e1285]: Bengaluru, 560103,
+                - paragraph [ref=e1286]: Karnataka, India
+              - generic [ref=e1287]: "Social:"
+              - generic [ref=e1288]:
+                - link "Facebook" [ref=e1290] [cursor=pointer]:
+                  - /url: https://www.facebook.com/flipkart
+                  - img "Facebook" [ref=e1291]
+                - link "Twitter" [ref=e1293] [cursor=pointer]:
+                  - /url: https://www.twitter.com/flipkart
+                  - img "Twitter" [ref=e1294]
+                - link "YouTube" [ref=e1296] [cursor=pointer]:
+                  - /url: https://www.youtube.com/flipkart
+                  - img "YouTube" [ref=e1297]
+                - link "Instagram" [ref=e1299] [cursor=pointer]:
+                  - /url: https://www.instagram.com/flipkart
+                  - img "Instagram" [ref=e1300]
+            - generic [ref=e1301]:
+              - generic [ref=e1302]: "Registered Office Address:"
+              - generic [ref=e1303]:
+                - paragraph [ref=e1304]: Flipkart Internet Private Limited,
+                - paragraph [ref=e1305]: Buildings Alyssa, Begonia &
+                - paragraph [ref=e1306]: Clove Embassy Tech Village,
+                - paragraph [ref=e1307]: Outer Ring Road, Devarabeesanahalli Village,
+                - paragraph [ref=e1308]: Bengaluru, 560103,
+                - paragraph [ref=e1309]: Karnataka, India
+                - paragraph [ref=e1310]: "CIN : U51109KA2012PTC066107"
+                - paragraph
+                - paragraph [ref=e1311]:
+                  - text: "Telephone:"
+                  - link "044-45614700" [ref=e4211] [cursor=pointer]:
+                    - /url: tel:044-45614700
+                  - text: /
+                  - link "044-67415800" [ref=e4212] [cursor=pointer]:
+                    - /url: tel:044-67415800
+          - generic [ref=e1314]:
+            - generic [ref=e1315]:
+              - img "Become a Seller" [ref=e1316]
+              - link "Become a Seller" [ref=e1317] [cursor=pointer]:
+                - /url: https://seller.flipkart.com/?utm_source=fkwebsite&utm_medium=websitedirect
+            - generic [ref=e1318]:
+              - img "Advertise" [ref=e1319]
+              - generic "Advertise" [ref=e1320]
+            - generic [ref=e1321]:
+              - img "Gift Cards" [ref=e1322]
+              - link "Gift Cards" [ref=e1323] [cursor=pointer]:
+                - /url: /the-gift-card-store?otracker=footer_navlinks
+            - generic [ref=e1324]:
+              - img "Help Center" [ref=e1325]
+              - link "Help Center" [ref=e1326] [cursor=pointer]:
+                - /url: /helpcentre?otracker=footer_navlinks
+            - generic [ref=e1327]: © 2007-2026 Flipkart.com
+            - img "Payment methods"
+  - contentinfo

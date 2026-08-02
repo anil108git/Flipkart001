@@ -27,6 +27,7 @@ export default defineConfig({
   projects: [
     {
       name: 'setup',
+      testDir: './fixtures/auth',
       testMatch: /global\.setup\.ts/,
     },
     {
@@ -36,6 +37,12 @@ export default defineConfig({
         storageState: 'fixtures/auth/.auth/user.json',
       },
       dependencies: ['setup'],
+    },
+    {
+      name: 'chromium-noauth',
+      use: {
+        ...devices['Desktop Chrome'],
+      },
     },
   ],
 });

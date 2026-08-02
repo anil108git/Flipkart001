@@ -1,0 +1,19 @@
+{
+  "homepageTabs": [
+    "For You",
+    "Fashion",
+    "Mobiles",
+    "Electronics",
+    "Beauty",
+    "Home",
+    "Appliances",
+    "Toys, baby..",
+    "Food & Health",
+    "Auto Accessories",
+    "Sports & Fitness",
+    "Furniture",
+    "Books & Media",
+    "2 Wheelers"
+  ],
+  "expectedTabCount": 14
+}

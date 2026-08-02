@@ -1,0 +1,231 @@
+{
+  "scenarios": [
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should display all 14 category tabs on initial load",
+      "status": "passed",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "positive",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should display all 14 category tabs after page refresh",
+      "status": "passed",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "positive",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify no tabs are missing on page load",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "negative",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify tab labels match exactly (case, punctuation, spacing)",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "edge",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify special characters in tab names render correctly",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "edge",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify tab bar loads within performance budget (1.5s)",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "performance",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify First Contentful Paint of tab bar < 1.5s",
+      "status": "passed",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "performance",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify \"For You\" tab is active on initial load",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "positive",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify \"For You\" tab remains active after page refresh",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "positive",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify active tab has distinct visual indicator",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "positive",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify no other tab shows active indicator on load",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "negative",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify active indicator persists across rapid refreshes",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "edge",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify clicking \"Fashion\" tab navigates to Fashion category page",
+      "status": "escalated",
+      "bugKey": "KAN-19",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "positive",
+      "failureType": "ROUTE_CHANGE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify clicking \"Mobiles\" tab navigates to Mobiles category page",
+      "status": "escalated",
+      "bugKey": "KAN-20",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "positive",
+      "failureType": "ROUTE_CHANGE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify clicking \"Electronics\" tab navigates to Electronics category page",
+      "status": "escalated",
+      "bugKey": "KAN-21",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "positive",
+      "failureType": "ROUTE_CHANGE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify clicking all 14 tabs sequentially routes correctly",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "positive",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify network failure during navigation shows error state",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "negative",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify server returns 404/500 shows appropriate error handling",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "negative",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify rapid successive tab clicks handled gracefully",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "edge",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify click tab then browser back button returns to homepage with correct tab active",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "edge",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify navigation completes within 3s (page load)",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "performance",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "tests/kan-12-homepage-navigation.spec.ts",
+      "testName": "should verify Category page TTFB < 500ms",
+      "status": "escalated",
+      "bugKey": "KAN-18",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "performance",
+      "failureType": "AUTH_FAILURE"
+    },
+    {
+      "specFile": "fixtures/auth/global.setup.ts",
+      "testName": "authenticate",
+      "status": "escalated",
+      "bugKey": "KAN-22",
+      "storyKey": "KAN-12",
+      "epicKey": "KAN-5",
+      "category": "non-functional",
+      "failureType": "AUTH_FAILURE"
+    }
+  ]
+}
